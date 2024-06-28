@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aIqU5V8+cP3ye1KcT8fSq/H7VPMyTlp9iWAnR12N+XSjqFdJq5qEzWX6F8h/FoTgM/1GV1b5oXqJ5s1eQhnwaw==",
+  "dgSpecHash": "gPT2sjkQ0HAd2Bq1OjWI7vfAhsAkwQfy/r/U4ZOtZaypE+F0wSwkOZXrzY23xtl+U/wiIpi9mjfEI5RA7S/53Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTest.POM\\AutomatedTest.POM.csproj",
+  "projectFilePath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTest.POM\\AutomatedTest.POM.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DamjanDosen\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\DamjanDosen\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "exASCGfdfNLWO6iZ3MslObLIk10ANduBkAqQ4GZ1pOPOlfpaaZDO4fbK/1Q8IgeBmFXHmY+QN7lQpyrP1BG9AA==",
+  "dgSpecHash": "AeNWxp1SojJX0bSNSCwWPqBXDOXybQ03XQKaDUUOemdkFX3AfMiewgAXH7ZXQIx9Wr+GLxHPKjiF8vXN8fIjtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTests.Common\\AutomatedTests.Common.csproj",
+  "projectFilePath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTests.Common\\AutomatedTests.Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

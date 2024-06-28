@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lkHbDNuzJyxr2uyV5wblnCLhrhlepKPH+WI/D53MwApZDxNSfbcDwLd5o/9BwY0Ze634aeRo6IuUoNtSeAt+mw==",
+  "dgSpecHash": "gT2PWz+H8HMeXFbdVaZudbsQUQKklReG2Gdlnuz75yll/HlMo4TMW3zHrREPwUbYmmqPjAb0a8buycgt9FwTXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTests.Tests\\AutomatedTests.Tests.csproj",
+  "projectFilePath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTests.Tests\\AutomatedTests.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DamjanDosen\\.nuget\\packages\\microsoft.codecoverage\\17.10.0\\microsoft.codecoverage.17.10.0.nupkg.sha512",
     "C:\\Users\\DamjanDosen\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

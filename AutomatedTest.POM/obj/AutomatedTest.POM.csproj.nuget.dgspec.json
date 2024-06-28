@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTest.POM\\AutomatedTest.POM.csproj": {}
+    "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTest.POM\\AutomatedTest.POM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTest.POM\\AutomatedTest.POM.csproj": {
+    "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTest.POM\\AutomatedTest.POM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTest.POM\\AutomatedTest.POM.csproj",
+        "projectUniqueName": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTest.POM\\AutomatedTest.POM.csproj",
         "projectName": "AutomatedTest.POM",
-        "projectPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTest.POM\\AutomatedTest.POM.csproj",
+        "projectPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTest.POM\\AutomatedTest.POM.csproj",
         "packagesPath": "C:\\Users\\DamjanDosen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTest.POM\\obj\\",
+        "outputPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTest.POM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DamjanDosen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTestsProject\\AutomatedTests.Framework.csproj": {
-                "projectPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTestsProject\\AutomatedTests.Framework.csproj"
+              "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTestsProject\\AutomatedTests.Framework.csproj": {
+                "projectPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTestsProject\\AutomatedTests.Framework.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTestsProject\\AutomatedTests.Framework.csproj": {
+    "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTestsProject\\AutomatedTests.Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTestsProject\\AutomatedTests.Framework.csproj",
+        "projectUniqueName": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTestsProject\\AutomatedTests.Framework.csproj",
         "projectName": "AutomatedTests.Framework",
-        "projectPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTestsProject\\AutomatedTests.Framework.csproj",
+        "projectPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTestsProject\\AutomatedTests.Framework.csproj",
         "packagesPath": "C:\\Users\\DamjanDosen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\AutomatedTestsProject\\obj\\",
+        "outputPath": "C:\\Users\\DamjanDosen\\Documents\\AutomatedTestsProject\\FemcareSelenium\\AutomatedTestsProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DamjanDosen\\AppData\\Roaming\\NuGet\\NuGet.Config",
