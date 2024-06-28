@@ -70,6 +70,9 @@ namespace Femcare.Selenium.Tests.TestCases
 		{
 			Assert.That(productCategoryPage.IsPeriodPantsRangeSliderDisplayed(), "Period pads range slider is to visible");
 		}
-
+		public void DevelopBranch()
+		{
+			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
+		}
 	}
 }
