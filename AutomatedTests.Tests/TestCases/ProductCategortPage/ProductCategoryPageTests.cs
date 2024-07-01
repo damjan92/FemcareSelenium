@@ -74,7 +74,7 @@ namespace Femcare.Selenium.Tests.TestCases
 		{
 			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
 		}
-		public void DevelopBranch2()
+		public void RenameFunc()
 		{
 			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
 		}
