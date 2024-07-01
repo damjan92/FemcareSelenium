@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
-namespace Femcare.POM
+namespace AutomatedTest.POM
 {
     public class TestSettings
     {

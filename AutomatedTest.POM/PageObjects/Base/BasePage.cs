@@ -1,8 +1,8 @@
-﻿using Femcare.Selenium.Framework.Core;
-using Femcare.Selenium.Framework.Extensions;
+﻿using AutomatedTests.Framework.Core;
+using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
 
-namespace Femcare.POM.PageObjects
+namespace AutomatedTest.POM.PageObjects
 {
     public abstract class BasePage
     {
