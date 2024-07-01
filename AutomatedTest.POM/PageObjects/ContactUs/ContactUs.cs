@@ -1,8 +1,9 @@
-﻿using Femcare.Selenium.Framework.Core;
-using Femcare.Selenium.Framework.Extensions;
+﻿using AutomatedTests.Framework.Core;
+using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using AutomatedTest.PageObjects;
 
-namespace Femcare.POM.PageObjects
+namespace AutomatedTest.POM.PageObjects
 {
 
 	public class ContactUs : BaseMainPage

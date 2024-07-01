@@ -1,10 +1,8 @@
-﻿using AutomatedTests.Tests.TestData;
-using Femcare.POM.PageObjects;
-using Femcare.Selenium.Framework.Core;
-using Femcare.Selenium.Tests.TestCases;
+﻿using AutomatedTest.POM.PageObjects;
+using AutomatedTests.Framework.Core;
 using NUnit.Framework;
 
-namespace Femcare.Selenium.Tests.TestCases
+namespace AutomatedTests.Tests.TestCases
 {
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ExpertAdviceUrls))]
 	[Parallelizable]

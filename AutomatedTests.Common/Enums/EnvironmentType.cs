@@ -1,4 +1,4 @@
-﻿namespace Femcare.Common.Enums
+﻿namespace AutomatedTests.Common.Enums
 {
     public enum EnvironmentType
     {

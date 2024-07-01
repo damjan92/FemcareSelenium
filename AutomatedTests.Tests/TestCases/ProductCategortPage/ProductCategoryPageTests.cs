@@ -1,10 +1,8 @@
-﻿using AutomatedTests.Tests.TestData;
-using Femcare.POM.PageObjects;
-using Femcare.Selenium.Framework.Core;
-using Femcare.Selenium.Tests.TestCases;
+﻿using AutomatedTest.POM.PageObjects;
+using AutomatedTests.Framework.Core;
 using NUnit.Framework;
 
-namespace Femcare.Selenium.Tests.TestCases
+namespace AutomatedTests.Tests.TestCases
 {
 	[TestFixtureSource(typeof(TestData), nameof(TestData.PcpUrls))]
 	[Parallelizable]
@@ -74,7 +72,7 @@ namespace Femcare.Selenium.Tests.TestCases
 		{
 			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
 		}
-		public void DevelopBranch2()
+		public void RenameFunc()
 		{
 			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
 		}
