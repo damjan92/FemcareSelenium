@@ -1,3 +1,5 @@
 .vsdx
 vs
 *.vsidx
+*.manifest
+*.testlog
