@@ -20,3 +20,15 @@ C:\Users\DamjanDosen\Documents\AutomatedTestsProject\AutomatedTests.Common\obj\D
 C:\Users\DamjanDosen\Documents\AutomatedTestsProject\AutomatedTests.Common\obj\Debug\net8.0\refint\AutomatedTests.Common.dll
 C:\Users\DamjanDosen\Documents\AutomatedTestsProject\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.pdb
 C:\Users\DamjanDosen\Documents\AutomatedTestsProject\AutomatedTests.Common\obj\Debug\net8.0\ref\AutomatedTests.Common.dll
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\bin\Debug\net8.0\AutomatedTests.Common.deps.json
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\bin\Debug\net8.0\AutomatedTests.Common.dll
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\bin\Debug\net8.0\AutomatedTests.Common.pdb
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.AssemblyInfoInputs.cache
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.AssemblyInfo.cs
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.csproj.CoreCompileInputs.cache
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.sourcelink.json
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.dll
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\refint\AutomatedTests.Common.dll
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\AutomatedTests.Common.pdb
+C:\Users\DamjanDosen\Documents\AutomatedTestsProject\FemcareSelenium\AutomatedTests.Common\obj\Debug\net8.0\ref\AutomatedTests.Common.dll
