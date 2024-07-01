@@ -1,2 +1,4 @@
 
 *.vsidx
+.vs/AutomatedTestsProject/v17/TestStore/0/008.testlog
+*.testlog
