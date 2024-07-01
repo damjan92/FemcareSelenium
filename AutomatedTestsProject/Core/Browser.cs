@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 
-namespace Femcare.Selenium.Framework.Core
+namespace AutomatedTests.Framework.Core
 {
     public class Browser
     {

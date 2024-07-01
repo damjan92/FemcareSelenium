@@ -1,4 +1,4 @@
-﻿namespace AutomatedTests.Tests.TestData
+﻿namespace AutomatedTests.Tests
 {
     public static class TestData
     {

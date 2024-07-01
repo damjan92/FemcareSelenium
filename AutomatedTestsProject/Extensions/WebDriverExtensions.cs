@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 
-namespace Femcare.Selenium.Framework.Extensions
+namespace AutomatedTests.Framework.Extensions
 {
     public static class WebDriverExtensions
     {

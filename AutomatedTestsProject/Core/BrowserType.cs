@@ -1,4 +1,4 @@
-﻿namespace Femcare.Selenium.Framework.Core
+﻿namespace AutomatedTests.Framework.Core
 {
     public enum BrowserType
     {

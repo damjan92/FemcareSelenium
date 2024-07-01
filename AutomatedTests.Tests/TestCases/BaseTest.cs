@@ -1,10 +1,10 @@
-﻿using Femcare.Common.Enums;
-using Femcare.POM;
-using Femcare.Selenium.Framework.Core;
+﻿using AutomatedTests.Common.Enums;
+using AutomatedTest.POM;
+using AutomatedTests.Framework.Core;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 
-namespace Femcare.Selenium.Tests.TestCases
+namespace AutomatedTests.Tests.TestCases
 {
     public abstract class BaseTest
     {
