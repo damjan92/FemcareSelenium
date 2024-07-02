@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutomatedTest.POM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15e9164dac33541696eb2d2b2abeaaacf1064b31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0edbdb45f14c98e26cfc64b9aebdcc2dec0b2804")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutomatedTest.POM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutomatedTest.POM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
