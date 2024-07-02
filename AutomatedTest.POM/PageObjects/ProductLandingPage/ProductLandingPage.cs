@@ -58,6 +58,15 @@ namespace AutomatedTest.POM.PageObjects.ProductLandingPage
 		}
 		
 		public bool IsIndicatorDisplayed() => IndicatorWebElement.Displayed;
+		public bool IsIndicatorRagneSliderDisplayed() => IndicatorRagneSliderWebElement.Displayed;
+		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
+		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
+		public bool IsFilterByButtonDisplayed() => FilterByButtonWebElement.Displayed;
+		public bool IsSortButtonDisplayed() => SortButtonWebElement.Displayed;
+		public bool IsExploreAllProductsDisplayed() => ExploreAllProductsWebElement.Displayed;
+		public bool IsFacebookIconDisplayed() => FacebookIconWebElement.Displayed;
+		public bool IsTwitterIconDisplayed() => TwitterIconWebElement.Displayed;
+
 
 
 		#endregion
