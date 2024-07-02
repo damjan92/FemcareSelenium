@@ -1,4 +1,4 @@
-﻿using AutomatedTest.POM.PageObjects;
+﻿using AutomatedTest.POM.PageObjects.ProductLandingPage;
 using AutomatedTests.Framework.Core;
 using NUnit.Framework;
 
