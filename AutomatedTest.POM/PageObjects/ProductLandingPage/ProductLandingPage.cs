@@ -56,7 +56,8 @@ namespace AutomatedTest.POM.PageObjects.ProductLandingPage
 		public ProductLandingPage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
-
+		
+		public bool IsIndicatorDisplayed() => IndicatorWebElement.Displayed;
 
 
 		#endregion
