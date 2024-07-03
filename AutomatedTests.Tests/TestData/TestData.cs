@@ -25,11 +25,17 @@
 			"https://www.bodyform.co.uk/break-taboos/discover/expert-advice/",			
 			"https://www.nana.fr/brisez-les-tabous/decouvrir/demandez-expert/"
 		};
-		public static string[] PcpUrls =
+		public static string[] ProductCategoryPageUrls =
 		{
 			"https://www.bodyform.co.uk/shop-our-products/available-in-store/",
 			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/",
 			"https://www.nana.fr/achetez-nos-produits/disponible-en-magasin/"
+		};
+		public static string[] ProdcutLandingPageUrls =
+		{
+			"https://www.bodyform.co.uk/shop-our-products/available-in-store/ultra-towels/",
+			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/",
+			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/bindor/"
 		};
 	}
 }

@@ -3,7 +3,7 @@ using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
 
-namespace AutomatedTest.POM.PageObjects.ProductLandingPage
+namespace AutomatedTest.POM.PageObjects
 {
 	public class ProductCategoryPage : BaseMainPage
 	{

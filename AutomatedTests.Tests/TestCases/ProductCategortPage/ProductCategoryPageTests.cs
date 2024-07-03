@@ -1,10 +1,10 @@
-﻿using AutomatedTest.POM.PageObjects.ProductLandingPage;
+﻿using AutomatedTest.POM.PageObjects;
 using AutomatedTests.Framework.Core;
 using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
-	[TestFixtureSource(typeof(TestData), nameof(TestData.PcpUrls))]
+	[TestFixtureSource(typeof(TestData), nameof(TestData.ProductCategoryPageUrls))]
 	[Parallelizable]
 	public class ProductCategoryPageTests(string websiteUrl) : BaseTest
 	{

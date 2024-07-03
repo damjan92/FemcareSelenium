@@ -1,14 +1,9 @@
 ﻿using AutomatedTest.PageObjects;
 using AutomatedTests.Framework.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
 using AutomatedTests.Framework.Extensions;
 
-namespace AutomatedTest.POM.PageObjects.ProductLandingPage
+namespace AutomatedTest.POM.PageObjects
 {
 	public class ProductLandingPage : BaseMainPage
 	{
@@ -39,7 +34,6 @@ namespace AutomatedTest.POM.PageObjects.ProductLandingPage
 		#endregion
 
 		#region WebElements
-
 		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator);
 		IWebElement IndicatorRagneSliderWebElement => Driver.FindElementWait(IndicatorRagneSlider);
 		IWebElement TitleWebElement => Driver.FindElementWait(Title);
@@ -66,8 +60,6 @@ namespace AutomatedTest.POM.PageObjects.ProductLandingPage
 		public bool IsExploreAllProductsDisplayed() => ExploreAllProductsWebElement.Displayed;
 		public bool IsFacebookIconDisplayed() => FacebookIconWebElement.Displayed;
 		public bool IsTwitterIconDisplayed() => TwitterIconWebElement.Displayed;
-
-
 
 		#endregion
 	}
