@@ -406,3 +406,5 @@ FodyWeavers.xsd
 *.v2
 *.v17/
 *.bin/
+.vs/AutomatedTestsProject/v17/.suo
+.vs/
