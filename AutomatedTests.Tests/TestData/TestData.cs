@@ -37,5 +37,11 @@
 			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/",
 			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/bindor/"
 		};
+		public static string[] ProductDetailPageUrls =
+		{
+			"https://www.bodyform.co.uk/shop-our-products/available-in-store/ultra-towels/ultra-towels-normal-wings/",
+			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/saba-intimawear-bikini/",
+			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/bindor/ultra-thin-normal-wing/"
+		};
 	}
 }
