@@ -55,7 +55,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Construktor and methods
 
-		public ProductDetailPage(Browser browser, string url = "") : base(browser)
+		public ProductDetailPage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
 
