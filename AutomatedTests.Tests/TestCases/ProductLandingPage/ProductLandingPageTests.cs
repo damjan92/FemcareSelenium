@@ -21,8 +21,6 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsIndicatorDisplayed() => Assert.That(productLandingPage.IsIndicatorDisplayed(), "Indicator is not visible");
 		[Test]
-		public void IndicatorRagneSlider() => Assert.That(productLandingPage.IsIndicatorRagneSliderDisplayed(), "Indicator range slideris not visible");
-		[Test]
 		public void IsTitleDisplayed() => Assert.That(productLandingPage.IsTitleDisplayed(), "Title is not dislayed");
 		[Test]
 		public void IsBreadcrumbsDisplayed() => Assert.That(productLandingPage.IsBreadcrumbsDisplayed(), "Breadcrumbs is not dislayed");

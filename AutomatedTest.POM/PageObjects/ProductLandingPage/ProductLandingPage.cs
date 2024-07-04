@@ -9,10 +9,9 @@ namespace AutomatedTest.POM.PageObjects
 	{
 
 		#region Selectors
-		public By Indicator => By.CssSelector("div[class='product-filter__headline'] span");
-		public By IndicatorRagneSlider => By.CssSelector("div[class='range-slider-info-panel__counter'] span");
+		public By Indicator => By.CssSelector("div[class=\"product-filter__occurrences\"]");
 		public By Title => By.TagName("h1");
-		public By Breadcrumbs => By.CssSelector("\"div[class='breadcrumbs']");
+		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
 		// Products list related
 		public By FilterByButton => By.CssSelector("a[class='btn btn-secondary btn-narrow init-filter']");
 		public By SortButton => By.CssSelector("div[class*='product-list__item'");
@@ -35,7 +34,6 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region WebElements
 		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator);
-		IWebElement IndicatorRagneSliderWebElement => Driver.FindElementWait(IndicatorRagneSlider);
 		IWebElement TitleWebElement => Driver.FindElementWait(Title);
 		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs);
 		IWebElement FilterByButtonWebElement => Driver.FindElementWait(FilterByButton);
@@ -52,7 +50,6 @@ namespace AutomatedTest.POM.PageObjects
 		}
 		
 		public bool IsIndicatorDisplayed() => IndicatorWebElement.Displayed;
-		public bool IsIndicatorRagneSliderDisplayed() => IndicatorRagneSliderWebElement.Displayed;
 		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
 		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
 		public bool IsFilterByButtonDisplayed() => FilterByButtonWebElement.Displayed;

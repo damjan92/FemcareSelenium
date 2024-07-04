@@ -7,8 +7,9 @@ namespace AutomatedTests.Framework.Extensions
     public static class WebDriverExtensions
     {
         private static readonly TimeSpan DefaultFindElementTimeout = TimeSpan.FromSeconds(10);
-       
-        public static bool WaitUntil(this IWebDriver webDriver, Func<IWebDriver, bool> func, int timeoutInSeconds = 5)
+
+		
+		public static bool WaitUntil(this IWebDriver webDriver, Func<IWebDriver, bool> func, int timeoutInSeconds = 5)
         {
             var wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(timeoutInSeconds));
             return wait.Until(func);
@@ -58,7 +59,34 @@ namespace AutomatedTests.Framework.Extensions
             }
         }
 
-        public static IList<IWebElement> FindElementsWait(this IWebDriver driver, By by, int timeoutSeconds = 5)
+        /// <summary>
+        /// Check for errors on page
+        /// </summary>
+        /// <param name="webElement"></param>
+        /// <param name="Driver"></param>
+        /// <returns></returns>
+		public static bool CheckForErrors(By webElement, IWebDriver Driver)
+		{
+			try
+			{
+				IWebElement element = Driver.FindElement(webElement);
+				if (!element.Displayed)
+				{
+					Console.WriteLine("[SuccesMessage] Element is not displayed");
+					return true;
+				}
+				else
+				{
+					Console.WriteLine("[ErrorMessage] Element is displayed");
+				}
+			}
+			catch
+			{
+			}
+			return false;
+		}
+
+		public static IList<IWebElement> FindElementsWait(this IWebDriver driver, By by, int timeoutSeconds = 5)
         {
             try
             {
