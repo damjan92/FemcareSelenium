@@ -40,7 +40,7 @@ namespace AutomatedTest.POM.PageObjects
 
         public override bool IsPageLoaded() => RootElement.Text.ToLowerInvariant().Contains("events");
         public bool IsNavigationBarLoaded() => NavigationBarWebElement.Displayed;
-		public bool IsErrorMessageDisplayed() => WebDriverExtensions.CheckForErrors(ErrorMessage, Driver);
+		public bool IsErrorMessageDisplayed() => WebDriverExtensions.IsElementDisplayedBy(Driver, ErrorMessage);
 		public bool IsBodyformNavIconDisplayed() => BodyformNavIconWebElement.Displayed;
 		public bool IsSearchIconDisplayed() => SearchIconWebElement.Displayed;
 		public bool IsEssityFooterLogoDisplayed() => EssityFooterLogoWebElement.Displayed;

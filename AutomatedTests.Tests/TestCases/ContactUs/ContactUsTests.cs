@@ -54,5 +54,7 @@ namespace AutomatedTests.Tests.TestCases
 		{
 			Assert.That(contactUs.IsSendButtonDisplayed(), "Send button is not loaded!");
 		}
+		[Test]
+		public void AreCheckBoxesDisplayed() => Assert.That(contactUs.AreCheckBoxesDisplayed(), "Check boxes are not visible");
 	}
 }

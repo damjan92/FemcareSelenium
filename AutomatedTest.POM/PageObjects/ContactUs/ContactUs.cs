@@ -20,7 +20,7 @@ namespace AutomatedTest.POM.PageObjects
 		public By TextAreaMessage => By.Id("Message");
 		public By ValidationErrorMessage => By.CssSelector("div[class='validation-error']");
 		//CheckBox
-		IList<IWebElement> CheckBoxes => Driver.FindElements(By.CssSelector("div[class*='form-group--checkbox']"));
+		public By CheckBoxes => By.CssSelector("div[class*='form-group--checkbox']");
 		//ReCaptcha and Send Button
 		public By ReCaptcha => By.CssSelector("div[class='g-recaptcha']");
 		public By SendButton => By.CssSelector("form[class*='custom-form'] button");
@@ -39,6 +39,7 @@ namespace AutomatedTest.POM.PageObjects
 		public IWebElement ValidationErrorMessageWebElement => Driver.FindElementWait(ValidationErrorMessage);
 		public IWebElement ReCaptchaWebElement => Driver.FindElementWait(ReCaptcha);
 		public IWebElement SendButtonWebElement => Driver.FindElementWait(SendButton);
+		public IList<IWebElement> CheckBoxesWebElements => Driver.FindElementsWait(CheckBoxes);
 
 		#endregion
 
@@ -60,6 +61,15 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsValidationErrorMessageDisplayed() => ValidationErrorMessageWebElement.Displayed;
 		public bool IsRecaptchaDisplayed() => ReCaptchaWebElement.Displayed;
 		public bool IsSendButtonDisplayed() => SendButtonWebElement.Displayed;
+		public bool AreCheckBoxesDisplayed()
+		{
+			foreach (var checkbox in CheckBoxesWebElements)
+			{
+                Console.WriteLine("checkbox is visible");
+                return checkbox.Displayed;
+			}
+			return false;
+		}
 		#endregion
 	}
 }

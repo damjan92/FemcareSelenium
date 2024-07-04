@@ -59,33 +59,6 @@ namespace AutomatedTests.Framework.Extensions
             }
         }
 
-        /// <summary>
-        /// Check for errors on page
-        /// </summary>
-        /// <param name="webElement"></param>
-        /// <param name="Driver"></param>
-        /// <returns></returns>
-		public static bool CheckForErrors(By webElement, IWebDriver Driver)
-		{
-			try
-			{
-				IWebElement element = Driver.FindElement(webElement);
-				if (!element.Displayed)
-				{
-					Console.WriteLine("[SuccesMessage] Element is not displayed");
-					return true;
-				}
-				else
-				{
-					Console.WriteLine("[ErrorMessage] Element is displayed");
-				}
-			}
-			catch
-			{
-			}
-			return false;
-		}
-
 		public static IList<IWebElement> FindElementsWait(this IWebDriver driver, By by, int timeoutSeconds = 5)
         {
             try
