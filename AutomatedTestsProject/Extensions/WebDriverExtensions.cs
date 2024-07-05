@@ -143,7 +143,7 @@ namespace AutomatedTests.Framework.Extensions
 			try
 			{
 				webElement.Click();
-                Console.WriteLine("Element is clicked");
+                Console.WriteLine($"Element[{webElement.Text}]Element is clicked");
                 return true;
 			}
 			catch (Exception ex)
