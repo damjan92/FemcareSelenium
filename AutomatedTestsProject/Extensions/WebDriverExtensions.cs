@@ -135,6 +135,22 @@ namespace AutomatedTests.Framework.Extensions
                 return false;
             }
         }
+        /// <summary>
+        /// Click the element by a BY locator
+        /// </summary>
+        public static bool ClickTheWebElement(IWebElement webElement)
+        {
+			try
+			{
+				webElement.Click();
+                Console.WriteLine("Element is clicked");
+                return true;
+			}
+			catch (Exception ex)
+			{
+				return false;
+			}
+		}
 
         public static void SwitchToTab(this IWebDriver webDriver, int tab)
         {

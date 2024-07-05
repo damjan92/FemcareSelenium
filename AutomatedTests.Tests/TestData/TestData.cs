@@ -43,5 +43,10 @@
 			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/saba-intimawear-bikini/",
 			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/bindor/ultra-thin-normal-wing/"
 		};
+		public static string[] AskTheExpertUrls =
+		{
+			"https://www.libresse.se/vi-bryter-tabun/tips-och-rad/fraga-var-barmorska/",
+			"https://www.saba.com.mx/rompiendo-tabues/mito-y-verdad/consejos-de-la-experta/"
+		};
 	}
 }
