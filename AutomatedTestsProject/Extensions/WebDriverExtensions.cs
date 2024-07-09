@@ -136,7 +136,7 @@ namespace AutomatedTests.Framework.Extensions
             }
         }
         /// <summary>
-        /// Click the element by a BY locator
+        /// Click the element by a IWebElement locator
         /// </summary>
         public static bool ClickTheWebElement(IWebElement webElement)
         {
@@ -148,7 +148,8 @@ namespace AutomatedTests.Framework.Extensions
 			}
 			catch (Exception ex)
 			{
-				return false;
+                Console.WriteLine(ex.Message);
+                return false;
 			}
 		}
 

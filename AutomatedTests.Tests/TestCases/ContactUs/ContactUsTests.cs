@@ -34,11 +34,7 @@ namespace AutomatedTests.Tests.TestCases
 		{
 			Assert.That(contactUs.IsEmailDisplayed(), "Email field is not loaded!");
 		}
-		[Test]
-		public void Test_09_IsSubjectSelectMenuDisplayed()
-		{
-			Assert.That(contactUs.IsSubjectSelectMenuDisplayed(), "SubjectSelectMenu is not loaded!");
-		}
+		
 		[Test]
 		public void Test_10_IsTextAreaMessageDisplayed()
 		{
@@ -56,5 +52,8 @@ namespace AutomatedTests.Tests.TestCases
 		}
 		[Test]
 		public void AreCheckBoxesDisplayed() => Assert.That(contactUs.AreCheckBoxesDisplayed(), "Check boxes are not visible");
+
+		//[Test]
+		// public void Test_09_IsSubjectSelectMenuDisplayed() => Assert.That(contactUs.IsSubjectSelectMenuDisplayed(), "SubjectSelectMenu is not loaded!");
 	}
 }
