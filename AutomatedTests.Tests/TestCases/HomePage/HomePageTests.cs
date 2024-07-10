@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
-    [TestFixtureSource(typeof(TestData), nameof(TestData.WebsiteUrls))]
+    [TestFixtureSource(typeof(TestData), nameof(TestData.HomePageUrls))]
     [Parallelizable]
     public class HomePageTests(string websiteUrl) : BaseTest
     {
