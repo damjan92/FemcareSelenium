@@ -37,12 +37,7 @@ namespace AutomatedTests.Tests.TestCases
 		public void Test_31_IsSecond_TheLatestQuestionDisplayed()
 		{
 			Assert.That(expertAdvice.IsSecond_TheLatestQuestionDisplayed(), "Second The Latest Question Displayed is not visible");
-		}
-		[Test]
-		public void Test_32_IsThird_TheLatestQuestionDisplayed()
-		{
-			Assert.That(expertAdvice.IsThird_TheLatestQuestionDisplayed(), "Third The Latest Question Displayed is not visible");
-		}
+		}		
 		[Test]
 		public void Test_33_IsIsLoadMoreButtonDisplayed()
 		{

@@ -27,7 +27,6 @@
 		public static string[] ContactUsUrls =
 	    {
 			"https://www.bodyform.co.uk/contact-us/",
-			"https://www.nana.fr/contactez-nous/",
 			"https://www.saba.com.mx/contactanos/",
 			"https://www.libresse.no/kontakt-oss/",
 			"https://www.libresse.gr/contact-us/",
@@ -42,6 +41,10 @@
 			"https://www.libresse.ro/contacteaza-ne/",
 			"https://www.libresse.rs/kontaktiraj-nas/",
 			"https://www.libresse.ua/contact-us/"
+		};
+		public static string[] CoherisContactUsUrls =
+		{
+			"https://www.nana.fr/contactez-nous/"
 		};
 		public static string[] PeriodTrackerUrls =
 		{
