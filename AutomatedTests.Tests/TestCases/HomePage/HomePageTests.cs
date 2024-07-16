@@ -1,6 +1,8 @@
 ﻿using AutomatedTest.POM.PageObjects;
 using AutomatedTests.Framework.Core;
+using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
+using System.Configuration;
 
 namespace AutomatedTests.Tests.TestCases
 {
@@ -17,6 +19,7 @@ namespace AutomatedTests.Tests.TestCases
             {
                 homePage = new HomePage(Browser, websiteUrl);
             }
+
         }
 
         [Test]
