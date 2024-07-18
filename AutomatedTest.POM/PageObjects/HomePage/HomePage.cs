@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -22,7 +23,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Web elements
 
-		public IWebElement BodyformNavIconWebElement => Driver.FindElementWait(BodyformNavIcon);
+		public IWebElement BodyformNavIconWebElement => Driver.FindElementWait(BodyformNavIcon, ExpectedConditions.ElementToBeClickable(BodyformNavIcon));
         public IWebElement ErrorMessageWebElement => Driver.FindElementWait(ErrorMessage);
 		public IWebElement NavigationBarWebElement => Driver.FindElementWait(NavigationBar);
 		public IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon);

@@ -27,8 +27,7 @@ namespace AutomatedTests.Framework.Extensions
         {
             try
             {
-                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
-
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));                
                 return condition != null ? wait.Until(condition) : wait.Until(ExpectedConditions.ElementExists(by));
 
             }

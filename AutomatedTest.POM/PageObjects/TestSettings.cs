@@ -50,12 +50,7 @@ namespace AutomatedTest.POM
         }
 
         public static TestSettings GetTestSettings(IConfigurationRoot configuration)
-        {
-            if (femcareTestSettings != null)
-            {
-                throw new InvalidOperationException("Test Settings are already created.");
-            }
-
+        {            
             femcareTestSettings = new TestSettings(configuration);
             return femcareTestSettings;
         }

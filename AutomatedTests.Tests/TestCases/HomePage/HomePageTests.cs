@@ -30,7 +30,7 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void Test_02_ErrorMessage()
 		{
-			Assert.That(homePage.IsErrorMessageDisplayed(), Is.False, "Navigation bar is loaded!");
+			Assert.That(homePage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		}		
 		[Test]
 		public void Test_04_IsSearchIconDisplayed()
