@@ -1,0 +1,355 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="AutomatedTests.Tests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="AutomatedTests.Tests.TestCases" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="ProductDetailPageTests(&quot;https://www.libresse.se/shoppa-vara-p...&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsBreadcrumbsDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsBreadcrumbsDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsButtonProductNewsletterDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsButtonProductNewsletterDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsCardsPanelDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsCardsPanelDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsFacebookIconDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsFacebookIconDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsFlowMeterDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsFlowMeterDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsProductDescriptionDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsProductDescriptionDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsProductImageSwipperDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsProductImageSwipperDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsProductNewsletterDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsProductNewsletterDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsProductRetailersDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsProductRetailersDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsReasonToLoveDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsReasonToLoveDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductDetailPageTests.IsTitleOfProductDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsTitleOfProductDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="ProductCategoryPageTests(&quot;https://www.libresse.se/shoppa-vara-p...&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsBreadcrumbsDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsBreadcrumbsDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsMaxiTowelsIndicatorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsMaxiTowelsIndicatorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsMaxiTowelsRangeSliderDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsMaxiTowelsRangeSliderDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsPantyLinersIndicatorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsPantyLinersIndicatorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsPantyLinersRangeSliderDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsPantyLinersRangeSliderDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsPeriodPadsIndicatorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsPeriodPadsIndicatorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsPeriodPadsRangeSliderDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsPeriodPadsRangeSliderDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsPeriodPantsIndicatorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsPeriodPantsIndicatorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsPeriodPantsRangeSliderDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsPeriodPantsRangeSliderDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductCategoryPageTests.IsTitleDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsTitleDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="AskTheExpertTests(&quot;https://www.libresse.se/vi-bryter-tab...&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsAskTheExpertFormVisible" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsAskTheExpertFormVisible" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsAskTheExpertWindowDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsAskTheExpertWindowDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsAteSubHeadingDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsAteSubHeadingDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertAnswersSubHeadingDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertAnswersSubHeadingDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertBodyDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertBodyDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertFormToggleButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertFormToggleButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertHeadlineDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertHeadlineDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsLoadMoreButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsLoadMoreButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsTitleDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsTitleDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="PeriodTrackerTests(&quot;https://www.libresse.se/menskalender/&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_13_IsTitleDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_13_IsTitleDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_14_IsPeriodTrackerContainerDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_14_IsPeriodTrackerContainerDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_15_IsInputFieldsDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_15_IsInputFieldsDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_16_IsDateSelectorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_16_IsDateSelectorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_17_IsDateSelectorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_17_IsDateSelectorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_18_IsDurationSelectorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_18_IsDurationSelectorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_19_IsCycleSelectorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_19_IsCycleSelectorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.PeriodTrackerTests.Test_20_IsTrackMyPeriodButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_20_IsTrackMyPeriodButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="ProductLandingPageTests(&quot;https://www.libresse.se/shoppa-vara-p...&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsBreadcrumbsDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsBreadcrumbsDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsExploreAllProductsDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExploreAllProductsDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsFacebookIconDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsFacebookIconDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsFilterByButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsFilterByButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsIndicatorDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsIndicatorDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsSortButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsSortButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsTitleDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsTitleDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.ProductLandingPageTests.IsTwitterIconDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsTwitterIconDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="HomePageTests(&quot;https://www.libresse.se/&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.HomePageTests.IsBodyformNavIconDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsBodyformNavIconDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.HomePageTests.IsNavigationBarLoaded" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsNavigationBarLoaded" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.HomePageTests.Test_02_ErrorMessage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_02_ErrorMessage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.HomePageTests.Test_04_IsSearchIconDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_04_IsSearchIconDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.HomePageTests.Test_05_IsEssityFooterLogoDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test_05_IsEssityFooterLogoDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

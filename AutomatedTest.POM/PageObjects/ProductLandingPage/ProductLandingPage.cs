@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Core;
 using OpenQA.Selenium;
 using AutomatedTests.Framework.Extensions;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -9,7 +10,7 @@ namespace AutomatedTest.POM.PageObjects
 	{
 
 		#region Selectors
-		public By Indicator => By.CssSelector("div[class=\"product-filter__occurrences\"]");
+		public By Indicator => By.CssSelector("div[class='product-filter__occurrences'] span");
 		public By Title => By.TagName("h1");
 		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
 		// Products list related
@@ -33,7 +34,7 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region WebElements
-		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator);
+		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator, ExpectedConditions.ElementIsVisible(Indicator), 3);
 		IWebElement TitleWebElement => Driver.FindElementWait(Title);
 		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs);
 		IWebElement FilterByButtonWebElement => Driver.FindElementWait(FilterByButton);
@@ -41,6 +42,7 @@ namespace AutomatedTest.POM.PageObjects
 		IWebElement ExploreAllProductsWebElement => Driver.FindElementWait(ExploreAllProducts);
 		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon);
 		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon);
+		IList<IWebElement> ListOfProducts => Driver.FindElementsWait(ProductList);
 
 		#endregion
 
@@ -57,7 +59,8 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsExploreAllProductsDisplayed() => ExploreAllProductsWebElement.Displayed;
 		public bool IsFacebookIconDisplayed() => FacebookIconWebElement.Displayed;
 		public bool IsTwitterIconDisplayed() => TwitterIconWebElement.Displayed;
-
+		public int GetIndicatorNumber() => WebDriverExtensions.GetIndicatorNumberOfProducts(IndicatorWebElement);
+		public int GetNumberOfProducts() => WebDriverExtensions.GetNumberOfProducts(ListOfProducts);
 		#endregion
 	}
 }

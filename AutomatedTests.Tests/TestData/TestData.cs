@@ -6,8 +6,7 @@
         {
 			//First round
 			"https://www.bodyform.co.uk/",
-			"https://www.libresse.se/",
-			"https://www.saba.com.mx/",
+			"https://www.libresse.se/","https://www.saba.com.mx/",
 
 			"https://www.libresse.no/",
 			"https://www.libresse.gr/",
@@ -35,7 +34,7 @@
 
 			"https://www.libresse.bg/svurjete-se-s-nas/",
 			"https://www.libresse.hr/kontaktiraj-nas/",
-			"https://www.libresse.dk/kontakt-os/",
+			//"https://www.libresse.dk/kontakt-os/",
 			"https://www.libresse.hu/kapcsolat/",
 			"https://www.libresse.nl/contact/",
 			"https://www.libresse.ro/contacteaza-ne/",

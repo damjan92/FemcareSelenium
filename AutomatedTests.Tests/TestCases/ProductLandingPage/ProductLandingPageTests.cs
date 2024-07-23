@@ -34,5 +34,8 @@ namespace AutomatedTests.Tests.TestCases
 		public void IsFacebookIconDisplayed() => Assert.That(productLandingPage.IsFacebookIconDisplayed(), "Facebook icon is not dislayed");
 		[Test]
 		public void IsTwitterIconDisplayed() => Assert.That(productLandingPage.IsTwitterIconDisplayed(), "Facebook icon is not dislayed");
+		[Test]
+		public void IsIndicatorNumberIsCorrect() => 
+			Assert.That(productLandingPage.GetIndicatorNumber(), Is.EqualTo(productLandingPage.GetNumberOfProducts()), "The number are not the same");
 	}
 }

@@ -9,6 +9,9 @@ namespace AutomatedTests.Framework.Extensions
         private static readonly TimeSpan DefaultFindElementTimeout = TimeSpan.FromSeconds(10);
 
 		
+        /// <summary>
+        /// Wait Until function
+        /// </summary>       
 		public static bool WaitUntil(this IWebDriver webDriver, Func<IWebDriver, bool> func, int timeoutInSeconds = 5)
         {
             var wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(timeoutInSeconds));
@@ -21,14 +24,27 @@ namespace AutomatedTests.Framework.Extensions
             return wait.Until(func);
         }
 
+        /// <summary>
+        /// Find Element Wait - ExpectedCondition
+        /// </summary>
         public static IWebElement FindElementWait(
             this IWebDriver driver,
             By by, Func<IWebDriver, IWebElement> condition = null, int timeoutInSeconds = 5)
         {
             try
             {
-                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));                
-                return condition != null ? wait.Until(condition) : wait.Until(ExpectedConditions.ElementExists(by));
+                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
+                // return condition != null ? wait.Until(condition) : wait.Until(ExpectedConditions.ElementExists(by));
+                if (condition != null)
+                {
+                    Console.WriteLine($"Element: [{by.Criteria}] is displayed");
+                    return wait.Until(condition);
+                }
+                else
+                {
+                    Console.WriteLine($"Element[ExpectedCondition]: [{by.Criteria}] is displayed");
+                    return wait.Until(ExpectedConditions.ElementExists(by));
+                }
 
             }
             catch (Exception e)
@@ -58,6 +74,9 @@ namespace AutomatedTests.Framework.Extensions
             }
         }
 
+        /// <summary>
+        /// Find Elmements
+        /// </summary>    
 		public static IList<IWebElement> FindElementsWait(this IWebDriver driver, By by, int timeoutSeconds = 5)
         {
             try
@@ -74,6 +93,25 @@ namespace AutomatedTests.Framework.Extensions
             catch (Exception e)
             {
                 throw new Exception($"No such elements with selector [{by.Criteria}]");
+            }
+        }
+        public static bool AreElementsDisplayed(IList<IWebElement> webElements)
+        {
+            try
+            {
+                if (!webElements.Any())
+                {
+                    Console.WriteLine("");
+                    return false;
+                }
+                foreach (var item in webElements)
+                {
+                    if (item.Displayed == true)
+                    {
+                        Console.WriteLine( "Elements is displayed");
+                    }
+                }
+                return true;
             }
         }
 
@@ -116,24 +154,12 @@ namespace AutomatedTests.Framework.Extensions
             }
             catch (NoSuchElementException)
             {
+                Console.WriteLine($"There is not such a element: {by.Criteria}");
                 return false;
             }
         }
 
-        ///<summary>
-        ///Generic method to check if an element defined by a BY locator is displayed on the current screen view - using selenium.
-        ///</summary>
-        public static bool IsElementDisplayedBy(this IWebDriver webDriver, By by)
-        {
-            try
-            {
-                return webDriver.FindElementWait(by).Displayed;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
+       
         /// <summary>
         /// Click the element by a IWebElement locator
         /// </summary>
@@ -152,7 +178,58 @@ namespace AutomatedTests.Framework.Extensions
 			}
 		}
 
-        public static void SwitchToTab(this IWebDriver webDriver, int tab)
+		/// <summary>
+		/// Return the indicator number
+		/// </summary>
+        public static int GetIndicatorNumberOfProducts(IWebElement webElement)
+        {
+			try
+			{                		
+				if (webElement != null)
+				{
+					Console.WriteLine($"Number is : [{int.Parse(webElement.Text)}]");
+					return int.Parse(webElement.Text);
+				}
+				else
+				{					
+                    return 0;
+				}
+
+			}
+			catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                return 0; 
+            }
+        }
+		/// <summary>
+		/// Return the number of products
+		/// </summary>
+		public static int GetNumberOfProducts(IList<IWebElement> webElement)
+		{
+			try
+			{
+				if (webElement != null)
+				{
+                    Console.WriteLine($"Number is : [{webElement.Count}]");
+                    return  webElement.Count;
+				}
+				else
+				{
+                    Console.WriteLine("Cannot get total number");
+                    return 0;
+				}
+
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine($"Error: {e.Message}");
+				return 0;
+			}
+		}
+
+
+		public static void SwitchToTab(this IWebDriver webDriver, int tab)
         {
             webDriver.SwitchTo().Window(webDriver.WindowHandles[tab]);
         }
