@@ -146,5 +146,18 @@
 			"https://www.libresse.se/vi-bryter-tabun/tips-och-rad/fraga-var-barmorska/",
 			"https://www.saba.com.mx/rompiendo-tabues/mito-y-verdad/consejos-de-la-experta/"
 		};
+		public static string[] PromotionNewsletterUrls =
+{
+			"https://www.bodyform.co.uk/break-taboos/take-action/subscribe-newsletter/",
+			"https://www.mysaba.com/break-taboos/take-action/subscribe-newsletter/"
+		};
+		public static string[] NewsletterSubscriptionUrls =
+		{
+			"https://www.nana.fr/brisez-les-tabous/agissez/s-abonner-newsletter/"
+		};
+		public static string[] SearchUrls =
+		{
+			"https://www.bodyform.co.uk/"
+		};
 	}
 }

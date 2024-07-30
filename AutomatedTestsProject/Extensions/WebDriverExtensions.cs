@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
+using OpenQA.Selenium.Interactions;
 
 namespace AutomatedTests.Framework.Extensions
 {
@@ -73,10 +74,37 @@ namespace AutomatedTests.Framework.Extensions
                 throw new Exception($"No such element with selector [{by.Criteria}]");
             }
         }
+		/// <summary>
+		/// Send keys
+		/// </summary>        
+		public static void WaitForElementToSendKeys(this IWebDriver webDriver, By by, string data, int timeoutSeconds = 5)
+		{
+			try
+			{
+				var wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(timeoutSeconds));
+				Actions action = new(webDriver);
 
-        /// <summary>
-        /// Find Elmements
-        /// </summary>    
+
+				wait.Until(ExpectedConditions.ElementToBeClickable(by));
+				IWebElement webElement = by.FindElement(webDriver);
+
+				webElement.SendKeys(data);
+				webElement.SendKeys(Keys.Return);
+
+			}
+			catch (Exception)
+			{
+				throw new Exception($"Element is not clickable to send  keys [{by.Criteria}]");
+			}
+		}
+		public static void ConfirmSearch(this IWebDriver webDriver)
+		{
+			Actions action = new Actions(webDriver);
+			action.SendKeys(Keys.Return).Perform();
+		}
+		/// <summary>
+		/// Find Elmements
+		/// </summary>    
 		public static IList<IWebElement> FindElementsWait(this IWebDriver driver, By by, int timeoutSeconds = 5)
         {
             try
@@ -141,10 +169,10 @@ namespace AutomatedTests.Framework.Extensions
             {
                 return wait.Until(ExpectedConditions.ElementIsVisible(by)) != null;
             }
-            catch (Exception ex)
+            catch
             {
-                return false;
-            }
+				throw new ElementNotVisibleException($"Element is not visible with[{by.Criteria}]");
+			}
         }
 
         ///<summary>
@@ -175,10 +203,9 @@ namespace AutomatedTests.Framework.Extensions
                 Console.WriteLine($"Element[{webElement.Text}]Element is clicked");
                 return true;
 			}
-			catch (Exception ex)
+			catch
 			{
-                Console.WriteLine(ex.Message);
-                return false;
+				throw new ElementNotVisibleException($"Element [{webElement.Text}] is not clickable nor visible");
 			}
 		}
 
