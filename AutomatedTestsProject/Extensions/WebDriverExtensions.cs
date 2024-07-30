@@ -113,7 +113,11 @@ namespace AutomatedTests.Framework.Extensions
                 }
                 return true;
             }
-        }
+			catch
+			{
+				throw new Exception($"No such elements with selector");
+			}
+		}
 
         public static void WaitForElementToBeClickable(this IWebDriver webDriver, By by, int timeoutSeconds = 5)
         {
