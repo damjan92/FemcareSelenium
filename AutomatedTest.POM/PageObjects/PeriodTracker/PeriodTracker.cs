@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -32,20 +33,20 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web elements
-		IWebElement TitleWebElement => Driver.FindElementWait(Title);
-		IWebElement PeriodTrackerContainerWebElement => Driver.FindElementWait(PeriodTrackerContainer);
-		IWebElement InputFieldsWebElement => Driver.FindElementWait(InputFields);
-		IWebElement DateSelectorWebElement => Driver.FindElementWait(DateSelector);
-		IWebElement DurationSelectorWebElement => Driver.FindElementWait(DurationSelector);
-		IWebElement CycleSelectorWebElement => Driver.FindElementWait(CycleSelector);
-		IWebElement TrackMyPeriodButtonWebElement => Driver.FindElementWait(TrackMyPeriodButton);
-		IWebElement SubHeadingWebElement => Driver.FindElementWait(SubHeading);
-		IWebElement PeriodTrackerResultContainerWebElement => Driver.FindElementWait(PeriodTrackerResultContainer);
-		IWebElement PreviousNavButtonWebElement => Driver.FindElementWait(PreviousNavButton);
-		IWebElement NextNavButtonWebElement => Driver.FindElementWait(NextNavButton);
-		IWebElement ResultCalendarWebElement => Driver.FindElementWait(ResultCalendar);
-		IWebElement PeriodTrackerLegendWebElement => Driver.FindElement(PeriodTrackerLegend);
-		IWebElement RelatedProductsWebElement => Driver.FindElementWait(RelatedProducts);
+		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
+		IWebElement PeriodTrackerContainerWebElement => Driver.FindElementWait(PeriodTrackerContainer, ExpectedConditions.ElementIsVisible(PeriodTrackerContainer));
+		IWebElement InputFieldsWebElement => Driver.FindElementWait(InputFields, ExpectedConditions.ElementIsVisible(InputFields));
+		IWebElement DateSelectorWebElement => Driver.FindElementWait(DateSelector, ExpectedConditions.ElementIsVisible(DateSelector));
+		IWebElement DurationSelectorWebElement => Driver.FindElementWait(DurationSelector, ExpectedConditions.ElementIsVisible(DurationSelector));
+		IWebElement CycleSelectorWebElement => Driver.FindElementWait(CycleSelector, ExpectedConditions.ElementIsVisible(CycleSelector));
+		IWebElement TrackMyPeriodButtonWebElement => Driver.FindElementWait(TrackMyPeriodButton, ExpectedConditions.ElementToBeClickable(TrackMyPeriodButton));
+		IWebElement SubHeadingWebElement => Driver.FindElementWait(SubHeading, ExpectedConditions.ElementIsVisible(SubHeading));
+		IWebElement PeriodTrackerResultContainerWebElement => Driver.FindElementWait(PeriodTrackerResultContainer, ExpectedConditions.ElementIsVisible(PeriodTrackerResultContainer));
+		IWebElement PreviousNavButtonWebElement => Driver.FindElementWait(PreviousNavButton, ExpectedConditions.ElementIsVisible(PreviousNavButton));
+		IWebElement NextNavButtonWebElement => Driver.FindElementWait(NextNavButton, ExpectedConditions.ElementIsVisible(NextNavButton));
+		IWebElement ResultCalendarWebElement => Driver.FindElementWait(ResultCalendar, ExpectedConditions.ElementIsVisible(ResultCalendar));
+		IWebElement PeriodTrackerLegendWebElement => Driver.FindElementWait(PeriodTrackerLegend, ExpectedConditions.ElementIsVisible(PeriodTrackerLegend));
+		IWebElement RelatedProductsWebElement => Driver.FindElementWait(RelatedProducts, ExpectedConditions.ElementIsVisible(RelatedProducts));
 
 		#endregion
 
@@ -64,6 +65,8 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsDurationSelectorDisplayed() => DurationSelectorWebElement.Displayed;
 		public bool IsCycleSelectorDisplayed() => CycleSelectorWebElement.Displayed;
 		public bool IsTrackMyPeriodButtonDisplayed() => TrackMyPeriodButtonWebElement.Displayed;
+		//On Click
+		public bool IsTrackMyPeriodBtnClicked() => WebDriverExtensions.ClickTheWebElement(TrackMyPeriodButtonWebElement);
 		public bool IsSubHeadingDisplayed() => SubHeadingWebElement.Displayed;
 		public bool IsPeriodTrackerResultContainerDisplayed() => PeriodTrackerResultContainerWebElement.Displayed;
 		public bool IsPreviousNavButtonDisplayed() => PreviousNavButtonWebElement.Displayed;

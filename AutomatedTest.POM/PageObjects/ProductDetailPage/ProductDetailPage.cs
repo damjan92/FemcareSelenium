@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -33,23 +34,23 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web Elements
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs);
-		IWebElement TitleOfProductWebElement => Driver.FindElementWait(TitleOfProduct);
-		IWebElement BvRatingsWebElement => Driver.FindElementWait(BvRatings);
-		IWebElement FlowMeterWebElement => Driver.FindElementWait(FlowMeter);
-		IWebElement ProductDescriptionWebElement => Driver.FindElementWait(ProductDescription);
-		IWebElement ReasonToLoveWebElement => Driver.FindElementWait(ReasonToLove);
-		IWebElement ProductNewsletterWebElement => Driver.FindElementWait(ProductNewsletter);
-		IWebElement ButtonProductNewsletterWebElement => Driver.FindElementWait(ButtonProductNewsletter);
-		IWebElement ProductImageSwipperWebElement => Driver.FindElementWait(ProductImageSwipper);
-		IWebElement ProductRetailersWebElemenet => Driver.FindElementWait(ProductRetailers);
+		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
+		IWebElement TitleOfProductWebElement => Driver.FindElementWait(TitleOfProduct, ExpectedConditions.ElementIsVisible(TitleOfProduct));
+		IWebElement BvRatingsWebElement => Driver.FindElementWait(BvRatings, ExpectedConditions.ElementIsVisible(BvRatings));
+		IWebElement FlowMeterWebElement => Driver.FindElementWait(FlowMeter, ExpectedConditions.ElementIsVisible(FlowMeter));
+		IWebElement ProductDescriptionWebElement => Driver.FindElementWait(ProductDescription, ExpectedConditions.ElementIsVisible(ProductDescription));
+		IWebElement ReasonToLoveWebElement => Driver.FindElementWait(ReasonToLove, ExpectedConditions.ElementIsVisible(ReasonToLove));
+		IWebElement ProductNewsletterWebElement => Driver.FindElementWait(ProductNewsletter, ExpectedConditions.ElementIsVisible(ProductNewsletter));
+		IWebElement ButtonProductNewsletterWebElement => Driver.FindElementWait(ButtonProductNewsletter, ExpectedConditions.ElementIsVisible(ButtonProductNewsletter));
+		IWebElement ProductImageSwipperWebElement => Driver.FindElementWait(ProductImageSwipper, ExpectedConditions.ElementIsVisible(ProductImageSwipper));
+		IWebElement ProductRetailersWebElemenet => Driver.FindElementWait(ProductRetailers, ExpectedConditions.ElementIsVisible(ProductRetailers));
 		//Social icons
-		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon);
-		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon);
+		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon, ExpectedConditions.ElementToBeClickable(FacebookIcon));
+		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon, ExpectedConditions.ElementToBeClickable(TwitterIcon));
 		//Cards panel
-		IWebElement CardsPanelWebElement => Driver.FindElementWait(CardsPanel);
+		IWebElement CardsPanelWebElement => Driver.FindElementWait(CardsPanel, ExpectedConditions.ElementIsVisible(CardsPanel));
 		//BaazarVoice
-		IWebElement BaazarVoiceContainerWebElement => Driver.FindElementWait(BaazarVoiceContainer);
+		IWebElement BaazarVoiceContainerWebElement => Driver.FindElementWait(BaazarVoiceContainer, ExpectedConditions.ElementIsVisible(BaazarVoiceContainer));
 
 		#endregion
 

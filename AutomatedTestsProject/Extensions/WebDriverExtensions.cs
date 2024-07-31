@@ -171,7 +171,7 @@ namespace AutomatedTests.Framework.Extensions
             }
             catch
             {
-				throw new ElementNotVisibleException($"Element is not visible with[{by.Criteria}]");
+				throw new ElementNotVisibleException($"Element is not visible with: [{by.Criteria}]");
 			}
         }
 

@@ -27,9 +27,14 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsAskTheExpertWindowDisplayed() => Assert.That(askTheExpert.IsAskTheExpertWindowDisplayed(), "Ask the expert window is not visible");
 		[Test]
-		public void IsAteSubHeadingDisplayed() => Assert.That(askTheExpert.IsAteSubHeadingDisplayed(), "Sub heading is not visible");
-		[Test]
-		public void IsExpertHeadlineDisplayed() => Assert.That(askTheExpert.IsExpertHeadlineDisplayed(), "Expert headline is not visible");
+		public void IsAskTheExpertInfoDisplayed() 
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(askTheExpert.IsAteSubHeadingDisplayed(), "Sub heading is not visible");
+				Assert.That(askTheExpert.IsExpertHeadlineDisplayed(), "Expert headline is not visible");
+			});
+		} 		
 		[Test]
 		public void IsExpertBodyDisplayed() => Assert.That(askTheExpert.IsExpertBodyDisplayed(), "Expert body element is not visible");
 		[Test]

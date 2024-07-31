@@ -19,15 +19,14 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
-		public void IsTitleDisplayed() 
+		public void AreHeaderDisplayed()
 		{
-			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
-		}
-		[Test]
-		public void IsBreadcrumbsDisplayed()
-		{
-			Assert.That(productCategoryPage.IsBreadcrumbsDisplayed(), "Breadcrumbs are not visible");
-		}
+			Assert.Multiple(() =>
+			{
+				Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
+				Assert.That(productCategoryPage.IsBreadcrumbsDisplayed(), "Breadcrumbs are not visible");
+			});
+		}		
 		[Test]
 		public void IsPeriodPadsIndicatorDisplayed()
 		{
@@ -67,14 +66,6 @@ namespace AutomatedTests.Tests.TestCases
 		public void IsPeriodPantsRangeSliderDisplayed()
 		{
 			Assert.That(productCategoryPage.IsPeriodPantsRangeSliderDisplayed(), "Period pads range slider is to visible");
-		}
-		public void DevelopBranch()
-		{
-			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
-		}
-		public void RenameFunc()
-		{
-			Assert.That(productCategoryPage.IsTitleDisplayed(), "Title is not visible");
-		}
+		}		
 	}
 }

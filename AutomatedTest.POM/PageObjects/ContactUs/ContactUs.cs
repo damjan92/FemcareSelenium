@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
 using AutomatedTest.PageObjects;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -46,34 +47,34 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Web elements
 
-		public IWebElement ContactUsFormWebElement => Driver.FindElementWait(ContactUsForm);
-		public IWebElement NameWebElement => Driver.FindElementWait(Name);
-		public IWebElement LastNameWebElement => Driver.FindElementWait(LastName);
-		public IWebElement PhoneNumberWebElement => Driver.FindElementWait(PhoneNumber);
-		public IWebElement EmailWebElement => Driver.FindElementWait(Email);
-		public IWebElement SubjectSelectMenuWebElement => Driver.FindElementWait(SubjectSelectMenu);
-		public IWebElement TextAreaMessageWebElement => Driver.FindElement(TextAreaMessage);
-		public IWebElement ValidationErrorMessageWebElement => Driver.FindElementWait(ValidationErrorMessage);
-		public IWebElement ReCaptchaWebElement => Driver.FindElementWait(ReCaptcha);
-		public IWebElement SendButtonWebElement => Driver.FindElementWait(SendButton);
+		public IWebElement ContactUsFormWebElement => Driver.FindElementWait(ContactUsForm, ExpectedConditions.ElementIsVisible(ContactUsForm));
+		public IWebElement NameWebElement => Driver.FindElementWait(Name, ExpectedConditions.ElementIsVisible(Name));
+		public IWebElement LastNameWebElement => Driver.FindElementWait(LastName, ExpectedConditions.ElementIsVisible(LastName));
+		public IWebElement PhoneNumberWebElement => Driver.FindElementWait(PhoneNumber, ExpectedConditions.ElementIsVisible(PhoneNumber));
+		public IWebElement EmailWebElement => Driver.FindElementWait(Email, ExpectedConditions.ElementIsVisible(Email));
+		public IWebElement SubjectSelectMenuWebElement => Driver.FindElementWait(SubjectSelectMenu, ExpectedConditions.ElementIsVisible(SubjectSelectMenu));
+		public IWebElement TextAreaMessageWebElement => Driver.FindElementWait(TextAreaMessage, ExpectedConditions.ElementIsVisible(TextAreaMessage));
+		public IWebElement ValidationErrorMessageWebElement => Driver.FindElementWait(ValidationErrorMessage, ExpectedConditions.ElementIsVisible(ValidationErrorMessage));
+		public IWebElement ReCaptchaWebElement => Driver.FindElementWait(ReCaptcha, ExpectedConditions.ElementIsVisible(ReCaptcha));
+		public IWebElement SendButtonWebElement => Driver.FindElementWait(SendButton, ExpectedConditions.ElementIsVisible(SendButton));
 		public IList<IWebElement> CheckBoxesWebElements => Driver.FindElementsWait(CheckBoxes);
 
 		/// <summary>
 		/// Coheris Form Web Elements
 		/// </summary>
-		public IWebElement TitleSelectFieldWebElement => Driver.FindElementWait(TitleSelectField);
-		public IWebElement CountryWebElement => Driver.FindElementWait(Country);
-		public IWebElement FirstNameWebElement => Driver.FindElementWait(FirstName);
-		public IWebElement AddressWebElement => Driver.FindElementWait(Address);
-		public IWebElement PostalCodeWebElement => Driver.FindElementWait(PostalCode);
-		public IWebElement CityWebElement => Driver.FindElementWait(City);
-		public IWebElement ConfirmEmailWebElement => Driver.FindElementWait(ConfirmEmail);
-		public IWebElement ControlNumberWebElement => Driver.FindElementWait(ControlNumber);
-		public IWebElement BarCodeWebElement => Driver.FindElementWait(BarCode);
-		public IWebElement PhoneWebElement => Driver.FindElementWait(Phone);
-		public IWebElement AgeRangeSelectWebElement => Driver.FindElementWait(AgeRangeSelect);
-		public IWebElement AffectedProductSelectWebElement => Driver.FindElementWait(AffectedProductSelect);
-		public IWebElement ReasonSelectWebElement => Driver.FindElementWait(ReasonSelect);
+		public IWebElement TitleSelectFieldWebElement => Driver.FindElementWait(TitleSelectField, ExpectedConditions.ElementIsVisible(TitleSelectField));
+		public IWebElement CountryWebElement => Driver.FindElementWait(Country, ExpectedConditions.ElementIsVisible(Country));
+		public IWebElement FirstNameWebElement => Driver.FindElementWait(FirstName, ExpectedConditions.ElementIsVisible(FirstName));
+		public IWebElement AddressWebElement => Driver.FindElementWait(Address, ExpectedConditions.ElementIsVisible(Address));
+		public IWebElement PostalCodeWebElement => Driver.FindElementWait(PostalCode, ExpectedConditions.ElementIsVisible(PostalCode));
+		public IWebElement CityWebElement => Driver.FindElementWait(City, ExpectedConditions.ElementIsVisible(City));
+		public IWebElement ConfirmEmailWebElement => Driver.FindElementWait(ConfirmEmail, ExpectedConditions.ElementIsVisible(ConfirmEmail));
+		public IWebElement ControlNumberWebElement => Driver.FindElementWait(ControlNumber, ExpectedConditions.ElementIsVisible(ControlNumber));
+		public IWebElement BarCodeWebElement => Driver.FindElementWait(BarCode, ExpectedConditions.ElementIsVisible(BarCode));
+		public IWebElement PhoneWebElement => Driver.FindElementWait(Phone, ExpectedConditions.ElementIsVisible(Phone));
+		public IWebElement AgeRangeSelectWebElement => Driver.FindElementWait(AgeRangeSelect, ExpectedConditions.ElementIsVisible(AgeRangeSelect));
+		public IWebElement AffectedProductSelectWebElement => Driver.FindElementWait(AffectedProductSelect, ExpectedConditions.ElementIsVisible(AffectedProductSelect));
+		public IWebElement ReasonSelectWebElement => Driver.FindElementWait(ReasonSelect, ExpectedConditions.ElementIsVisible(ReasonSelect));
 
 		#endregion
 

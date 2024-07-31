@@ -2,11 +2,7 @@
 using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -35,24 +31,24 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web Elements
-		public IWebElement TitleWebElement => Driver.FindElementWait(Title);
-		public IWebElement AskTheExpertWindowWebElement => Driver.FindElementWait(AskTheExpertWindow);
-		public IWebElement AteSubHeadingWebElement => Driver.FindElementWait(AteSubHeading);
-		public IWebElement ExpertHeadlineWebElement => Driver.FindElementWait(ExpertHeadline);
-		public IWebElement ExpertBodyWebElemenet => Driver.FindElementWait(ExpertBody);
-		public IWebElement ExpertFormToggleButtonWebElement => Driver.FindElementWait(ExpertFormToggleButton);
-		public IWebElement ExpertAnswersSubHeadingWebElement => Driver.FindElementWait(ExpertAnswersSubHeading);
+		public IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
+		public IWebElement AskTheExpertWindowWebElement => Driver.FindElementWait(AskTheExpertWindow, ExpectedConditions.ElementIsVisible(AskTheExpertWindow));
+		public IWebElement AteSubHeadingWebElement => Driver.FindElementWait(AteSubHeading, ExpectedConditions.ElementIsVisible(AteSubHeading));
+		public IWebElement ExpertHeadlineWebElement => Driver.FindElementWait(ExpertHeadline, ExpectedConditions.ElementIsVisible(ExpertHeadline));
+		public IWebElement ExpertBodyWebElemenet => Driver.FindElementWait(ExpertBody, ExpectedConditions.ElementIsVisible(ExpertBody));
+		public IWebElement ExpertFormToggleButtonWebElement => Driver.FindElementWait(ExpertFormToggleButton, ExpectedConditions.ElementIsVisible(ExpertFormToggleButton));
+		public IWebElement ExpertAnswersSubHeadingWebElement => Driver.FindElementWait(ExpertAnswersSubHeading, ExpectedConditions.ElementIsVisible(ExpertAnswersSubHeading));
 		public IList<IWebElement> ExpertAnswersWebElement => Driver.FindElementsWait(ExpertAnswers);
-		public IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton);
+		public IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton, ExpectedConditions.ElementToBeClickable(LoadMoreButton));
 		// Ask the Expert form
-		public IWebElement AskTheExpertFormWebElement => Driver.FindElementWait(AskTheExpertForm);
-		public IWebElement NameFieldWebElement => Driver.FindElementWait(NameField);
-		public IWebElement EmailFieldWebElement => Driver.FindElementWait(EmailField);
-		public IWebElement QuestionWebElement => Driver.FindElementWait(Question);
-		public IWebElement SummaryWebElement => Driver.FindElementWait(Summary);
+		public IWebElement AskTheExpertFormWebElement => Driver.FindElementWait(AskTheExpertForm, ExpectedConditions.ElementIsVisible(AskTheExpertForm));
+		public IWebElement NameFieldWebElement => Driver.FindElementWait(NameField, ExpectedConditions.ElementIsVisible(NameField));
+		public IWebElement EmailFieldWebElement => Driver.FindElementWait(EmailField, ExpectedConditions.ElementIsVisible(EmailField));
+		public IWebElement QuestionWebElement => Driver.FindElementWait(Question, ExpectedConditions.ElementIsVisible(Question));
+		public IWebElement SummaryWebElement => Driver.FindElementWait(Summary, ExpectedConditions.ElementIsVisible(Summary));
 		public IList<IWebElement> CheckBoxesConsentWebElements => Driver.FindElementsWait(CheckBoxesConsent);
-		public IWebElement RecaptchaWebElement => Driver.FindElementWait(Recaptcha);
-		public IWebElement AteSubmitButtonWebElement => Driver.FindElementWait(AteSubmitButton);
+		public IWebElement RecaptchaWebElement => Driver.FindElementWait(Recaptcha, ExpectedConditions.ElementIsVisible(Recaptcha));
+		public IWebElement AteSubmitButtonWebElement => Driver.FindElementWait(AteSubmitButton, ExpectedConditions.ElementToBeClickable(AteSubmitButton));
 
 		#endregion
 

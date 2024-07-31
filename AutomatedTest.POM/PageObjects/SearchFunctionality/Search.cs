@@ -22,7 +22,7 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region WebElements
-		IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon, ExpectedConditions.ElementExists(SearchIcon), 10);
+		IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon, ExpectedConditions.ElementExists(SearchIcon), 7);
 		IWebElement SearchBarWebElement => Driver.FindElementWait(SearchBar, ExpectedConditions.ElementIsVisible(SearchBar), 3);
 		// On click action
 		IWebElement ResetSearchWordWebElement => Driver.FindElementWait(ResetSearchWord, ExpectedConditions.ElementToBeClickable(ResetSearchWord), 3);

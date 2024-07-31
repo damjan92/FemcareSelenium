@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -13,22 +14,23 @@ namespace AutomatedTest.POM.PageObjects
 		public By First_TheLatestQuestion => By.CssSelector("article[class='list-article']:nth-child(1) a");
 		public By Second_TheLatestQuestion => By.CssSelector("article[class='list-article']:nth-child(2) a");
 		public By Third_TheLatestQuestion => By.CssSelector("rticle[class='list-article']:nth-child(3) a");
-		//public By AllQuestion => By.CssSelector("article[class='list-article list-article--small']");
+		public By AllQuestion => By.CssSelector("article[class='list-article list-article--small']");
 		public By LoadMoreButton => By.CssSelector("button[class*='list-articles-list__load-more']");
 
 		#endregion
 
 		#region WebElements
-		IWebElement TitleWebElement => Driver.FindElementWait(Title);
-		IWebElement LatestQuestionSubWebElement => Driver.FindElementWait(LatestQuestionSub);
-		IWebElement First_TheLatestQuestionWebElement => Driver.FindElementWait(First_TheLatestQuestion);
-		IWebElement Second_TheLatestQuestionWebElement => Driver.FindElementWait(Second_TheLatestQuestion);
-		IWebElement Third_TheLatestQuestionWebElement => Driver.FindElementWait(Third_TheLatestQuestion);
-		//IWebElement AllQuestionWebElemenet => Driver.FindElementWait(AllQuestion);
-		IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton);
+		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
+		IWebElement LatestQuestionSubWebElement => Driver.FindElementWait(LatestQuestionSub, ExpectedConditions.ElementIsVisible(LatestQuestionSub));
+		IWebElement First_TheLatestQuestionWebElement => Driver.FindElementWait(First_TheLatestQuestion, ExpectedConditions.ElementIsVisible(First_TheLatestQuestion));
+		IWebElement Second_TheLatestQuestionWebElement => Driver.FindElementWait(Second_TheLatestQuestion, ExpectedConditions.ElementIsVisible(Second_TheLatestQuestion));
+		IWebElement Third_TheLatestQuestionWebElement => Driver.FindElementWait(Third_TheLatestQuestion, ExpectedConditions.ElementIsVisible(Third_TheLatestQuestion));
+		IList<IWebElement> AllQuestionWebElemenet => Driver.FindElementsWait(AllQuestion);
+		IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton, ExpectedConditions.ElementToBeClickable(LoadMoreButton));
 
 
 		#endregion
+
 		#region Constructor and methods
 		public ExpertAdvice(Browser browser, string url = "") : base(browser, url)
 		{
@@ -41,6 +43,7 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsSecond_TheLatestQuestionDisplayed() => Second_TheLatestQuestionWebElement.Displayed;
 		public bool IsThird_TheLatestQuestionDisplayed() => Third_TheLatestQuestionWebElement.Displayed;
 		public bool IsLoadMoreButtonDisplayed() => LoadMoreButtonWebElement.Displayed;
+		public bool AreAllQuestionDisplayed() => WebDriverExtensions.AreElementsDisplayed(AllQuestionWebElemenet);
 
 		#endregion
 

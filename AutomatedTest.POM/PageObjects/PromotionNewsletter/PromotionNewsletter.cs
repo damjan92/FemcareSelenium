@@ -29,19 +29,19 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region WebElements
 		IWebElement PromotionFormWebElement => Driver.FindElementWait(PromotionForm, ExpectedConditions.ElementExists(PromotionForm), 3);
-		IWebElement FirstNameWebElement => Driver.FindElementWait(FirstName, ExpectedConditions.ElementToBeClickable(FirstName), 3);
-		IWebElement AgeFieldWebElement => Driver.FindElementWait(AgeField, ExpectedConditions.ElementIsVisible(AgeField), 5);
-		IWebElement MonthFieldWebElement => Driver.FindElementWait(MonthField, ExpectedConditions.ElementIsVisible(MonthField), 5);
-		IWebElement YearFieldWebElement => Driver.FindElementWait(YearField, ExpectedConditions.ElementToBeClickable(YearField), 5);
-		IWebElement EmailWebElement => Driver.FindElementWait(Email, ExpectedConditions.ElementToBeClickable(Email), 3);
-		IWebElement RecaptchaWebElement => Driver.FindElementWait(Recaptcha, ExpectedConditions.ElementToBeClickable(Recaptcha), 3);
-		IWebElement SubmitButtonWebElement => Driver.FindElementWait(SubmitButton, ExpectedConditions.ElementToBeClickable(SubmitButton), 3);
+		IWebElement FirstNameWebElement => Driver.FindElementWait(FirstName, ExpectedConditions.ElementToBeClickable(FirstName));
+		IWebElement AgeFieldWebElement => Driver.FindElementWait(AgeField, ExpectedConditions.ElementIsVisible(AgeField));
+		IWebElement MonthFieldWebElement => Driver.FindElementWait(MonthField, ExpectedConditions.ElementIsVisible(MonthField));
+		IWebElement YearFieldWebElement => Driver.FindElementWait(YearField, ExpectedConditions.ElementToBeClickable(YearField));
+		IWebElement EmailWebElement => Driver.FindElementWait(Email, ExpectedConditions.ElementToBeClickable(Email));
+		IWebElement RecaptchaWebElement => Driver.FindElementWait(Recaptcha, ExpectedConditions.ElementToBeClickable(Recaptcha));
+		IWebElement SubmitButtonWebElement => Driver.FindElementWait(SubmitButton, ExpectedConditions.ElementToBeClickable(SubmitButton));
 		// Newsletter Subscription
-		IWebElement NewsletterFormWebElement => Driver.FindElementWait(NewsletterForm, ExpectedConditions.ElementExists(NewsletterForm), 5);
-		IWebElement NewsletterNameWebElement => Driver.FindElementWait(NewsletterName, ExpectedConditions.ElementToBeClickable(NewsletterName), 5);
-		IWebElement NewsletterEmailWebElement => Driver.FindElementWait(NewsletterEmail, ExpectedConditions.ElementToBeClickable(NewsletterEmail), 5);
-		IWebElement NewsletterRecaptchaWebElement => Driver.FindElementWait(NewsletterRecaptcha, ExpectedConditions.ElementToBeClickable(NewsletterRecaptcha), 5);
-		IWebElement NewsletterButtonWebElement => Driver.FindElementWait(NewsletterButton, ExpectedConditions.ElementIsVisible(NewsletterButton), 5);
+		IWebElement NewsletterFormWebElement => Driver.FindElementWait(NewsletterForm, ExpectedConditions.ElementExists(NewsletterForm));
+		IWebElement NewsletterNameWebElement => Driver.FindElementWait(NewsletterName, ExpectedConditions.ElementToBeClickable(NewsletterName));
+		IWebElement NewsletterEmailWebElement => Driver.FindElementWait(NewsletterEmail, ExpectedConditions.ElementToBeClickable(NewsletterEmail));
+		IWebElement NewsletterRecaptchaWebElement => Driver.FindElementWait(NewsletterRecaptcha, ExpectedConditions.ElementToBeClickable(NewsletterRecaptcha));
+		IWebElement NewsletterButtonWebElement => Driver.FindElementWait(NewsletterButton, ExpectedConditions.ElementIsVisible(NewsletterButton));
 		#endregion
 
 		#region Constructor and methods

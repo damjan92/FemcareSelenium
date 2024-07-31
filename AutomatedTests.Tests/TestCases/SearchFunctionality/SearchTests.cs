@@ -1,8 +1,6 @@
 ﻿using AutomatedTest.POM.PageObjects;
 using NUnit.Framework;
 using AutomatedTests.Framework.Core;
-using AutomatedTests.Framework.Extensions;
-using System.Threading;
 
 namespace AutomatedTests.Tests.TestCases
 {

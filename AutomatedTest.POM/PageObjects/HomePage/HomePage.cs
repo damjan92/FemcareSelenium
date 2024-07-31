@@ -26,8 +26,8 @@ namespace AutomatedTest.POM.PageObjects
 
 		public IWebElement BodyformNavIconWebElement => Driver.FindElementWait(BodyformNavIcon, ExpectedConditions.ElementToBeClickable(BodyformNavIcon));		
 		public IWebElement NavigationBarWebElement => Driver.FindElementWait(NavigationBar, ExpectedConditions.ElementIsVisible(NavigationBar));
-		public IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon, ExpectedConditions.ElementIsVisible(SearchIcon), 5);
-		public IWebElement EssityFooterLogoWebElement => Driver.FindElementWait(EssityFooterLogo);
+		public IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon, ExpectedConditions.ElementIsVisible(SearchIcon), 3);
+		public IWebElement EssityFooterLogoWebElement => Driver.FindElementWait(EssityFooterLogo, ExpectedConditions.ElementIsVisible(EssityFooterLogo));
 		public IList<IWebElement> FooterLinksWebElements => Driver.FindElementsWait(FooterLinks);
 
 		#endregion
@@ -36,12 +36,11 @@ namespace AutomatedTest.POM.PageObjects
 
 		public HomePage(Browser browser, string url = "") : base(browser, url)
         {
-
         }
 
         public override bool IsPageLoaded() => RootElement.Text.ToLowerInvariant().Contains("events");
         public bool IsNavigationBarLoaded() => NavigationBarWebElement.Displayed;
-		public bool IsErrorMessageDisplayed() => Driver.WaitForElementIsVisible(ErrorMessage, 5);
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsBodyformNavIconDisplayed() => BodyformNavIconWebElement.Displayed;
 		public bool IsSearchIconDisplayed() => SearchIconWebElement.Displayed;
 		public bool IsEssityFooterLogoDisplayed() => EssityFooterLogoWebElement.Displayed;

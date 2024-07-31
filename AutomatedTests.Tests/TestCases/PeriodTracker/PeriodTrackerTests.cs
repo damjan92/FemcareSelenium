@@ -24,50 +24,31 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void Test_14_IsPeriodTrackerContainerDisplayed() => Assert.That(periodTracker.IsPeriodTrackerContainerDisplayed(), "Period Tracker Container is not displayed");
 		[Test]
-		public void Test_15_IsInputFieldsDisplayed() => Assert.That(periodTracker.IsInputFieldsDisplayed(), "Input Field is not displayed");
-		[Test]
-		public void Test_16_IsDateSelectorDisplayed() => Assert.That(periodTracker.IsDateSelectorDisplayed(), "Date selector is not displayed");
-		[Test]
-		public void Test_17_IsDateSelectorDisplayed() => Assert.That(periodTracker.IsDateSelectorDisplayed(), "Date selector is not displayed");
-		[Test]
-		public void Test_18_IsDurationSelectorDisplayed() => Assert.That(periodTracker.IsDurationSelectorDisplayed(), "Duration selector is not displayed");
-		[Test]
-		public void Test_19_IsCycleSelectorDisplayed() => Assert.That(periodTracker.IsCycleSelectorDisplayed(), "Cycle selector is not displayed");
+		public void ArePeriodTrackerFieldsDisplayed()
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(periodTracker.IsInputFieldsDisplayed(), "Input Field is not displayed");
+				Assert.That(periodTracker.IsDateSelectorDisplayed(), "Date selector is not displayed");
+				Assert.That(periodTracker.IsDurationSelectorDisplayed(), "Duration selector is not displayed");
+				Assert.That(periodTracker.IsCycleSelectorDisplayed(), "Cycle selector is not displayed");
+			});
+		}		
 		[Test]
 		public void Test_20_IsTrackMyPeriodButtonDisplayed() => Assert.That(periodTracker.IsTrackMyPeriodButtonDisplayed(), "Period Button is not displayed");
-
-		/*Need Action for Click on Period Tracker button
-		 * [Test]
-		public void Test_21_IsSubHeadingDisplayed()
-		{
-			Assert.That(periodTracker.IsSubHeadingDisplayed(), "Subheading is not displayed");
-		}
 		[Test]
-		public void Test_22_IsPeriodTrackerResultContainerDisplayed()
+		public void IsCalendarVisibleAfterSubmit()
 		{
-			Assert.That(periodTracker.IsPeriodTrackerResultContainerDisplayed(), "Result container is not displayed");
-		}
-		[Test]
-		public void Test_23_IsPreviousNavButtonDisplayed()
-		{
-			Assert.That(periodTracker.IsPreviousNavButtonDisplayed(), "Previos button is not displayed");
-		}
-		[Test]
-		public void Test_24_IsNextNavButtonDisplayed()
-		{
-			Assert.That(periodTracker.IsNextNavButtonDisplayed(), "Next button is not displayed");
-		}
-		[Test]
-		public void Test_25_IsResultCalendarDisplayed()
-		{
-			Assert.That(periodTracker.IsResultCalendarDisplayed(), "Calendar is not displayed");
-		}
-		[Test]
-		public void Test_26_IsPeriodTrackerLegendDisplayed()
-		{
-			Assert.That(periodTracker.IsPeriodTrackerLegendDisplayed(), "Legend is not displayed");
-		}*/
-
-
+			Assert.Multiple(() =>
+			{
+				Assert.That(periodTracker.IsTrackMyPeriodBtnClicked(), "Track my Period Button is not found/clicked");
+				Assert.That(periodTracker.IsResultCalendarDisplayed(), "Calendar is not displayed");
+				Assert.That(periodTracker.IsSubHeadingDisplayed(), "Subheading is not displayed");
+				Assert.That(periodTracker.IsPeriodTrackerResultContainerDisplayed(), "Result container is not displayed");
+				Assert.That(periodTracker.IsPreviousNavButtonDisplayed(), "Previos button is not displayed");
+				Assert.That(periodTracker.IsNextNavButtonDisplayed(), "Next button is not displayed");
+				Assert.That(periodTracker.IsPeriodTrackerLegendDisplayed(), "Legend is not displayed");
+			});
+		}		
 	}
 }

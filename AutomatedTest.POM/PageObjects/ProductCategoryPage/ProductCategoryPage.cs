@@ -2,6 +2,7 @@
 using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -31,20 +32,20 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Webelemets
 
-		IWebElement TitleWebElement => Driver.FindElementWait(Title);
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs);
+		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
+		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
 		//Period Pads
-		IWebElement PeriodPadsIndicatorWebElement => Driver.FindElementWait(PeriodPadsIndicator);
-		IWebElement PeriodPadsRangeSliderWebElement => Driver.FindElementWait(PeriodPadsRangeSlider);
+		IWebElement PeriodPadsIndicatorWebElement => Driver.FindElementWait(PeriodPadsIndicator, ExpectedConditions.ElementIsVisible(PeriodPadsIndicator));
+		IWebElement PeriodPadsRangeSliderWebElement => Driver.FindElementWait(PeriodPadsRangeSlider, ExpectedConditions.ElementIsVisible(PeriodPadsRangeSlider));
 		// Maxi Towels
-		IWebElement MaxiTowelsIndicatorWebElement => Driver.FindElementWait(MaxiTowelsIndicator);
-		IWebElement MaxiTowelsRangeSliderWewbElement => Driver.FindElement(MaxiTowelsRangeSlider);
+		IWebElement MaxiTowelsIndicatorWebElement => Driver.FindElementWait(MaxiTowelsIndicator, ExpectedConditions.ElementIsVisible(MaxiTowelsIndicator));
+		IWebElement MaxiTowelsRangeSliderWewbElement => Driver.FindElementWait(MaxiTowelsRangeSlider, ExpectedConditions.ElementIsVisible(MaxiTowelsRangeSlider));
 		//Panty Liners
-		IWebElement PantyLinersIndicatorWebElement => Driver.FindElementWait(PantyLinersIndicator);
-		IWebElement PantyLinersRangeSliderWebElement => Driver.FindElementWait(PantyLinersRangeSlider);
+		IWebElement PantyLinersIndicatorWebElement => Driver.FindElementWait(PantyLinersIndicator, ExpectedConditions.ElementIsVisible(PantyLinersIndicator));
+		IWebElement PantyLinersRangeSliderWebElement => Driver.FindElementWait(PantyLinersRangeSlider, ExpectedConditions.ElementIsVisible(PantyLinersRangeSlider));
 		//Period Pants
-		IWebElement PeriodPantsIndicatorWebElement => Driver.FindElementWait(PeriodPantsIndicator);
-		IWebElement PeriodPantsRangeSliderWebElement => Driver.FindElementWait(PeriodPantsRangeSlider);
+		IWebElement PeriodPantsIndicatorWebElement => Driver.FindElementWait(PeriodPantsIndicator, ExpectedConditions.ElementIsVisible(PeriodPantsIndicator));
+		IWebElement PeriodPantsRangeSliderWebElement => Driver.FindElementWait(PeriodPantsRangeSlider, ExpectedConditions.ElementIsVisible(PeriodPantsRangeSlider));
 
 		#endregion
 

@@ -29,13 +29,18 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsSortButtonDisplayed() => Assert.That(productLandingPage.IsSortButtonDisplayed(), "Filter button is not dislayed");
 		[Test]
-		public void IsExploreAllProductsDisplayed() => Assert.That(productLandingPage.IsExploreAllProductsDisplayed(), "Explore all products button is not dislayed");
+		public void IsExploreAllProductsDisplayed() => Assert.That(productLandingPage.IsExploreAllProductsDisplayed(), "Explore all products button is not dislayed");		
 		[Test]
-		public void IsFacebookIconDisplayed() => Assert.That(productLandingPage.IsFacebookIconDisplayed(), "Facebook icon is not dislayed");
-		[Test]
-		public void IsTwitterIconDisplayed() => Assert.That(productLandingPage.IsTwitterIconDisplayed(), "Facebook icon is not dislayed");
+		public void AreSocialIconsDisplayed()
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(productLandingPage.IsFacebookIconDisplayed(), "Facebook icon is not visible");
+				Assert.That(productLandingPage.IsTwitterIconDisplayed(), "Twitter icon is not visible");
+			});			
+		}		
 		[Test]
 		public void IsIndicatorNumberIsCorrect() => 
-			Assert.That(productLandingPage.GetIndicatorNumber(), Is.EqualTo(productLandingPage.GetNumberOfProducts()), "The number are not the same");
+			Assert.That(productLandingPage.GetIndicatorNumber(), Is.EqualTo(productLandingPage.GetNumberOfProducts()), "The number of displayed products are not the same");
 	}
 }

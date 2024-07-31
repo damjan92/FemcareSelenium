@@ -3,15 +3,15 @@
     public static class TestData
     {
         public static string[] HomePageUrls =
-        {
-			//First round
+        {			
 			"https://www.bodyform.co.uk/",
-			"https://www.libresse.se/","https://www.saba.com.mx/",
-
+			"https://www.libresse.se/",
+			"https://www.saba.com.mx/",
 			"https://www.libresse.no/",
 			"https://www.libresse.gr/",
 			"https://www.nana-me.com/ar-lb/",
 			"https://www.saba-centroamerica.com/gt/",
+			"https://www.nuvenia.it/",
 			//Libresse
 			"https://www.libresse.bg/",
 			"https://www.libresse.hr/",
@@ -31,6 +31,7 @@
 			"https://www.libresse.gr/contact-us/",
 			"https://www.nana-me.com/ar-lb/contact-us/",
 			"https://www.saba-centroamerica.com/gt/contactanos/",
+			"https://www.nuvenia.it/contattaci/",
 
 			"https://www.libresse.bg/svurjete-se-s-nas/",
 			"https://www.libresse.hr/kontaktiraj-nas/",
@@ -54,6 +55,7 @@
 			"https://www.nana-me.com/ar-lb/period-tracker/",
 			"https://www.saba-centroamerica.com/gt/calculadora-menstrual/",
 			"https://www.libresse.gr/period-tracker/",
+			"https://www.nuvenia.it/calendario-ciclo/",
 
 			"https://www.libresse.bg/track-your-period/",
 			"https://www.libresse.hr/menstrualni-kalenda/",
@@ -72,6 +74,7 @@
 			"https://www.saba-centroamerica.com/gt/rompiendo-mitos/mito-verdad/preguntale-a-la-experta/",
 			"https://www.libresse.gr/break-taboos/discover/expert-advice/",
 			"https://www.libresse.no/ofte-stile-sporsmal-og-svar/eksperttips/",
+			"https://www.nuvenia.it/rompiamo-tabu/miti-e-realta/consiglio-degli-esperti/",
 
 			"https://www.libresse.hr/vise-o-proizvodima/savjet-strucnjaka/",
 			"https://www.libresse.fi/usein-kysyttyja-kysymyksia/asiantuntijan-neuvot/",
@@ -90,6 +93,7 @@
 			"https://www.libresse.no/kjop-vare-produkter/les-mer-om-produktene/",
 			"https://www.nana-me.com/ar-lb/shop-our-products/available-in-store/",
 			"https://www.saba-centroamerica.com/gt/nuestros-productos/available-in-store/",
+			"https://www.nuvenia.it/prodotti/nostri-prodotti/",
 
 			"https://www.libresse.bg/kupi-nashite-produkti/available-in-store/",
 			"https://www.libresse.hr/kupi-nase-proizvode/kupi-nase-proizvode/",
@@ -110,6 +114,7 @@
 			"https://www.libresse.gr/shop-our-products/available-in-store/period-pads/",
 			"https://www.nana-me.com/ar-lb/shop-our-products/available-in-store/sanitary-pads/",
 			"https://www.saba-centroamerica.com/gt/nuestros-productos/available-in-store/toallas-femeninas/",
+			"https://www.nuvenia.it/prodotti/nostri-prodotti/assorbenti/",
 
 			"https://www.libresse.bg/kupi-nashite-produkti/available-in-store/menstrualni-prevruzki/",
 			"https://www.libresse.hr/kupi-nase-proizvode/kupi-nase-proizvode/ulosci/",
@@ -130,6 +135,7 @@
 			"https://www.libresse.gr/shop-our-products/available-in-store/period-pads/ultra-regular/",
 			"https://www.nana-me.com/ar-lb/shop-our-products/available-in-store/sanitary-pads/ultra-regular-pads-with-wings/",
 			"https://www.saba-centroamerica.com/gt/nuestros-productos/disponible-en-tiendas/toallas-femeninas/buenas-noches-alas/",
+			"https://www.nuvenia.it/prodotti/nostri-prodotti/assorbenti/ultra-ali-assorbente-pure-sensitive/",
 
 			"https://www.libresse.bg/kupi-nashite-produkti/available-in-store/menstrualni-prevruzki/ultra-prevrazki-normal/",
 			"https://www.libresse.hr/kupi-nase-proizvode/kupi-nase-proizvode/ulosci/puresensitive-ultra-ulosci-normal/",

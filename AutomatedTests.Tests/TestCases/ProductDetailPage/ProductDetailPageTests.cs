@@ -19,9 +19,14 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
-		public void IsBreadcrumbsDisplayed() => Assert.That(productDetailPage.IsBreadcrumbsDisplayed(), "Breadcrumbs is not visible");
-		[Test]
-		public void IsTitleOfProductDisplayed() => Assert.That(productDetailPage.IsTitleOfProductDisplayed(), "Ttile is not visible");
+		public void AreProductInfoDisplayed()
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(productDetailPage.IsBreadcrumbsDisplayed(), "Breadcrumbs is not visible");
+				Assert.That(productDetailPage.IsTitleOfProductDisplayed(), "Ttile is not visible");
+			});
+		}		
 		[Test]
 		public void IsFlowMeterDisplayed() => Assert.That(productDetailPage.IsFlowMeterDisplayed(), "Flow meter is not visible");
 		[Test]
@@ -37,9 +42,16 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsProductRetailersDisplayed() => Assert.That(productDetailPage.IsProductRetailersDisplayed(), "Product reatiler is not visible");
 		[Test]
-		public void IsFacebookIconDisplayed() => Assert.That(productDetailPage.IsFacebookIconDisplayed(), "Facebook icon is not visible");
+		public void AreCardsPanelDisplayed() => Assert.That(productDetailPage.IsCardsPanelDisplayed(), "Twitter icon is not visible");
 		[Test]
-		public void IsCardsPanelDisplayed() => Assert.That(productDetailPage.IsCardsPanelDisplayed(), "Twitter icon is not visible");
+		public void AreSocialIconsDisplayed()
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(productDetailPage.IsFacebookIconDisplayed(), "Facebook icon is not visible");
+				Assert.That(productDetailPage.IsTwitterIconDisplayed(), "Twitter icon is not visible");
+			});			
+		}		
 	}
 	
 }

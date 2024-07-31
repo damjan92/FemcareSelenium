@@ -35,13 +35,13 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region WebElements
 		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator, ExpectedConditions.ElementIsVisible(Indicator), 3);
-		IWebElement TitleWebElement => Driver.FindElementWait(Title);
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs);
-		IWebElement FilterByButtonWebElement => Driver.FindElementWait(FilterByButton);
-		IWebElement SortButtonWebElement => Driver.FindElementWait(SortButton);
-		IWebElement ExploreAllProductsWebElement => Driver.FindElementWait(ExploreAllProducts);
-		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon);
-		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon);
+		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
+		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
+		IWebElement FilterByButtonWebElement => Driver.FindElementWait(FilterByButton, ExpectedConditions.ElementIsVisible(FilterByButton));
+		IWebElement SortButtonWebElement => Driver.FindElementWait(SortButton, ExpectedConditions.ElementIsVisible(SortButton));
+		IWebElement ExploreAllProductsWebElement => Driver.FindElementWait(ExploreAllProducts, ExpectedConditions.ElementToBeClickable(ExploreAllProducts));
+		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon, ExpectedConditions.ElementToBeClickable(FacebookIcon));
+		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon, ExpectedConditions.ElementToBeClickable(TwitterIcon));
 		IList<IWebElement> ListOfProducts => Driver.FindElementsWait(ProductList);
 
 		#endregion
