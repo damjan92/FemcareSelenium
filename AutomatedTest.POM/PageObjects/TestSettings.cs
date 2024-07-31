@@ -16,9 +16,9 @@ namespace AutomatedTest.POM
         public int PageLoadWaitSeconds { get; }
         #endregion
 
-        public int EmailCampaignTestsMessageTimeoutSeconds { get; }
+        //public int EmailCampaignTestsMessageTimeoutSeconds { get; }
 
-        public static string ProjectDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        //public static string ProjectDirectory => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
         private TestSettings(IConfigurationRoot configuration)
         {          
@@ -26,18 +26,18 @@ namespace AutomatedTest.POM
             PageLoadWaitSeconds = int.Parse(configuration["pageLoadWaitSeconds"]);
         }
 
-        public static string AssemblyDirectory
-        {
-            get
-            {
-                string codeBase = Assembly.GetExecutingAssembly().CodeBase;
-                UriBuilder uri = new UriBuilder(codeBase);
-                string path = Uri.UnescapeDataString(uri.Path);
-                return Path.GetDirectoryName(path);
-            }
-        }
+        //public static string AssemblyDirectory
+        //{
+        //    get
+        //    {
+        //        string codeBase = Assembly.GetExecutingAssembly().CodeBase;
+        //        UriBuilder uri = new UriBuilder(codeBase);
+        //        string path = Uri.UnescapeDataString(uri.Path);
+        //        return Path.GetDirectoryName(path);
+        //    }
+        //}
 
-        public static string CurrentDirectory => Environment.CurrentDirectory;
+        //public static string CurrentDirectory => Environment.CurrentDirectory;
 
 
         public static TestSettings GetTestSettings()
