@@ -105,6 +105,10 @@
 			"https://www.libresse.rs/kupi-nase-proizvode/available-in-store/",
 			"https://www.libresse.ua/shop-our-products/"
 		};
+		public static string[] ProductCategoryPageQuickBuy =
+		{
+			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/"
+		};
 		public static string[] ProductLandingPageQuickBuy =
 		{
 			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/"
