@@ -105,7 +105,11 @@
 			"https://www.libresse.rs/kupi-nase-proizvode/available-in-store/",
 			"https://www.libresse.ua/shop-our-products/"
 		};
-		public static string[] ProdcutLandingPageUrls =
+		public static string[] ProductLandingPageQuickBuy =
+		{
+			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/"
+		};
+		public static string[] ProductLandingPageUrls =
 		{
 			"https://www.bodyform.co.uk/shop-our-products/available-in-store/ultra-towels/",
 			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/",
@@ -129,7 +133,6 @@
 		public static string[] ProductDetailPageUrls =
 		{
 			"https://www.bodyform.co.uk/shop-our-products/available-in-store/ultra-towels/ultra-towels-normal-wings/",
-			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/saba-intimawear-bikini/",
 			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/bindor/ultra-thin-normal-wing/",
 			"https://www.libresse.no/kjop-vare-produkter/Les-mer-om-produktene/bind/ultra-normal-wings-bind/",
 			"https://www.libresse.gr/shop-our-products/available-in-store/period-pads/ultra-regular/",
@@ -146,6 +149,10 @@
 			"https://www.libresse.ro/produsele-noastre/produse-disponibile-in-magazine/absorbante/ultra-normal-deo-fresh-absorbant-aripioare/",
 			"https://www.libresse.rs/kupi-nase-proizvode/available-in-store/ulosci/puresensitive-ultra-ulosci-normal/",
 			"https://www.libresse.ua/shop-our-products/period-pads/ultra-normal-soft/"
+		};
+		public static string[] ProductDetailPageVtex =
+		{
+			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/saba-intimawear-hipster-flujo-abundante/"
 		};
 		public static string[] AskTheExpertUrls =
 		{

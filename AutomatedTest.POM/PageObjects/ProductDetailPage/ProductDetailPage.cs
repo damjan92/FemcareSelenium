@@ -40,7 +40,7 @@ namespace AutomatedTest.POM.PageObjects
 		public By ProductOptions => By.CssSelector("div[class='product-main-options__title']");
 		public By SizeCards => By.CssSelector("div[class*='form-group--chips'] label");
 		public By ColorPicker => By.CssSelector("div[class*='form-group--color-picker'] input");
-		public By AddToCartCounter => By.CssSelector("product-cart-add__counter");
+		public By AddToCartCounter => By.CssSelector("div[class='product-cart-add__counter']");
 		public By AddToCartButton => By.CssSelector("button[class*='product-cart-add__button']");
 		public By SizeGuidTable => By.CssSelector("div[class*='product-measurement__container']");
 		public By ProductSafety => By.CssSelector("div[class='product-safety']");
@@ -99,7 +99,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		#endregion
 
-		#region Construktor and methods
+		#region Constructor and methods
 
 		public ProductDetailPage(Browser browser, string url = "") : base(browser, url)
 		{
@@ -124,6 +124,27 @@ namespace AutomatedTest.POM.PageObjects
 		/// Selectors for products which comming from Vtex providers
 		/// </summary>
 		/// 
+		public bool IsRatingStarsDisplayed() => RatingStarsWebElement.Displayed;
+		public bool IsNumOfRatingDisplayed() => NumOfRatingWebElement.Displayed;
+		public bool IsPriceDisplayed() => PriceWebElement.Displayed;
+		public bool IsProductOptionsDisplayed() => ProductOptionsWebElement.Displayed;
+		public bool AreSizeCardsDisplayed() => WebDriverExtensions.AreElementsDisplayed(SizeCardsList);
+		public bool IsColorPickerDisplayed() => ColorPickerWebElement.Displayed;
+		public bool IsAddToCartCounterDisplayed() => AddToCartCounterWebElement.Displayed;
+		public bool IsAddToCartButtonDisplayed() => AddToCartButtonWebElement.Displayed;
+		public bool IsSizeGuidTableDisplayed() => SizeGuidTableWebElement.Displayed;
+		public bool IsProductSafetyDisplayed() => ProductSafetyWebElement.Displayed;
+		// Add to cart modal
+		public bool IsAddToCartClicked() => WebDriverExtensions.ClickTheWebElement(AddToCartButtonWebElement);
+		public bool IsCartModalTitleDisplayed() => CartModalTitleWebElement.Displayed;
+		public bool IsCartModalCloseBtnDisplayed() => CartModalCloseBtnWebElement.Displayed;
+		public bool IsCartModalProductImageDisplayed() => CartModalProductImageWebElement.Displayed;
+		public bool IsCartModalProductNameDisplayed() => CartModalProductNameWebElement.Displayed;
+		public bool IsCartModalSkuNameDisplayed() => CartModalSkuNameWebElement.Displayed;
+		public bool IsCartModalTotalPriceDisplayed() => CartModalTotalPriceWebElement.Displayed;
+		public bool IsCartModalViewCartDisplayed() => CartModalViewCartWebElement.Displayed;
+		public bool IsCartModalCheckoutDisplayed() => CartModalCheckoutWebElement.Displayed;
+
 		#endregion
 	}
 }

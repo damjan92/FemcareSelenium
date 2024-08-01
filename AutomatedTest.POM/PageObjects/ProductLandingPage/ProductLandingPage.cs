@@ -25,10 +25,25 @@ namespace AutomatedTest.POM.PageObjects
 		public By RatingsAndReviews_Group => By.CssSelector("div[class='pr-rating-stars']");
 		public By ProductFlow_Group => By.CssSelector("div[class='product-metric product-metric--flow']");
 		public By ProductImages_Group =>By.TagName("picture");
-
 		//Social icons
 		public By FacebookIcon => By.CssSelector("i[class='icon-share-facebook']");
 		public By TwitterIcon => By.CssSelector("i[class='icon-share-twitter']");
+		/// <summary>
+		/// Quick Buy Modal
+		/// </summary>
+		/// 
+		public By ProductInPcp => By.CssSelector("div[class='product-list__item']:nth-child(1)");
+		public By QuickBuyButton => By.CssSelector("div[class='product-list__item']:nth-child(1) div[class*='cta-panel__quick-buy-button']");
+		public By QuickBuyModal => By.CssSelector("div[class='cta-panel__quick-buy-modal--wrapper']");
+		public By ModalTitle => By.CssSelector("h1[class='product-main__title']");
+		public By ModalOldPrice => By.CssSelector("div[class*='product-main-purchase__amount--old']");
+		public By ModalNewPrice => By.CssSelector("div[class*='product-main-purchase__amount--new']");
+		public By ModalRatings => By.CssSelector("div[class='product-main__rating']");
+		public By ModalSizeGuide => By.CssSelector("div[class*='form-group--chips']");
+		public By ModalAddToCartCounter => By.CssSelector("div[class='product-cart-add__counter']");
+		public By ModalAddToCartButton => By.CssSelector("button[class*='product-cart-add__button']");
+		public By ModalViewProductButton => By.CssSelector("div[class='cta-panel__quick-buy-modal--view-details']");
+
 
 
 		#endregion
@@ -43,7 +58,21 @@ namespace AutomatedTest.POM.PageObjects
 		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon, ExpectedConditions.ElementToBeClickable(FacebookIcon));
 		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon, ExpectedConditions.ElementToBeClickable(TwitterIcon));
 		IList<IWebElement> ListOfProducts => Driver.FindElementsWait(ProductList);
-
+		/// <summary>
+		/// Quick Buy Modal
+		/// </summary>
+		/// 
+		IWebElement ProductInPcpWebElement => Driver.FindElementWait(ProductInPcp, ExpectedConditions.ElementIsVisible(ProductInPcp));
+		IWebElement QuickBuyButtonWebElement => Driver.FindElementWait(QuickBuyButton, ExpectedConditions.ElementIsVisible(QuickBuyButton));
+		IWebElement QuickBuyModalWebElement => Driver.FindElementWait(QuickBuyModal,ExpectedConditions.ElementIsVisible(QuickBuyModal));
+		IWebElement ModalTitleWebElement => Driver.FindElementWait(ModalTitle, ExpectedConditions.ElementIsVisible(ModalTitle));
+		IWebElement ModalOldPriceWebElement => Driver.FindElementWait(ModalOldPrice, ExpectedConditions.ElementIsVisible(ModalOldPrice));
+		IWebElement ModalNewPriceWebElement => Driver.FindElementWait(ModalNewPrice, ExpectedConditions.ElementIsVisible(ModalNewPrice));
+		IWebElement ModalRatingsWebElement => Driver.FindElementWait(ModalRatings, ExpectedConditions.ElementIsVisible(ModalRatings));
+		IWebElement ModalSizeGuideWebElement => Driver.FindElementWait(ModalSizeGuide, ExpectedConditions.ElementIsVisible(ModalSizeGuide));
+		IWebElement ModalAddToCartCounterWebElement => Driver.FindElementWait(ModalAddToCartCounter, ExpectedConditions.ElementIsVisible(ModalAddToCartCounter), 3);
+		IWebElement ModalAddToCartButtonWebElement => Driver.FindElementWait(ModalAddToCartButton, ExpectedConditions.ElementIsVisible(ModalAddToCartButton));
+		IWebElement ModalViewProductButtonWebElement => Driver.FindElementWait(ModalViewProductButton, ExpectedConditions.ElementIsVisible(ModalViewProductButton));
 		#endregion
 
 		#region Constructor and methods
@@ -61,6 +90,23 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsTwitterIconDisplayed() => TwitterIconWebElement.Displayed;
 		public int GetIndicatorNumber() => WebDriverExtensions.GetIndicatorNumberOfProducts(IndicatorWebElement);
 		public int GetNumberOfProducts() => WebDriverExtensions.GetNumberOfProducts(ListOfProducts);
+		/// <summary>
+		/// Quick Buy Modal
+		/// </summary>
+		/// 
+		public bool IsProductInPcpDisplayed() => ProductInPcpWebElement.Displayed;
+		public bool IsQuickBuyButtonDisplayed() => QuickBuyButtonWebElement.Displayed;
+		public void IsProductInPcpHoveredAndClicked() => WebDriverExtensions.WaitElementForHoverAndClick(Driver, ProductInPcp);
+		public bool IsClicked() => WebDriverExtensions.ClickTheWebElement(QuickBuyButtonWebElement);
+		public bool IsQuickBuyModalDisplayed() => QuickBuyModalWebElement.Displayed;
+		public bool IsModalTitleDisplayed() => ModalTitleWebElement.Displayed;
+		public bool IsModalOldPriceWebElement() => ModalOldPriceWebElement.Displayed;
+		public bool IsModalNewPriceWebElement() => ModalNewPriceWebElement.Displayed;
+		public bool IsModalRatingsWebElement() => ModalRatingsWebElement.Displayed;
+		public bool IsModalSizeGuideWebElement() => ModalSizeGuideWebElement.Displayed;
+		public bool IsModalAddToCartCounterWebElement() => ModalAddToCartCounterWebElement.Displayed;
+		public bool IsModalAddToCartButtonWebElement() => ModalAddToCartButtonWebElement.Displayed;
+		public bool IsModalViewProductButtonWebElement() => ModalViewProductButtonWebElement.Displayed;
 		#endregion
 	}
 }

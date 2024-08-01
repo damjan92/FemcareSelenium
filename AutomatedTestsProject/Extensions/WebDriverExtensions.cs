@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Interactions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AutomatedTests.Framework.Extensions
 {
@@ -101,6 +102,24 @@ namespace AutomatedTests.Framework.Extensions
 		{
 			Actions action = new Actions(webDriver);
 			action.SendKeys(Keys.Return).Perform();
+		}
+        /// <summary>
+        /// Hover and Click actions
+        /// </summary>
+        public static void WaitElementForHoverAndClick(this IWebDriver webDriver, By by, int timeoutSeconds = 5)
+        {
+			try
+			{
+				Actions action = new Actions(webDriver);
+				IWebElement webElement = by.FindElement(webDriver);
+                //IWebElement webElementHover = byHover.FindElement(webDriver);
+
+				action.MoveToElement(webElement).Build().Perform();
+			}
+			catch (Exception)
+			{
+				throw new Exception($"Element is not clickable to send  keys [{by.Criteria}]");
+			}
 		}
 		/// <summary>
 		/// Find Elmements
