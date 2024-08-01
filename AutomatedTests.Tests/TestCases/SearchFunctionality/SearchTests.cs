@@ -17,13 +17,13 @@ namespace AutomatedTests.Tests.TestCases
 				search = new Search(Browser, websiteUrl);
 			}
 		}
-		[Test]
-		public void IsSearchIconDisplayed() => Assert.That(search.IsSearchIconDisplayed(), "Search icon is not displayed");
+		
 		[Test]
 		public void AreElementsInSearchBarDisplayed()
 		{
 			Assert.Multiple(() =>
 			{
+				Assert.That(search.IsSearchIconDisplayed(), "Search icon is not displayed");
 				Assert.That(search.ClickOnSearchIcon(), "Search icon is not displayed/clicked");
 				Assert.That(search.IsSearchBarDisplayed(), "Search bar is not displayed");
 				Assert.That(search.IsResetSearchWordDisplayed(), "Reset/close search icon is not displayed");

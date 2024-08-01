@@ -13,27 +13,26 @@ namespace AutomatedTest.POM.PageObjects
 		public By Title => By.TagName("h1");
 		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
 		//Period Pads
-		public By PeriodPadsIndicator => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1) span[class='range-slider-info-panel__count']");
-		public By PeriodPadsRangeSlider => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1)");
-		public By PeriodPadsProducts => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1) div[class*='swiper-slide']");
+		public By PeriodPadsIndicator => By.CssSelector("ddiv[class*='range-slider ']:nth-child(1) span[class='range-slider-info-panel__count']");
+		public By PeriodPadsRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(1)");
+		public By PeriodPadsProducts => By.CssSelector("div[class*='range-slider ']:nth-child(1) div[class*='swiper-slide']");
 		// Maxi Towels
-		public By MaxiTowelsIndicator => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(2) span[class='range-slider-info-panel__count']");
-		public By MaxiTowelsRangeSlider => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(2)");
-		public By MaxiTowelProducts => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(2) div[class*='swiper-slide");
+		public By MaxiTowelsIndicator => By.CssSelector("div[class*='range-slider ']:nth-child(2) span[class='range-slider-info-panel__count']");
+		public By MaxiTowelsRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(2)");
+		public By MaxiTowelProducts => By.CssSelector("div[class*='range-slider ']:nth-child(2) div[class*='swiper-slide");
 		//Panty Liners
-		public By PantyLinersIndicator => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(3) span[class='range-slider-info-panel__count']");
-		public By PantyLinersRangeSlider => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(3)");
-		public By PantyLinersProducts => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(3) div[class*='swiper-slide");
+		public By PantyLinersIndicator => By.CssSelector("div[class*='range-slider ']:nth-child(3) span[class='range-slider-info-panel__count']");
+		public By PantyLinersRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(3)");
+		public By PantyLinersProducts => By.CssSelector("div[class*='range-slider ']:nth-child(3) div[class*='swiper-slide");
 		//Period Pants
-		public By PeriodPantsIndicator => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(4) span[class='range-slider-info-panel__count']");
-		public By PeriodPantsRangeSlider => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(4)");
-		public By PeriodPantsProducts => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(4) div[class*='swiper-slide");
+		public By PeriodPantsIndicator => By.CssSelector("div[class*='range-slider ']:nth-child(4) span[class='range-slider-info-panel__count']");
+		public By PeriodPantsRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(4)");
+		public By PeriodPantsProducts => By.CssSelector("div[class*='range-slider ']:nth-child(4) div[class*='swiper-slide");
 		/// <summary>
 		/// Quick buy
 		/// </summary>
 		/// 
-		public By QuickBuyProduct => By.CssSelector
-			("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1) div[class*='swiper-slide-active'] div[class='cta-panel__image']");
+		public By QuickBuyProduct => By.CssSelector("div[class*='range-slider ']:nth-child(10) div[class*='swiper-slide-active']");
 		public By QuickBuyButton => By.CssSelector("div[class='btn btn-primary cta-panel__quick-buy-button']");
 		public By QuickBuyModal => By.CssSelector("div[class='cta-panel__quick-buy-modal--wrapper']");
 		public By ModalTitle => By.CssSelector("h1[class='product-main__title']");
