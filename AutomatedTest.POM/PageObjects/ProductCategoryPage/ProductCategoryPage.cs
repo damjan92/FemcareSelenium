@@ -13,7 +13,7 @@ namespace AutomatedTest.POM.PageObjects
 		public By Title => By.TagName("h1");
 		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
 		//Period Pads
-		public By PeriodPadsIndicator => By.CssSelector("ddiv[class*='range-slider ']:nth-child(1) span[class='range-slider-info-panel__count']");
+		public By PeriodPadsIndicator => By.CssSelector("div[class*='range-slider ']:nth-child(1) span[class='range-slider-info-panel__count']");
 		public By PeriodPadsRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(1)");
 		public By PeriodPadsProducts => By.CssSelector("div[class*='range-slider ']:nth-child(1) div[class*='swiper-slide']");
 		// Maxi Towels
@@ -32,7 +32,7 @@ namespace AutomatedTest.POM.PageObjects
 		/// Quick buy
 		/// </summary>
 		/// 
-		public By QuickBuyProduct => By.CssSelector("div[class*='range-slider ']:nth-child(10) div[class*='swiper-slide-active']");
+		public By QuickBuyProduct => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1) div[class*='swiper-slide-active'] div[class='cta-panel__image']");
 		public By QuickBuyButton => By.CssSelector("div[class='btn btn-primary cta-panel__quick-buy-button']");
 		public By QuickBuyModal => By.CssSelector("div[class='cta-panel__quick-buy-modal--wrapper']");
 		public By ModalTitle => By.CssSelector("h1[class='product-main__title']");
