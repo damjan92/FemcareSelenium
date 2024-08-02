@@ -32,7 +32,8 @@ namespace AutomatedTest.POM.PageObjects
 		/// Quick buy
 		/// </summary>
 		/// 
-		public By QuickBuyProduct => By.CssSelector("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1) div[class*='swiper-slide-active'] div[class='cta-panel__image']");
+		public By QuickBuyProduct => By.CssSelector
+			("div[class='range-slider range-slider--bg-white clearfix']:nth-child(1) div[class*='swiper-slide-active'] div[class='cta-panel__image']");
 		public By QuickBuyButton => By.CssSelector("div[class='btn btn-primary cta-panel__quick-buy-button']");
 		public By QuickBuyModal => By.CssSelector("div[class='cta-panel__quick-buy-modal--wrapper']");
 		public By ModalTitle => By.CssSelector("h1[class='product-main__title']");
