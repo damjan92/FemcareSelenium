@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Product Detail Page")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ProductDetailPageUrls))]
 	[Parallelizable]
 	public class ProductDetailPageTests(string websiteUrl) : BaseTest

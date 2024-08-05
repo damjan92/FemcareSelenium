@@ -4,6 +4,7 @@ using AutomatedTests.Framework.Core;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Search functionality")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.SearchUrls))]
 	[Parallelizable]
 	public class SearchTests(string websiteUrl) : BaseTest

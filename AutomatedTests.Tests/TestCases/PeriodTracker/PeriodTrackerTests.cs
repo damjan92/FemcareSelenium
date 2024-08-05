@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Period Tracker")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.PeriodTrackerUrls))]
 	[Parallelizable]
 	public class PeriodTrackerTests(string websiteUrl) : BaseTest

@@ -28,6 +28,10 @@ namespace AutomatedTest.POM.PageObjects
 		public By PeriodPantsIndicator => By.CssSelector("div[class*='range-slider ']:nth-child(4) span[class='range-slider-info-panel__count']");
 		public By PeriodPantsRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(4)");
 		public By PeriodPantsProducts => By.CssSelector("div[class*='range-slider ']:nth-child(4) div[class*='swiper-slide");
+		// Inovations
+		public By InovationsInfoPanel => By.CssSelector("div[class='innovations-info-panel']");
+		public By InovationsSlider => By.CssSelector("div[class*='innovations-slider']");
+
 		/// <summary>
 		/// Quick buy
 		/// </summary>
@@ -53,15 +57,22 @@ namespace AutomatedTest.POM.PageObjects
 		//Period Pads
 		IWebElement PeriodPadsIndicatorWebElement => Driver.FindElementWait(PeriodPadsIndicator, ExpectedConditions.ElementIsVisible(PeriodPadsIndicator));
 		IWebElement PeriodPadsRangeSliderWebElement => Driver.FindElementWait(PeriodPadsRangeSlider, ExpectedConditions.ElementIsVisible(PeriodPadsRangeSlider));
+		IList<IWebElement> PeriodPadsList => Driver.FindElementsWait(PeriodPadsProducts);
 		// Maxi Towels
 		IWebElement MaxiTowelsIndicatorWebElement => Driver.FindElementWait(MaxiTowelsIndicator, ExpectedConditions.ElementIsVisible(MaxiTowelsIndicator));
 		IWebElement MaxiTowelsRangeSliderWewbElement => Driver.FindElementWait(MaxiTowelsRangeSlider, ExpectedConditions.ElementIsVisible(MaxiTowelsRangeSlider));
+		IList<IWebElement> MaxiTowelsList => Driver.FindElementsWait(MaxiTowelProducts);
 		//Panty Liners
 		IWebElement PantyLinersIndicatorWebElement => Driver.FindElementWait(PantyLinersIndicator, ExpectedConditions.ElementIsVisible(PantyLinersIndicator));
 		IWebElement PantyLinersRangeSliderWebElement => Driver.FindElementWait(PantyLinersRangeSlider, ExpectedConditions.ElementIsVisible(PantyLinersRangeSlider));
+		IList<IWebElement> PantyLinersList => Driver.FindElementsWait(PantyLinersProducts);
 		//Period Pants
 		IWebElement PeriodPantsIndicatorWebElement => Driver.FindElementWait(PeriodPantsIndicator, ExpectedConditions.ElementIsVisible(PeriodPantsIndicator));
 		IWebElement PeriodPantsRangeSliderWebElement => Driver.FindElementWait(PeriodPantsRangeSlider, ExpectedConditions.ElementIsVisible(PeriodPantsRangeSlider));
+		IList<IWebElement> PeriodPantsList => Driver.FindElementsWait(PeriodPantsProducts);
+		// Innovations
+		IWebElement InovationsInfoPanelWebElement => Driver.FindElementWait(InovationsInfoPanel, ExpectedConditions.ElementIsVisible(InovationsInfoPanel));
+		IWebElement InovationsSliderWebElement => Driver.FindElementWait(InovationsSlider, ExpectedConditions.ElementIsVisible(InovationsSlider));
 		/// <summary>
 		/// Quick Buy
 		/// </summary>
@@ -91,12 +102,19 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
 		public bool IsPeriodPadsIndicatorDisplayed() => PeriodPadsIndicatorWebElement.Displayed;
 		public bool IsPeriodPadsRangeSliderDisplayed() => PeriodPadsRangeSliderWebElement.Displayed;
+		public bool ArePeriodPadsProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(PeriodPadsList);
 		public bool IsMaxiTowelsIndicatorDisplayed() => MaxiTowelsIndicatorWebElement.Displayed;
 		public bool IsMaxiTowelsRangeSliderDisplayed() => MaxiTowelsRangeSliderWewbElement.Displayed;
+		public bool AreMaxiTowelProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(MaxiTowelsList);
 		public bool IsPantyLinersIndicatorDisplayed() => PantyLinersIndicatorWebElement.Displayed;
 		public bool IsPantyLinersRangeSliderDisplayed() => PantyLinersRangeSliderWebElement.Displayed;
+		public bool ArePantyLinersProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(PantyLinersList);
 		public bool IsPeriodPantsIndicatorDisplayed() => PeriodPantsIndicatorWebElement.Displayed;
 		public bool IsPeriodPantsRangeSliderDisplayed() => PeriodPantsRangeSliderWebElement.Displayed;
+		public bool ArePeriodPantsProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(PeriodPantsList);
+		public bool IsInovationsInfoPanelDisplayed() => InovationsInfoPanelWebElement.Displayed;
+		public bool IsInnovationSliderDisplayed() => InovationsSliderWebElement.Displayed;
+
 		/// <summary>
 		/// Quick Buy Modal
 		/// </summary>

@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Contact us")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ContactUsUrls))]
 	[Parallelizable]
 	public class ContactUsTests(string websiteUrl) : BaseTest

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Ask the Expert")]
 	[TestFixtureSource(typeof(TestData),nameof(TestData.AskTheExpertUrls))]
 	[Parallelizable]
 	public class AskTheExpertTests(string websiteUrl) : BaseTest

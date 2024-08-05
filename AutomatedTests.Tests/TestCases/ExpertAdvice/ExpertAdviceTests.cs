@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Expert Advice")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ExpertAdviceUrls))]
 	[Parallelizable]
 	public class ExpertAdviceTests(string websiteUrl) : BaseTest

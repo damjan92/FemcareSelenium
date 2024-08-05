@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Contact us")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.CoherisContactUsUrls))]
 	[Parallelizable]
 	public class CohersContactUsTests(string websiteUrl) : BaseTest

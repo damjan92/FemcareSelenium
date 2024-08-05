@@ -6,7 +6,8 @@ using System.Configuration;
 
 namespace AutomatedTests.Tests.TestCases
 {
-    [TestFixtureSource(typeof(TestData), nameof(TestData.HomePageUrls))]
+	[Category("Home page")]
+	[TestFixtureSource(typeof(TestData), nameof(TestData.HomePageUrls))]
     [Parallelizable]
     public class HomePageTests(string websiteUrl) : BaseTest
     {

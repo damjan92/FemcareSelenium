@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Promotion Newsletter")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.NewsletterSubscriptionUrls))]
 	[Parallelizable]
 	public class NewsletterSubscriptionTests(string websiteUrl) : BaseTest

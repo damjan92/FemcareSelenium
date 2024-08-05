@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
+	[Category("Promotion Newsletter")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.PromotionNewsletterUrls))]
 	[Parallelizable]
 	public class PromotionNewsletterTests(string websiteUrl) : BaseTest
