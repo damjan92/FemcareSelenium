@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
 {
-	[Category("Product Category Page")]
+	[Category("Product Category Page Quick Buy")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ProductCategoryPageQuickBuy))]
 	[Parallelizable]
 	public class ProductCategoryPageQuickBuyTests(string websiteUrl) : BaseTest

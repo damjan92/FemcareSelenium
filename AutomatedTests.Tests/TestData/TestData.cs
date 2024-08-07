@@ -154,6 +154,18 @@
 			"https://www.libresse.rs/kupi-nase-proizvode/available-in-store/ulosci/puresensitive-ultra-ulosci-normal/",
 			"https://www.libresse.ua/shop-our-products/period-pads/ultra-normal-soft/"
 		};
+		public static string[] ProductDetailPageBaazarVoice =
+		{
+			"https://www.bodyform.co.uk/shop-our-products/available-in-store/ultra-towels/ultra-towels-normal-wings/",
+		};
+		public static string[] ProductDetailPageRatingsReviews =
+		{			
+			"https://www.libresse.se/shoppa-vara-produkter/shoppa-i-butik/bindor/ultra-thin-normal-wing/",
+			"https://www.libresse.no/kjop-vare-produkter/Les-mer-om-produktene/bind/ultra-normal-wings-bind/",			
+			"https://www.saba.com.mx/comprar-productos/productos-saba/tampones/saba-v-compact-tampones-compactos/",
+			"https://www.libresse.nl/onze-producten/producten/maandverband/libresse-ultra-normal/",			
+			
+		};
 		public static string[] ProductDetailPageVtex =
 		{
 			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/saba-intimawear-hipster-flujo-abundante/"

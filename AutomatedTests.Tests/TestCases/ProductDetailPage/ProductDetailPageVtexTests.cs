@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
-	[Category("Product Detail Page")]
+	[Category("Product Detail Page Vtex")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ProductDetailPageVtex))]
 	[Parallelizable]
 	public class ProductDetailPageVtexTests(string websiteUrl) : BaseTest

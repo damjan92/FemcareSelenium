@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
-	[Category("Product Landing Page")]
+	[Category("Product Landing Page Quick Buy")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.ProductLandingPageQuickBuy))]
 	[Parallelizable]
 	public class ProductLandingPageQuickBuyTests(string websiteUrl) : BaseTest
