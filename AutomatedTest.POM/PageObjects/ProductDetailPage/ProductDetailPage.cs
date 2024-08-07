@@ -53,6 +53,12 @@ namespace AutomatedTest.POM.PageObjects
 		public By CartModalTotalPrice => By.CssSelector("div[class='cart-notification__total']");
 		public By CartModalViewCart => By.CssSelector("div[class='cart-notification-view__button']");
 		public By CartModalCheckout => By.CssSelector("div[class='cart-notification-checkout']");
+		public By Cart => By.CssSelector("div[class='cart__dialog']");
+		public By CartTitle => By.CssSelector("div[class='cart__dialog'] div[class='cart__title']");
+		public By CartIndicator => By.CssSelector("div[class='cart-indicator']");
+		public By CartClose => By.CssSelector("div[class='cart__close']");
+		public By CartItemName => By.CssSelector("div[class='cart-item__name'] div[class='cart-item__name']");
+		public By CartItemSkuName => By.CssSelector("div[class='cart-item__skuName']");
 
 
 		#endregion
