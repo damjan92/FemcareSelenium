@@ -42,12 +42,13 @@ namespace AutomatedTests.Tests.TestCases
 		{
 			Assert.Multiple(() =>
 			{
-				Assert.That(periodTracker.IsTrackMyPeriodBtnClicked(), "Track my Period Button is not found/clicked");
-				Assert.That(periodTracker.IsResultCalendarDisplayed(), "Calendar is not displayed");
+				//periodTracker.IsTrackMyPeriodBtnClicked();
+				Assert.That(periodTracker.IsTrackMyPeriodBtnClicked(), "Track my Period Button is not found/clicked");				
 				Assert.That(periodTracker.IsSubHeadingDisplayed(), "Subheading is not displayed");
 				Assert.That(periodTracker.IsPeriodTrackerResultContainerDisplayed(), "Result container is not displayed");
 				Assert.That(periodTracker.IsPreviousNavButtonDisplayed(), "Previos button is not displayed");
 				Assert.That(periodTracker.IsNextNavButtonDisplayed(), "Next button is not displayed");
+				Assert.That(periodTracker.IsResultCalendarDisplayed(), "Calendar is not displayed");
 				Assert.That(periodTracker.IsPeriodTrackerLegendDisplayed(), "Legend is not displayed");
 			});
 		}		

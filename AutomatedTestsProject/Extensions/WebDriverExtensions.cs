@@ -155,7 +155,7 @@ namespace AutomatedTests.Framework.Extensions
                 {
                     if (item.Displayed == true)
                     {
-                        Console.WriteLine( "Elements is displayed");
+                        Console.WriteLine($"Elements: [{item.GetAttribute("class")}]is displayed");
                     }
                 }
                 return true;
@@ -277,7 +277,11 @@ namespace AutomatedTests.Framework.Extensions
 				return 0;
 			}
 		}
-
+        /// <summary>
+        /// Get rest status of images, return status 200 if image is loaded properly
+        /// </summary>
+        /// <param name="webDriver"></param>
+        /// <param name="tab"></param>
 
 		public static void SwitchToTab(this IWebDriver webDriver, int tab)
         {
