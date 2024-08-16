@@ -28,7 +28,9 @@ namespace AutomatedTest.POM.PageObjects
 		public By PeriodTrackerLegend => By.CssSelector("div[class='period-tracker-legend']");
 		//Range slider
 		public By RelatedProducts => By.CssSelector("div[class*='range-slider__slider']");
-
+		//Test
+		public By ListOfAssets => By.CssSelector("picture img[srcset]");
+		public By FooterLogo => By.CssSelector("div[class='global-footer__essity-logo']");
 
 		#endregion
 
@@ -47,6 +49,8 @@ namespace AutomatedTest.POM.PageObjects
 		IWebElement ResultCalendarWebElement => Driver.FindElementWait(ResultCalendar, ExpectedConditions.ElementIsVisible(ResultCalendar),3);
 		IWebElement PeriodTrackerLegendWebElement => Driver.FindElementWait(PeriodTrackerLegend, ExpectedConditions.ElementIsVisible(PeriodTrackerLegend));
 		IWebElement RelatedProductsWebElement => Driver.FindElementWait(RelatedProducts, ExpectedConditions.ElementIsVisible(RelatedProducts));
+		IList<IWebElement> ListOfAssetsWb => Driver.FindElementsWait(ListOfAssets);
+		IWebElement FooterLogoWb => Driver.FindElementWait(FooterLogo);
 
 		#endregion
 
@@ -74,6 +78,11 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsResultCalendarDisplayed() => ResultCalendarWebElement.Displayed;
 		public bool IsPeriodTrackerLegendDisplayed() => PeriodTrackerLegendWebElement.Displayed;
 		public bool IsRelatedProductsDisplayed() => RelatedProductsWebElement.Displayed;
+		public bool GetTextOfListOfAssets() => WebDriverExtensions.AreAssetsDisplayed(ListOfAssetsWb);
+		public void ScrollIntoFooter()
+		{
+			WebDriverExtensions.ScrollElementIntoCenterOfView(Driver, FooterLogoWb);
+		}
 
 		#endregion
 	}

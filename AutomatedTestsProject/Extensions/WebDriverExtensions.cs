@@ -2,7 +2,8 @@
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Interactions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Net.Http.Headers;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AutomatedTests.Framework.Extensions
 {
@@ -75,6 +76,7 @@ namespace AutomatedTests.Framework.Extensions
                 throw new Exception($"No such element with selector [{by.Criteria}]");
             }
         }
+
 		/// <summary>
 		/// Send keys
 		/// </summary>        
@@ -98,11 +100,7 @@ namespace AutomatedTests.Framework.Extensions
 				throw new Exception($"Element is not clickable to send  keys [{by.Criteria}]");
 			}
 		}
-		public static void ConfirmSearch(this IWebDriver webDriver)
-		{
-			Actions action = new Actions(webDriver);
-			action.SendKeys(Keys.Return).Perform();
-		}
+        
         /// <summary>
         /// Hover and Click actions
         /// </summary>
@@ -142,14 +140,15 @@ namespace AutomatedTests.Framework.Extensions
                 throw new Exception($"No such elements with selector [{by.Criteria}]");
             }
         }
+
         public static bool AreElementsDisplayed(IList<IWebElement> webElements)
         {
             try
             {
                 if (!webElements.Any())
                 {
-                    Console.WriteLine("");
-                    return false;
+                    Console.WriteLine("There is not any elements");
+                    throw new NoSuchElementException();
                 }
                 foreach (var item in webElements)
                 {
@@ -165,8 +164,11 @@ namespace AutomatedTests.Framework.Extensions
 				throw new Exception($"No such elements with selector");
 			}
 		}
-
-        public static void WaitForElementToBeClickable(this IWebDriver webDriver, By by, int timeoutSeconds = 5)
+		
+        /// <summary>
+        /// Wait for element to be clickable
+        /// </summary>
+		public static void WaitForElementToBeClickable(this IWebDriver webDriver, By by, int timeoutSeconds = 5)
         {
             try
             {
@@ -179,8 +181,11 @@ namespace AutomatedTests.Framework.Extensions
                 throw new Exception($"Element is not clickable [{by.Criteria}]");
             }
         }
-             
-        public static bool WaitForElementIsVisible(this IWebDriver webDriver, By by, int timeoutSeconds = 5)
+
+		/// <summary>
+		/// Wait for element to be visible
+		/// </summary>
+		public static bool WaitForElementIsVisible(this IWebDriver webDriver, By by, int timeoutSeconds = 5)
         {
             var wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(timeoutSeconds));
 
@@ -252,6 +257,7 @@ namespace AutomatedTests.Framework.Extensions
                 return 0; 
             }
         }
+
 		/// <summary>
 		/// Return the number of products
 		/// </summary>
@@ -280,8 +286,54 @@ namespace AutomatedTests.Framework.Extensions
         /// <summary>
         /// Get rest status of images, return status 200 if image is loaded properly
         /// </summary>
-        /// <param name="webDriver"></param>
-        /// <param name="tab"></param>
+        public static async Task<bool> GetStatusCode(string url)
+        {
+            HttpClient restClient = new HttpClient();
+            HttpRequestMessage restRequest = new HttpRequestMessage(HttpMethod.Get, url);
+            try
+            {
+				HttpResponseMessage restResponse = await restClient.SendAsync(restRequest);
+				int responseCode = (int)restResponse.StatusCode;
+                if (responseCode == 200)
+                {
+                    await Console.Out.WriteLineAsync("Image has response 200");
+                    return true;
+                }
+                else
+                {
+                    await Console.Out.WriteLineAsync($"Image response code is: {responseCode}");
+                    return false;
+                }
+				
+			}
+            catch { return false; }            
+        }
+
+		public static bool AreAssetsDisplayed(IList<IWebElement> webElements)
+		{
+			try
+			{
+				if (!webElements.Any())
+				{
+					Console.WriteLine("There is not any of assets");
+					throw new NoSuchElementException();
+				}
+				foreach (var item in webElements)
+				{
+					var src = item.GetAttribute("srcset");
+					if (item.Displayed == true && !string.IsNullOrEmpty(src))
+					{
+						var statusCode = GetStatusCode(src);
+						Console.WriteLine($"Image URL: {src} - Status Code: {statusCode}");
+					}
+				}
+				return true;
+			}
+			catch
+			{
+				throw new Exception($"No such elements with selector");
+			}
+		}
 
 		public static void SwitchToTab(this IWebDriver webDriver, int tab)
         {

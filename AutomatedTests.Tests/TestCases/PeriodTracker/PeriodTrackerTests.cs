@@ -1,5 +1,6 @@
 ﻿using AutomatedTest.POM.PageObjects;
 using AutomatedTests.Framework.Core;
+using AutomatedTests.Framework.Extensions;
 using NUnit.Framework;
 
 namespace AutomatedTests.Tests.TestCases
@@ -51,6 +52,12 @@ namespace AutomatedTests.Tests.TestCases
 				Assert.That(periodTracker.IsResultCalendarDisplayed(), "Calendar is not displayed");
 				Assert.That(periodTracker.IsPeriodTrackerLegendDisplayed(), "Legend is not displayed");
 			});
-		}		
+		}
+		[Test]
+		public void AreAssetsLoaded()
+		{
+			//periodTracker.ScrollIntoFooter();
+			Assert.That(periodTracker.GetTextOfListOfAssets(), "T");
+		}
 	}
 }
