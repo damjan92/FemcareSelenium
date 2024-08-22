@@ -3,6 +3,7 @@ using AutomatedTest.POM;
 using AutomatedTests.Framework.Core;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
+using AutomatedTest.POM.PageObjects;
 
 namespace AutomatedTests.Tests.TestCases
 {
@@ -40,6 +41,18 @@ namespace AutomatedTests.Tests.TestCases
         public virtual void ShutDown()
         {
             Browser.Quit();
+        }
+
+        protected virtual TPage NavigateToPage<TPage>(TPage page, string websiteUrl) where TPage : BasePage
+        {
+            if (page is null || !Browser.BrowserDriver.Url.EndsWith(websiteUrl))
+            {
+                if (Activator.CreateInstance(typeof(TPage), Browser, websiteUrl) is not TPage newPage) throw new NullReferenceException();
+
+                return newPage;
+            }
+
+            return page;
         }
     }
 }

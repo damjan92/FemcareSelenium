@@ -7,7 +7,7 @@ using SeleniumExtras.WaitHelpers;
 namespace AutomatedTest.POM.PageObjects
 {
 
-	public class PeriodTracker : BaseMainPage
+	public class PeriodTrackerPage : BaseMainPage
 	{
 		#region Selectors
 		//Tracker
@@ -52,7 +52,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Contructor and methods
 
-		public PeriodTracker(Browser browser, string url = "") : base(browser, url)
+		public PeriodTrackerPage(Browser browser, string url = "") : base(browser, url)
 		{
 
 		}

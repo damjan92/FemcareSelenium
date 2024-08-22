@@ -96,15 +96,17 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsValidationErrorMessageDisplayed() => ValidationErrorMessageWebElement.Displayed;
 		public bool IsRecaptchaDisplayed() => ReCaptchaWebElement.Displayed;
 		public bool IsSendButtonDisplayed() => SendButtonWebElement.Displayed;
+		
 		public bool AreCheckBoxesDisplayed()
 		{
 			foreach (var checkbox in CheckBoxesWebElements)
 			{
-                Console.WriteLine("checkbox is visible");
                 return checkbox.Displayed;
 			}
+
 			return false;
 		}
+
 		/// <summary>
 		/// Coheris Form Web Elements
 		/// </summary>

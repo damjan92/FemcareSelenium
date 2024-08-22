@@ -1,14 +1,9 @@
 ﻿using AutomatedTest.POM.PageObjects;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
-	[Category("Contact us")]
+    [Category("Contact us")]
 	[TestFixtureSource(typeof(TestData), nameof(TestData.CoherisContactUsUrls))]
 	[Parallelizable]
 	public class CohersContactUsTests(string websiteUrl) : BaseTest
@@ -18,11 +13,9 @@ namespace AutomatedTests.Tests.TestCases
 		[SetUp]
 		public void NavigateToHomePage()
 		{
-			if (contactUs == null || (!Browser.BrowserDriver.Url.EndsWith("")))
-			{
-				contactUs = new ContactUs(Browser, websiteUrl);
-			}
+            contactUs = NavigateToPage(contactUs, websiteUrl);			
 		}
+
 		[Test]
 		public void IsTitleSelectFieldDisplayed() => Assert.That(contactUs.IsTitleSelectFieldDisplayed(), "Title select is not visible");
 		[Test]
@@ -61,6 +54,5 @@ namespace AutomatedTests.Tests.TestCases
 		public void IsSendButtonDisplayed() => Assert.That(contactUs.IsSendButtonDisplayed(), "Send button is not loaded!");
 		[Test]
 		public void AreCheckBoxesDisplayed() => Assert.That(contactUs.AreCheckBoxesDisplayed(), "Check boxes are not visible");
-
 	}
 }

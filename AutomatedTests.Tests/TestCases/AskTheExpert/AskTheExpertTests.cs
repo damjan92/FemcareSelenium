@@ -1,14 +1,9 @@
 ﻿using AutomatedTest.POM.PageObjects;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
-	[Category("Ask the Expert")]
+    [Category("Ask the Expert")]
 	[TestFixtureSource(typeof(TestData),nameof(TestData.AskTheExpertUrls))]
 	[Parallelizable]
 	public class AskTheExpertTests(string websiteUrl) : BaseTest
@@ -23,6 +18,7 @@ namespace AutomatedTests.Tests.TestCases
 				askTheExpert = new AskTheExpert(Browser, websiteUrl);
 			}
 		}
+
 		[Test]
 		public void IsTitleDisplayed() => Assert.That(askTheExpert.IsTitleDisplayed(), Is.True, "H1 is not displayed");
 		[Test]

@@ -15,7 +15,6 @@ namespace AutomatedTest.PageObjects
             {
                 Navigate(_pageUrl);
             }
-
         }
 
         public void Navigate(string url)

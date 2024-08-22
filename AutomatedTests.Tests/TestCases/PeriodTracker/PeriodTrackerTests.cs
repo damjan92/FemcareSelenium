@@ -9,14 +9,14 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class PeriodTrackerTests(string websiteUrl) : BaseTest
 	{
-		private PeriodTracker periodTracker;
+		private PeriodTrackerPage periodTracker;
 
 		[SetUp]
 		public void NavigateToHomePage()
 		{
 			if (periodTracker == null || (!Browser.BrowserDriver.Url.EndsWith("")))
 			{
-				periodTracker = new PeriodTracker(Browser, websiteUrl);
+				periodTracker = new PeriodTrackerPage(Browser, websiteUrl);
 			}
 		}
 
