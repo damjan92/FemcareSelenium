@@ -23,19 +23,17 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsContactUsFormLoaded() => Assert.That(contactUs.IsContactUsFormLoaded(), " Contact Us Form is not loaded!");
 		[Test]
-		public void IsNameDisplayed() => Assert.That(contactUs.IsNameDisplayed(), "First name field bar is loaded!");
-		[Test]
-		public void IsEmailDisplayedDisplayed() => Assert.That(contactUs.IsEmailDisplayed(), "Email field is not loaded!");
-		[Test]
-		public void IsTextAreaMessageDisplayed() => Assert.That(contactUs.IsTextAreaMessageDisplayed(), "Text area is not loaded!");
-		[Test]
-		public void IsRecaptchaDisplayed() => Assert.That(contactUs.IsRecaptchaDisplayed(), "Recaptcha is not loaded!");
-		[Test]
-		public void IsSendButtonDisplayed() => Assert.That(contactUs.IsSendButtonDisplayed(), "Send button is not loaded!");
-		[Test]
-		public void AreCheckBoxesDisplayed() => Assert.That(contactUs.AreCheckBoxesDisplayed(), "Check boxes are not visible");
-
-		//[Test]
-		// public void Test_09_IsSubjectSelectMenuDisplayed() => Assert.That(contactUs.IsSubjectSelectMenuDisplayed(), "SubjectSelectMenu is not loaded!");
+		public void IsNameDisplayed()
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(contactUs.IsNameDisplayed(), "First name field bar is loaded!");
+				Assert.That(contactUs.IsEmailDisplayed(), "Email field is not loaded!");
+				Assert.That(contactUs.IsTextAreaMessageDisplayed(), "Text area is not loaded!");
+				Assert.That(contactUs.IsRecaptchaDisplayed(), "Recaptcha is not loaded!");
+				Assert.That(contactUs.IsSendButtonDisplayed(), "Send button is not loaded!");
+				Assert.That(contactUs.AreCheckBoxesDisplayed(), "Check boxes are not visible");
+			});
+		}		
 	}
 }
