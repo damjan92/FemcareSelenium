@@ -9,14 +9,14 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class ContactUsTests(string websiteUrl) : BaseTest
 	{
-		private ContactUs contactUs;
+		private ContactUsPage contactUs;
 
 		[SetUp]
 		public void NavigateToHomePage()
 		{
 			if (contactUs == null || (!Browser.BrowserDriver.Url.EndsWith("")))
 			{
-				contactUs = new ContactUs(Browser, websiteUrl);
+				contactUs = new ContactUsPage(Browser, websiteUrl);
 			}
 		}
 

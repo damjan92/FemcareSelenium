@@ -8,13 +8,13 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class PromotionNewsletterTests(string websiteUrl) : BaseTest
 	{
-		private PromotionNewsletter promotionNewsletter;
+		private PromotionNewsletterPage promotionNewsletter;
 		[SetUp]
 		public void NavigateToHomePage()
 		{
 			if (promotionNewsletter == null || (!Browser.BrowserDriver.Url.EndsWith("")))
 			{
-				promotionNewsletter = new PromotionNewsletter(Browser, websiteUrl);
+				promotionNewsletter = new PromotionNewsletterPage(Browser, websiteUrl);
 			}
 		}
 		[Test]

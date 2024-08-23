@@ -6,7 +6,7 @@ using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
-	public class ExpertAdvice : BaseMainPage
+	public class ExpertAdvicePage : BaseMainPage
 	{
 		#region Selector
 		public By Title => By.TagName("h1");
@@ -32,7 +32,7 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Constructor and methods
-		public ExpertAdvice(Browser browser, string url = "") : base(browser, url)
+		public ExpertAdvicePage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
 

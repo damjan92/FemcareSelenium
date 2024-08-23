@@ -6,7 +6,7 @@ using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
-	public class PromotionNewsletter : BaseMainPage
+	public class PromotionNewsletterPage : BaseMainPage
 	{
 
 		#region Selectors
@@ -60,7 +60,7 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsNewsletterRecaptchaDisplayed() => NewsletterRecaptchaWebElement.Displayed;
 		public bool IsNewsletterButtonDisplayed() => NewsletterButtonWebElement.Displayed;
 
-		public PromotionNewsletter(Browser browser, string url = "") : base(browser, url)
+		public PromotionNewsletterPage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
 		#endregion

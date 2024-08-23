@@ -9,14 +9,14 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class ExpertAdviceTests(string websiteUrl) : BaseTest
 	{
-		private ExpertAdvice expertAdvice;
+		private ExpertAdvicePage expertAdvice;
 
 		[SetUp]
 		public void NavigateToHomePage() 
 		{
 			if (expertAdvice == null || (!Browser.BrowserDriver.Url.EndsWith(""))) 
 			{
-				expertAdvice = new ExpertAdvice(Browser, websiteUrl);
+				expertAdvice = new ExpertAdvicePage(Browser, websiteUrl);
 			}
 		}
 		[Test]

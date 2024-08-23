@@ -8,14 +8,14 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class AskTheExpertTests(string websiteUrl) : BaseTest
 	{
-		private AskTheExpert askTheExpert;
+		private AskTheExpertPage askTheExpert;
 
 		[SetUp]
 		public void NavigateToHomePage()
 		{
 			if (askTheExpert == null || (!Browser.BrowserDriver.Url.EndsWith("")))
 			{
-				askTheExpert = new AskTheExpert(Browser, websiteUrl);
+				askTheExpert = new AskTheExpertPage(Browser, websiteUrl);
 			}
 		}
 

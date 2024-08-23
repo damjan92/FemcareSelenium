@@ -7,7 +7,7 @@ using SeleniumExtras.WaitHelpers;
 namespace AutomatedTest.POM.PageObjects
 {
 
-	public class ContactUs : BaseMainPage
+	public class ContactUsPage : BaseMainPage
 	{
 		#region Selectors
 
@@ -80,7 +80,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Contructor and methods
 
-		public ContactUs(Browser browser, string url = "") : base(browser, url)
+		public ContactUsPage(Browser browser, string url = "") : base(browser, url)
 		{
 
 		}

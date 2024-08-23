@@ -8,7 +8,7 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class CohersContactUsTests(string websiteUrl) : BaseTest
 	{
-		private ContactUs contactUs;
+		private ContactUsPage contactUs;
 
 		[SetUp]
 		public void NavigateToHomePage()

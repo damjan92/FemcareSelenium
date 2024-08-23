@@ -9,13 +9,13 @@ namespace AutomatedTests.Tests.TestCases
 	[Parallelizable]
 	public class SearchTests(string websiteUrl) : BaseTest
 	{
-		private Search search;
+		private SearchPage search;
 		[SetUp]
 		public void NavigateToHomePage()
 		{
 			if (search == null || (!Browser.BrowserDriver.Url.EndsWith("")))
 			{
-				search = new Search(Browser, websiteUrl);
+				search = new SearchPage(Browser, websiteUrl);
 			}
 		}
 		

@@ -6,7 +6,7 @@ using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
-	public class Search : BaseMainPage
+	public class SearchPage : BaseMainPage
 	{
 		#region Selectors
 		public By SearchIcon => By.CssSelector("div[class*='navigation-bar__icon--search']");
@@ -35,7 +35,7 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Constructods and methods
-		public Search(Browser browser, string url = "") : base(browser, url)
+		public SearchPage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
 		public bool IsSearchIconDisplayed() => SearchIconWebElement.Displayed;
