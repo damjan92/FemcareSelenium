@@ -11,7 +11,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		#region Selectors
 		public By Title => By.TagName("h1");
-		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
+		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
 		//Period Pads
 		public By PeriodPadsIndicator => By.CssSelector("div[class*='range-slider ']:nth-child(1) span[class='range-slider-info-panel__count']");
 		public By PeriodPadsRangeSlider => By.CssSelector("div[class*='range-slider ']:nth-child(1)");

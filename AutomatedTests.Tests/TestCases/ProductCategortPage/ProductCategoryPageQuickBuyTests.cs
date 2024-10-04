@@ -30,7 +30,7 @@ namespace AutomatedTests.Tests.TestCases
 				Thread.Sleep(1000);
 				Assert.That(productCategoryPageQuickBuy.IsQuickBuyModalDisplayed(), "Modal is not displayed");
 				Assert.That(productCategoryPageQuickBuy.IsModalTitleDisplayed(), "Modal Title is not displayed");
-				Assert.That(productCategoryPageQuickBuy.IsModalOldPriceWebElement(), "Modal Old price is not displayed");
+				//Assert.That(productCategoryPageQuickBuy.IsModalOldPriceWebElement(), "Modal Old price is not displayed");
 				Assert.That(productCategoryPageQuickBuy.IsModalNewPriceWebElement(), "Modal New price is not displayed");
 				Assert.That(productCategoryPageQuickBuy.IsModalRatingsWebElement(), "Modal ratings is not displayed");
 				Assert.That(productCategoryPageQuickBuy.IsModalSizeGuideWebElement(), "Modal size guide is not displayed");

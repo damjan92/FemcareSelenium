@@ -9,7 +9,7 @@ namespace AutomatedTest.POM.PageObjects
 	public class ProductDetailPageVtex : BaseMainPage
 	{
 		#region Selectors		
-		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
+		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
 		public By TitleOfProduct => By.TagName("h1");
 		public By FlowMeter => By.CssSelector("div[class=\"product-metric product-metric--flow\"]");
 		public By ProductDescription => By.CssSelector("div[class=\"product-main__description\"]");

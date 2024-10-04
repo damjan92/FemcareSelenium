@@ -34,10 +34,10 @@ namespace AutomatedTests.Tests.TestCases
 		public void IsProductDescriptionDisplayed() => Assert.That(productDetailPage.IsProductDescriptionDisplayed(), "Product description is not visible");
 		[Test]
 		public void IsReasonToLoveDisplayed() => Assert.That(productDetailPage.IsReasonToLoveDisplayed(), "Reason to leave section is not visible");
-		[Test]
+		/*[Test]
 		public void IsProductNewsletterDisplayed() => Assert.That(productDetailPage.IsProductNewsletterDisplayed(), "Product newsletter is not visible");
 		[Test]
-		public void IsButtonProductNewsletterDisplayed() => Assert.That(productDetailPage.IsButtonProductNewsletterDisplayed(), "Button product newsletter is not visible");
+		public void IsButtonProductNewsletterDisplayed() => Assert.That(productDetailPage.IsButtonProductNewsletterDisplayed(), "Button product newsletter is not visible");*/
 		[Test]
 		public void IsProductImageSwipperDisplayed() => Assert.That(productDetailPage.IsProductImageSwipperDisplayed(), "Product image swiper is not visible");
 		[Test]

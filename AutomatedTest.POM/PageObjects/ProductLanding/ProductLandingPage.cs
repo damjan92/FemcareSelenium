@@ -12,7 +12,7 @@ namespace AutomatedTest.POM.PageObjects
 		#region Selectors
 		public By Indicator => By.CssSelector("div[class='product-filter__occurrences'] span");
 		public By Title => By.TagName("h1");
-		public By Breadcrumbs => By.CssSelector("div[class='breadcrumbs']");
+		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
 		// Products list related
 		public By FilterByButton => By.CssSelector("a[class='btn btn-secondary btn-narrow init-filter']");
 		public By SortButton => By.CssSelector("div[class*='product-list__item'");
