@@ -10,6 +10,7 @@ namespace AutomatedTest.POM.PageObjects
 	public class ProductDetailPage : BaseMainPage
 	{
 		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
 		public By TitleOfProduct => By.TagName("h1");
 		public By BvRatings => By.CssSelector("div[class=\"bv_main_container\"]");
@@ -60,6 +61,7 @@ namespace AutomatedTest.POM.PageObjects
 		{
 		}
 
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
 		public bool IsTitleOfProductDisplayed() => TitleOfProductWebElement.Displayed;
 		public bool IsBvRatingsDisplayed() => BvRatingsWebElement.Displayed;

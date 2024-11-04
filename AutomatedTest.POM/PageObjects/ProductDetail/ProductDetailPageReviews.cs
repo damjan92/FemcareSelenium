@@ -10,6 +10,7 @@ namespace AutomatedTest.POM.PageObjects
 	{
 		#region Selectors
 		// Bazaar Voice
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By BvReviewsContainer => By.CssSelector("div[class$='show-reviews-container']");
 		public By BvReviewsOverview => By.CssSelector("div[class*='bv-rnr__sc-10ra6n1-1'] ");
 		public By BvRatingsSnapshot => By.CssSelector("div[class*='bv-rnr__sc-10ra6n1-1'] div[class$='bv_rating_content1']");
@@ -59,6 +60,7 @@ namespace AutomatedTest.POM.PageObjects
 		public ProductDetailPageReviews(Browser browser, string url = "") : base(browser, url)
 		{
 		}
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		// Baazar Voice
 		public bool IsBvReviewsContainerDisplayed() => BvReviewsContainerWebElement.Displayed;
 		public bool IsBvReviewsOverviewDisplayed() => BvReviewsOverviewWebElement.Displayed;

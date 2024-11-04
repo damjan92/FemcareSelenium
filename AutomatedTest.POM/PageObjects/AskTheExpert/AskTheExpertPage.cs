@@ -9,6 +9,7 @@ namespace AutomatedTest.POM.PageObjects
 	public class AskTheExpertPage : BaseMainPage
 	{
 		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Title => By.TagName("h1");
 		public By AskTheExpertWindow => By.CssSelector("div[class='ask-expert']");
 		public By AteSubHeading => By.CssSelector("div[class='ask-expert'] h2");
@@ -58,6 +59,7 @@ namespace AutomatedTest.POM.PageObjects
 		{
 		}
 
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
 		public bool IsAskTheExpertWindowDisplayed() => AskTheExpertWindowWebElement.Displayed;
 		public bool IsAteSubHeadingDisplayed() => AteSubHeadingWebElement.Displayed;

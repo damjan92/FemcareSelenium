@@ -10,6 +10,7 @@ namespace AutomatedTest.POM.PageObjects
 	{
 
 		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Title => By.TagName("h1");
 		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
 		//Period Pads
@@ -97,7 +98,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		}
 
-		public override bool IsPageLoaded() => RootElement.Text.ToLowerInvariant().Contains("events");
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
 		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
 		public bool IsPeriodPadsIndicatorDisplayed() => PeriodPadsIndicatorWebElement.Displayed;

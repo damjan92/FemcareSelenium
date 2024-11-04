@@ -20,6 +20,8 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(productLandingPage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void IsIndicatorDisplayed() => Assert.That(productLandingPage.IsIndicatorDisplayed(), "Indicator is not visible");
 		[Test]
 		public void IsTitleDisplayed() => Assert.That(productLandingPage.IsTitleDisplayed(), "Title is not dislayed");

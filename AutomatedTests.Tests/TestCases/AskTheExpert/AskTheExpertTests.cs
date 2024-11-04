@@ -18,6 +18,8 @@ namespace AutomatedTests.Tests.TestCases
 				askTheExpert = new AskTheExpertPage(Browser, websiteUrl);
 			}
 		}
+		[Test]
+		public void ErrorMessage() => Assert.That(askTheExpert.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 
 		[Test]
 		public void IsTitleDisplayed() => Assert.That(askTheExpert.IsTitleDisplayed(), Is.True, "H1 is not displayed");

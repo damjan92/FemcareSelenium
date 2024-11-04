@@ -24,6 +24,8 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(promotionNewsletter.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void IsNewsletterFormDisplayed() => Assert.That(promotionNewsletter.IsNewsletterFormDisplayed(), "Newsletter form is not visible");
 		[Test]
 		public void IsNewsletterNameDisplayed() => Assert.That(promotionNewsletter.IsNewsletterNameDisplayed(), "Name field is not visible");

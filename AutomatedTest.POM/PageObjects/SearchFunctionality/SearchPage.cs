@@ -9,6 +9,7 @@ namespace AutomatedTest.POM.PageObjects
 	public class SearchPage : BaseMainPage
 	{
 		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By SearchIcon => By.CssSelector("div[class*='navigation-bar__icon--search']");
 		//public By SearchIcon => By.CssSelector("i[class='icon-search']");
 		public By SearchBar => By.Id("searchModalInput");
@@ -38,6 +39,7 @@ namespace AutomatedTest.POM.PageObjects
 		public SearchPage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsSearchIconDisplayed() => SearchIconWebElement.Displayed;
 		public bool IsSearchBarDisplayed() => SearchBarWebElement.Displayed;
 		public bool ClickOnSearchIcon() => WebDriverExtensions.ClickTheWebElement(SearchIconWebElement);

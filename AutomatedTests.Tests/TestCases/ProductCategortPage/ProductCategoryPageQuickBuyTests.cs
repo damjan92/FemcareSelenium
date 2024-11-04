@@ -19,6 +19,8 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(productCategoryPageQuickBuy.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void IsProductInPcpDisplayed() => Assert.That(productCategoryPageQuickBuy.IsProductInPcpDisplayed(), "Product is not visible");
 		[Test]
 		public void IsModalDisplayed()

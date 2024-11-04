@@ -1,18 +1,15 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using Newtonsoft.Json;
 
 namespace AutomatedTests.Tests
 {
-	public class JsonReader
+	public class TestScenarios
 	{
 		public static string jsonPath = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"));
 		public static string json = File.ReadAllText(jsonPath);
+
+		public List<string> lines = new List<string>();
 
 		public string Home { get; set; }
 		public string ContactUs { get; set; }
@@ -23,16 +20,5 @@ namespace AutomatedTests.Tests
 		public string ProductDetailPage { get; set; }
 		public string PromotionForm { get; set; }
 		public string AskTheExpert { get; set; }
-
-		public static void ReadJson()
-		{
-			string jsonPath = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "appsettings.json"));
-			var json = File.ReadAllText(jsonPath);
-			
-
-			//var model = JsonSerializer.Deserialize
-		}
-		
-
 	}
 }

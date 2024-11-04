@@ -10,6 +10,7 @@ namespace AutomatedTest.POM.PageObjects
 	{
 
 		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By PromotionForm => By.CssSelector("form[class*=\"custom-header-form\"]");
 		public By FirstName => By.Id("FirstName");
 		public By AgeField => By.Id("Age_day");
@@ -45,6 +46,7 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Constructor and methods
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsPromotionFormDisplayed() => PromotionFormWebElement.Displayed;
 		public bool IsFirstNameDisplayed() => FirstNameWebElement.Displayed;
 		public bool IsAgeFieldDisplayed() => AgeFieldWebElement.Displayed;

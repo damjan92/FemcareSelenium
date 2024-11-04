@@ -10,6 +10,7 @@ namespace AutomatedTest.POM.PageObjects
 	{
 
 		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Indicator => By.CssSelector("div[class='product-filter__occurrences'] span");
 		public By Title => By.TagName("h1");
 		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
@@ -44,8 +45,6 @@ namespace AutomatedTest.POM.PageObjects
 		public By ModalAddToCartButton => By.CssSelector("button[class*='product-cart-add__button']");
 		public By ModalViewProductButton => By.CssSelector("div[class='cta-panel__quick-buy-modal--view-details']");
 
-
-
 		#endregion
 
 		#region WebElements
@@ -79,7 +78,7 @@ namespace AutomatedTest.POM.PageObjects
 		public ProductLandingPage(Browser browser, string url = "") : base(browser, url)
 		{
 		}
-		
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsIndicatorDisplayed() => IndicatorWebElement.Displayed;
 		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
 		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;

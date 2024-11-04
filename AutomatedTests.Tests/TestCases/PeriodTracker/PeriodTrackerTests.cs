@@ -19,6 +19,8 @@ namespace AutomatedTests.Tests.TestCases
 				periodTracker = new PeriodTrackerPage(Browser, websiteUrl);
 			}
 		}
+		[Test]
+		public void ErrorMessage() => Assert.That(periodTracker.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 
 		[Test]
 		public void Test_13_IsTitleDisplayed() => Assert.That(periodTracker.IsTitleDisplayed(), "Title is not displayed");

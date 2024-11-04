@@ -18,6 +18,8 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(promotionNewsletter.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void IsPromotionFormDisplayed() => Assert.That(promotionNewsletter.IsPromotionFormDisplayed(), "Promotion form is not displayed");
 		[Test]
 		public void IsFirstNameDisplayed() => Assert.That(promotionNewsletter.IsFirstNameDisplayed(), "First name is not displayed");

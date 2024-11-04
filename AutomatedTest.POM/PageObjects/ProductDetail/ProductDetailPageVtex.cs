@@ -8,7 +8,8 @@ namespace AutomatedTest.POM.PageObjects
 {
 	public class ProductDetailPageVtex : BaseMainPage
 	{
-		#region Selectors		
+		#region Selectors
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Breadcrumbs => By.CssSelector("ol[class='breadcrumbs__list']");
 		public By TitleOfProduct => By.TagName("h1");
 		public By FlowMeter => By.CssSelector("div[class=\"product-metric product-metric--flow\"]");
@@ -92,6 +93,7 @@ namespace AutomatedTest.POM.PageObjects
 		public ProductDetailPageVtex(Browser browser, string url = "") : base(browser, url)
 		{
 		}
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
 		public bool IsTitleOfProductDisplayed() => TitleOfProductWebElement.Displayed;
 		public bool IsFlowMeterDisplayed() => FlowMeterWebElement.Displayed;

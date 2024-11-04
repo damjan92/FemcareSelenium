@@ -11,7 +11,7 @@ namespace AutomatedTest.POM.PageObjects
 	{
 		#region Selectors
 		//Tracker
-		public override By RootSelector => By.ClassName("hero-slide");
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Title => By.TagName("h1");
 		public By PeriodTrackerContainer => By.CssSelector("div[class='period-tracker__content']");
 		public By InputFields => By.CssSelector("div[class='period-tracker__inputs']");
@@ -57,7 +57,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		}
 
-		public override bool IsPageLoaded() => RootElement.Text.ToLowerInvariant().Contains("events");
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
 		public bool IsPeriodTrackerContainerDisplayed() => PeriodTrackerContainerWebElement.Displayed;
 		public bool IsInputFieldsDisplayed() => InputFieldsWebElement.Displayed;

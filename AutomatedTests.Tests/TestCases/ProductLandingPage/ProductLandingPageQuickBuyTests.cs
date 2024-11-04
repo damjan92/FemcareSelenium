@@ -24,12 +24,15 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(productLandingPageQuickBuy.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void IsProductInPcpDisplayed() => Assert.That(productLandingPageQuickBuy.IsProductInPcpDisplayed(), "Product is not visible");
 		[Test]
 		public void IsModalDisplayed()
 		{
 			Assert.Multiple(() =>
 			{
+				Thread.Sleep(1000);
 				productLandingPageQuickBuy.IsProductInPcpHoveredAndClicked();
 				productLandingPageQuickBuy.IsClicked();
 				Thread.Sleep(1000);

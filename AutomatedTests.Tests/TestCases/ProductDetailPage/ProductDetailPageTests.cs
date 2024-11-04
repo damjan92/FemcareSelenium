@@ -20,6 +20,8 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(productDetailPage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void AreProductInfoDisplayed()
 		{
 			Assert.Multiple(() =>
@@ -34,10 +36,6 @@ namespace AutomatedTests.Tests.TestCases
 		public void IsProductDescriptionDisplayed() => Assert.That(productDetailPage.IsProductDescriptionDisplayed(), "Product description is not visible");
 		[Test]
 		public void IsReasonToLoveDisplayed() => Assert.That(productDetailPage.IsReasonToLoveDisplayed(), "Reason to leave section is not visible");
-		/*[Test]
-		public void IsProductNewsletterDisplayed() => Assert.That(productDetailPage.IsProductNewsletterDisplayed(), "Product newsletter is not visible");
-		[Test]
-		public void IsButtonProductNewsletterDisplayed() => Assert.That(productDetailPage.IsButtonProductNewsletterDisplayed(), "Button product newsletter is not visible");*/
 		[Test]
 		public void IsProductImageSwipperDisplayed() => Assert.That(productDetailPage.IsProductImageSwipperDisplayed(), "Product image swiper is not visible");
 		[Test]
@@ -52,7 +50,7 @@ namespace AutomatedTests.Tests.TestCases
 				Assert.That(productDetailPage.IsFacebookIconDisplayed(), "Facebook icon is not visible");
 				Assert.That(productDetailPage.IsTwitterIconDisplayed(), "Twitter icon is not visible");
 			});			
-		}		
+		}
 	}
 	
 }

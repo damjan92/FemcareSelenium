@@ -12,6 +12,7 @@ namespace AutomatedTest.POM.PageObjects
 		#region Selectors
 
 		public override By RootSelector => By.ClassName("hero-slide");
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By ContactUsForm => By.CssSelector("form[class*='custom-form']");
 		public By Name => By.Id("Name");
 		public By LastName => By.Id("Surname");
@@ -85,7 +86,7 @@ namespace AutomatedTest.POM.PageObjects
 
 		}
 
-		public override bool IsPageLoaded() => RootElement.Text.ToLowerInvariant().Contains("events");
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsContactUsFormLoaded() => ContactUsFormWebElement.Displayed;
 		public bool IsNameDisplayed() => NameWebElement.Displayed;
 		public bool IsLastNameDisplayed() => LastNameWebElement.Displayed;

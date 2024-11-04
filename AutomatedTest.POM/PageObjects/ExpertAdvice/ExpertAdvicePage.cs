@@ -9,6 +9,7 @@ namespace AutomatedTest.POM.PageObjects
 	public class ExpertAdvicePage : BaseMainPage
 	{
 		#region Selector
+		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Title => By.TagName("h1");
 		public By LatestQuestionSub => By.CssSelector("div[class*='list-articles-list--ask-expert'] h2");
 		public By First_TheLatestQuestion => By.CssSelector("article[class='list-article']:nth-child(1) a");
@@ -36,7 +37,7 @@ namespace AutomatedTest.POM.PageObjects
 		{
 		}
 
-		public override bool IsPageLoaded() => RootElement.Text.ToLowerInvariant().Contains("events");
+		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
 		public bool IsLatestQuestionSubDisplayed() => LatestQuestionSubWebElement.Displayed;
 		public bool IsFirst_TheLatestQuestionDisplayed() => First_TheLatestQuestionWebElement.Displayed;

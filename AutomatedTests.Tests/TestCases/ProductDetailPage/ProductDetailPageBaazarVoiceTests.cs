@@ -21,6 +21,8 @@ namespace AutomatedTests.Tests.TestCases
 		}
 		[Test]
 		public void IsBvReviewsContainerDisplayed() => Assert.That(productDetailPageReviews.IsBvReviewsContainerDisplayed(), "Review contatiner is not visible");
+		[Test]
+		public void ErrorMessage() => Assert.That(productDetailPageReviews.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		//[Test]
 		//public void IsBvReviewsOverviewDisplayed()
 		//{

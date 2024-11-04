@@ -20,6 +20,8 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(productCategoryPage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void AreHeaderDisplayed()
 		{
 			Assert.Multiple(() =>

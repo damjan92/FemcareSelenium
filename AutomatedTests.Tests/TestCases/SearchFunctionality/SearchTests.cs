@@ -18,7 +18,8 @@ namespace AutomatedTests.Tests.TestCases
 				search = new SearchPage(Browser, websiteUrl);
 			}
 		}
-		
+		[Test]
+		public void ErrorMessage() => Assert.That(search.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void AreElementsInSearchBarDisplayed()
 		{

@@ -16,6 +16,8 @@ namespace AutomatedTests.Tests.TestCases
             contactUs = NavigateToPage(contactUs, websiteUrl);			
 		}
 		[Test]
+		public void ErrorMessage() => Assert.That(contactUs.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
+		[Test]
 		public void IsContactUsCoherisFormDisplayed()
 		{
 			Assert.Multiple(() =>
