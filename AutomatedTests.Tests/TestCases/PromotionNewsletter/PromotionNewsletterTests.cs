@@ -18,6 +18,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - Promotion Newsletter")]
 		public void ErrorMessage() => Assert.That(promotionNewsletter.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsPromotionFormDisplayed() => Assert.That(promotionNewsletter.IsPromotionFormDisplayed(), "Promotion form is not displayed");

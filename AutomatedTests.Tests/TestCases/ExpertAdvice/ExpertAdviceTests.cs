@@ -20,6 +20,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - Expert Advice")]
 		public void ErrorMessage() => Assert.That(expertAdvice.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void Test_28_IsTitleDisplayed()

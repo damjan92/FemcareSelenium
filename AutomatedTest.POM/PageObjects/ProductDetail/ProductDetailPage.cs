@@ -23,8 +23,7 @@ namespace AutomatedTest.POM.PageObjects
 		public By ProductImageSwipper => By.CssSelector("div[class*=\"product-main__thumbnails-wrapper\"]");
 		public By ProductRetailers => By.CssSelector("div[class=\"product-retailers\"]");
 		//Social icons
-		public By FacebookIcon => By.CssSelector("i[class=\"icon-share-facebook\"]");
-		public By TwitterIcon => By.CssSelector("i[class=\"icon-share-twitter\"]");
+		public By SocialLinks=> By.CssSelector("ul[class='social__list']");
 		//Cards panel
 		public By CardsPanel => By.CssSelector("div[class=\"cards-panel\"]");
 		//BaazarVoice
@@ -46,9 +45,7 @@ namespace AutomatedTest.POM.PageObjects
 		IWebElement ProductImageSwipperWebElement => Driver.FindElementWait(ProductImageSwipper, ExpectedConditions.ElementIsVisible(ProductImageSwipper));
 		IWebElement ProductRetailersWebElemenet => Driver.FindElementWait(ProductRetailers, ExpectedConditions.ElementIsVisible(ProductRetailers));
 		//Social icons
-		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon, ExpectedConditions.ElementToBeClickable(FacebookIcon));
-		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon, ExpectedConditions.ElementToBeClickable(TwitterIcon));
-		//Cards panel
+		IWebElement SocialLinkWebElement => Driver.FindElementWait(SocialLinks, ExpectedConditions.ElementToBeClickable(SocialLinks));
 		IWebElement CardsPanelWebElement => Driver.FindElementWait(CardsPanel, ExpectedConditions.ElementIsVisible(CardsPanel));
 		//BaazarVoice
 		IWebElement BaazarVoiceContainerWebElement => Driver.FindElementWait(BaazarVoiceContainer, ExpectedConditions.ElementIsVisible(BaazarVoiceContainer));		
@@ -72,8 +69,7 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsButtonProductNewsletterDisplayed() => ButtonProductNewsletterWebElement.Displayed;
 		public bool IsProductImageSwipperDisplayed() => ProductImageSwipperWebElement.Displayed;
 		public bool IsProductRetailersDisplayed() => ProductRetailersWebElemenet.Displayed;
-		public bool IsFacebookIconDisplayed() => FacebookIconWebElement.Displayed;
-		public bool IsTwitterIconDisplayed() => TwitterIconWebElement.Displayed;
+		public bool IsSocialIconDisplayed() => SocialLinkWebElement.Displayed;
 		public bool IsCardsPanelDisplayed() => CardsPanelWebElement.Displayed;
 		public bool IsBaazarVoiceContainerDisplayed() => BaazarVoiceContainerWebElement.Displayed;
 

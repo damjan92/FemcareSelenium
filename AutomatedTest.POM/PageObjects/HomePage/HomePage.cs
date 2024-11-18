@@ -17,8 +17,9 @@ namespace AutomatedTest.POM.PageObjects
 		public By BodyformNavIcon => By.CssSelector("#Ebene_1MainNavigation");
 		public By SearchIcon => By.CssSelector("div[class*=\"navigation-bar__icon--search\"]");
 		
-		public By EssityFooterLogo => By.CssSelector("div[class='global-footer__essity-logo']");
-		public By FooterLinks => By.CssSelector("ul[class='global-footer__links']");
+		public By EssityFooterLogo => By.CssSelector("div[class='footer__essity-logo']");
+		public By FooterMenuLinks => By.CssSelector("ul[class='footer__menu-list']");
+		public By FooterSocialLinks => By.CssSelector("div[class*='social--follow']");
 
 		#endregion
 
@@ -28,7 +29,8 @@ namespace AutomatedTest.POM.PageObjects
 		public IWebElement NavigationBarWebElement => Driver.FindElementWait(NavigationBar, ExpectedConditions.ElementIsVisible(NavigationBar));
 		public IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon, ExpectedConditions.ElementIsVisible(SearchIcon), 3);
 		public IWebElement EssityFooterLogoWebElement => Driver.FindElementWait(EssityFooterLogo, ExpectedConditions.ElementIsVisible(EssityFooterLogo));
-		public IList<IWebElement> FooterLinksWebElements => Driver.FindElementsWait(FooterLinks);
+		public IWebElement FooterSocialLinksWebElement => Driver.FindElementWait(FooterSocialLinks, ExpectedConditions.ElementIsVisible(FooterSocialLinks));
+		public IList<IWebElement> FooterMenuLinksWebElements => Driver.FindElementsWait(FooterMenuLinks);
 
 		#endregion
 
@@ -44,7 +46,9 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsBodyformNavIconDisplayed() => BodyformNavIconWebElement.Displayed;
 		public bool IsSearchIconDisplayed() => SearchIconWebElement.Displayed;
 		public bool IsEssityFooterLogoDisplayed() => EssityFooterLogoWebElement.Displayed;
-		public bool AreFooterLinksDisplayed() => WebDriverExtensions.AreElementsDisplayed(FooterLinksWebElements);
+		public bool IsFooterSocialLinksDisplayed() => FooterSocialLinksWebElement.Displayed;
+
+		public bool AreFooterMenuLinksDisplayed() => WebDriverExtensions.AreElementsDisplayed(FooterMenuLinksWebElements);
 
 		#endregion
 	}

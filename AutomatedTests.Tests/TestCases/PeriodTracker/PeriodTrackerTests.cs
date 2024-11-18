@@ -20,6 +20,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - Period Tracker")]
 		public void ErrorMessage() => Assert.That(periodTracker.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 
 		[Test]

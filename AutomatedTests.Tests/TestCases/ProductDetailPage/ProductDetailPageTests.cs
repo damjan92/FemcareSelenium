@@ -20,6 +20,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - PDP")]
 		public void ErrorMessage() => Assert.That(productDetailPage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void AreProductInfoDisplayed()
@@ -43,14 +44,7 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void AreCardsPanelDisplayed() => Assert.That(productDetailPage.IsCardsPanelDisplayed(), "Twitter icon is not visible");
 		[Test]
-		public void AreSocialIconsDisplayed()
-		{
-			Assert.Multiple(() =>
-			{
-				Assert.That(productDetailPage.IsFacebookIconDisplayed(), "Facebook icon is not visible");
-				Assert.That(productDetailPage.IsTwitterIconDisplayed(), "Twitter icon is not visible");
-			});			
-		}
+		public void AreSocialIconsDisplayed() => Assert.That(productDetailPage.IsSocialIconDisplayed(), "Facebook icon is not visible");
 	}
 	
 }

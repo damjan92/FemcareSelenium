@@ -24,6 +24,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - PLP Quick Buy")]
 		public void ErrorMessage() => Assert.That(productLandingPageQuickBuy.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsProductInPcpDisplayed() => Assert.That(productLandingPageQuickBuy.IsProductInPcpDisplayed(), "Product is not visible");

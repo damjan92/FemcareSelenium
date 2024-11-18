@@ -19,6 +19,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - PDP R&R")]
 		public void ErrorMessage() => Assert.That(productDetailPageReviews.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsRrReviesContainerDisplayed() => Assert.That(productDetailPageReviews.IsRrReviesContainerDisplayed(), "RR reviews container is not visible");

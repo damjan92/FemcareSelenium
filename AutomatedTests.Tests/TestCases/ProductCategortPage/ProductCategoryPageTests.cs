@@ -20,6 +20,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - PCP")]
 		public void ErrorMessage() => Assert.That(productCategoryPage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void AreHeaderDisplayed()

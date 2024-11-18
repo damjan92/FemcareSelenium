@@ -24,6 +24,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - PDP Vtex")]
 		public void ErrorMessage() => Assert.That(productDetailPageVtex.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void AreProductHeaderInfoDisplayed()

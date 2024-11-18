@@ -20,11 +20,12 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - Contact Us")]
 		public void ErrorMessage() => Assert.That(contactUs.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsContactUsFormLoaded() => Assert.That(contactUs.IsContactUsFormLoaded(), " Contact Us Form is not loaded!");
 		[Test]
-		public void IsNameDisplayed()
+		public void AreFieldOFormsDisplayed()
 		{
 			Assert.Multiple(() =>
 			{

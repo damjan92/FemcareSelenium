@@ -27,12 +27,10 @@ namespace AutomatedTest.POM.PageObjects
 		public By ProductFlow_Group => By.CssSelector("div[class='product-metric product-metric--flow']");
 		public By ProductImages_Group =>By.TagName("picture");
 		//Social icons
-		public By FacebookIcon => By.CssSelector("i[class='icon-share-facebook']");
-		public By TwitterIcon => By.CssSelector("i[class='icon-share-twitter']");
+		public By SocialLinks => By.CssSelector("ul[class='social__list']");
 		/// <summary>
 		/// Quick Buy Modal
 		/// </summary>
-		/// 
 		public By ProductInPcp => By.CssSelector("div[class='product-list__item']:nth-child(1)");
 		public By QuickBuyButton => By.CssSelector("div[class='product-list__item']:nth-child(1) div[class*='cta-panel__quick-buy-button']");
 		public By QuickBuyModal => By.CssSelector("div[class='cta-panel__quick-buy-modal--wrapper']");
@@ -54,8 +52,7 @@ namespace AutomatedTest.POM.PageObjects
 		IWebElement FilterByButtonWebElement => Driver.FindElementWait(FilterByButton, ExpectedConditions.ElementIsVisible(FilterByButton));
 		IWebElement SortButtonWebElement => Driver.FindElementWait(SortButton, ExpectedConditions.ElementIsVisible(SortButton));
 		IWebElement ExploreAllProductsWebElement => Driver.FindElementWait(ExploreAllProducts, ExpectedConditions.ElementToBeClickable(ExploreAllProducts));
-		IWebElement FacebookIconWebElement => Driver.FindElementWait(FacebookIcon, ExpectedConditions.ElementToBeClickable(FacebookIcon));
-		IWebElement TwitterIconWebElement => Driver.FindElementWait(TwitterIcon, ExpectedConditions.ElementToBeClickable(TwitterIcon));
+		IWebElement SocialLinkWebElement => Driver.FindElementWait(SocialLinks, ExpectedConditions.ElementToBeClickable(SocialLinks));
 		IList<IWebElement> ListOfProducts => Driver.FindElementsWait(ProductList);
 		/// <summary>
 		/// Quick Buy Modal
@@ -85,8 +82,7 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsFilterByButtonDisplayed() => FilterByButtonWebElement.Displayed;
 		public bool IsSortButtonDisplayed() => SortButtonWebElement.Displayed;
 		public bool IsExploreAllProductsDisplayed() => ExploreAllProductsWebElement.Displayed;
-		public bool IsFacebookIconDisplayed() => FacebookIconWebElement.Displayed;
-		public bool IsTwitterIconDisplayed() => TwitterIconWebElement.Displayed;
+		public bool IsSocialIconDisplayed() => SocialLinkWebElement.Displayed;
 		public int GetIndicatorNumber() => WebDriverExtensions.GetIndicatorNumberOfProducts(IndicatorWebElement);
 		public int GetNumberOfProducts() => WebDriverExtensions.GetNumberOfProducts(ListOfProducts);
 		/// <summary>

@@ -20,6 +20,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - PLP")]
 		public void ErrorMessage() => Assert.That(productLandingPage.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsIndicatorDisplayed() => Assert.That(productLandingPage.IsIndicatorDisplayed(), "Indicator is not visible");
@@ -34,14 +35,7 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsExploreAllProductsDisplayed() => Assert.That(productLandingPage.IsExploreAllProductsDisplayed(), "Explore all products button is not dislayed");		
 		[Test]
-		public void AreSocialIconsDisplayed()
-		{
-			Assert.Multiple(() =>
-			{
-				Assert.That(productLandingPage.IsFacebookIconDisplayed(), "Facebook icon is not visible");
-				Assert.That(productLandingPage.IsTwitterIconDisplayed(), "Twitter icon is not visible");
-			});			
-		}		
+		public void AreSocialIconsDisplayed() => Assert.That(productLandingPage.IsSocialIconDisplayed(), "Facebook icon is not visible");
 		[Test]
 		public void IsIndicatorNumberIsCorrect() => 
 			Assert.That(productLandingPage.GetIndicatorNumber(), Is.EqualTo(productLandingPage.GetNumberOfProducts()), "The number of displayed products are not the same");

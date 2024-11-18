@@ -1,0 +1,78 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="AutomatedTests.Tests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="AutomatedTests.Tests.TestCases" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="AskTheExpertTests(&quot;https://www.saba.com.mx/rompiendo-tab...&quot;)" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.ErrorMessage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ErrorMessage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsAskTheExpertFormVisible" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsAskTheExpertFormVisible" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsAskTheExpertInfoDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsAskTheExpertInfoDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsAskTheExpertWindowDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsAskTheExpertWindowDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertAnswersSubHeadingDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertAnswersSubHeadingDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertBodyDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertBodyDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsExpertFormToggleButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsExpertFormToggleButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsLoadMoreButtonDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsLoadMoreButtonDisplayed" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutomatedTests.Tests.TestCases.AskTheExpertTests.IsTitleDisplayed" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="IsTitleDisplayed" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

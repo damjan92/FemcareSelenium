@@ -16,6 +16,7 @@ namespace AutomatedTests.Tests.TestCases
             contactUs = NavigateToPage(contactUs, websiteUrl);			
 		}
 		[Test]
+		[Category("ErrorAlert - ContactUs Coheris")]
 		public void ErrorMessage() => Assert.That(contactUs.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsContactUsCoherisFormDisplayed()

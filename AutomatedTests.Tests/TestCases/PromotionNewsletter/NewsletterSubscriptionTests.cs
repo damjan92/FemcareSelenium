@@ -1,11 +1,5 @@
 ﻿using AutomatedTest.POM.PageObjects;
 using NUnit.Framework;
-using OpenQA.Selenium.DevTools.V123.DOM;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutomatedTests.Tests.TestCases
 {
@@ -24,6 +18,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - Newsletter Subscription")]
 		public void ErrorMessage() => Assert.That(promotionNewsletter.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
 		public void IsNewsletterFormDisplayed() => Assert.That(promotionNewsletter.IsNewsletterFormDisplayed(), "Newsletter form is not visible");

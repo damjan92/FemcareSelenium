@@ -19,6 +19,7 @@ namespace AutomatedTests.Tests.TestCases
 			}
 		}
 		[Test]
+		[Category("ErrorAlert - ATE")]
 		public void ErrorMessage() => Assert.That(askTheExpert.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 
 		[Test]
