@@ -23,29 +23,21 @@ namespace AutomatedTests.Tests.TestCases
 		[Category("ErrorAlert - Expert Advice")]
 		public void ErrorMessage() => Assert.That(expertAdvice.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
-		public void Test_28_IsTitleDisplayed()
-		{
-			Assert.That(expertAdvice.IsTitleDisplayed(), "Title is not visible");
-		}
+		public void IsTitleDisplayed() => Assert.That(expertAdvice.IsTitleDisplayed(), "Title is not visible");
 		[Test]
-		public void Test_29_IsLatestQuestionSubDisplayed()
-		{
-			Assert.That(expertAdvice.IsLatestQuestionSubDisplayed(), "Subheading is not visible");
-		}
+		public void IsLatestQuestionSubDisplayed() => Assert.That(expertAdvice.IsLatestQuestionSubDisplayed(), "The Latest Question Displayed is not visible");
 		[Test]
-		public void Test_30_IsFirst_TheLatestQuestionDisplayed()
-		{
-			Assert.That(expertAdvice.IsFirst_TheLatestQuestionDisplayed(), "First The Latest Question Displayed is not visible");
-		}
+		public void IsBrowseLatestQuestionWebElement() => Assert.That(expertAdvice.IsBrowseLatestQuestionWebElement(), "Browse Latest Question Displayed is not visible");
 		[Test]
-		public void Test_31_IsSecond_TheLatestQuestionDisplayed()
-		{
-			Assert.That(expertAdvice.IsSecond_TheLatestQuestionDisplayed(), "Second The Latest Question Displayed is not visible");
-		}		
+		public void IsLoadMoreButtonDisplayed() => Assert.That(expertAdvice.IsLoadMoreButtonDisplayed(), "Load more button is not visible");
 		[Test]
-		public void Test_33_IsIsLoadMoreButtonDisplayed()
+		public void AreAllQuestionDisplayed() => Assert.That(expertAdvice.AreAllQuestionDisplayed(), "Questions are not visible");
+		[Test]
+		public void CheckLoadingQuestions()
 		{
-			Assert.That(expertAdvice.IsLoadMoreButtonDisplayed(), "Load more button is not visible");
+			expertAdvice.ClickOnLoadMoreQuestion();
+			Thread.Sleep(1000);
+			Assert.That(expertAdvice.NumberOfResult(), Is.GreaterThan(13));
 		}
 	}
 }

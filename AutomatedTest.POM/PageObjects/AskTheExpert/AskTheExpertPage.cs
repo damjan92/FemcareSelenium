@@ -12,13 +12,13 @@ namespace AutomatedTest.POM.PageObjects
 		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By Title => By.TagName("h1");
 		public By AskTheExpertWindow => By.CssSelector("div[class='ask-expert']");
-		public By AteSubHeading => By.CssSelector("div[class='ask-expert'] h2");
+		public By AteSubHeading => By.Id("ask-expert-subtitle");
 		public By ExpertHeadline => By.CssSelector("div[class='ask-expert__headline']");
 		public By ExpertBody => By.CssSelector("div[class='ask-expert__body']");
-		public By ExpertFormToggleButton => By.CssSelector("a[class*='ask-expert__form-toggle']");
-		public By ExpertAnswersSubHeading => By.CssSelector("div[class='list-articles-list__heading'] h2");
+		public By ExpertFormToggleButton => By.CssSelector("button[class*='ask-expert__form-toggle']");
+		public By ExpertAnswersSubHeading => By.Id("listQuestionsHeading");
 		public By ExpertAnswers => By.CssSelector("div[class='list-article__placeholder]");
-		public By LoadMoreButton => By.CssSelector("button[class*=\"list-articles-list__load-more\"]");
+		public By LoadMoreButton => By.CssSelector("button[class*='questions__load-more']");
 		// Ask the Expert form
 		public By AskTheExpertForm => By.CssSelector("div[class='ask-expert-form']");
 		public By NameField => By.Id("Name");

@@ -23,7 +23,7 @@ namespace AutomatedTest.POM.PageObjects
 		public By NewsletterForm => By.Id("newsletter-subscription");
 		public By NewsletterName => By.Id("newsletter-name");
 		public By NewsletterEmail => By.Id("email");
-		public By NewsletterRecaptcha => By.CssSelector("#newsletter-subscription div[class*=\"g-recaptcha\"]");
+		public By NewsletterRecaptcha => By.CssSelector("div[class='form-recaptcha']");
 		public By NewsletterButton => By.CssSelector("#newsletter-subscription button");
 
 		#endregion

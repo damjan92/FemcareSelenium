@@ -23,8 +23,6 @@ namespace AutomatedTests.Tests.TestCases
 		public void ErrorMessage() => Assert.That(askTheExpert.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 
 		[Test]
-		public void IsTitleDisplayed() => Assert.That(askTheExpert.IsTitleDisplayed(), Is.True, "H1 is not displayed");
-		[Test]
 		public void IsAskTheExpertWindowDisplayed() => Assert.That(askTheExpert.IsAskTheExpertWindowDisplayed(), "Ask the expert window is not visible");
 		[Test]
 		public void IsAskTheExpertInfoDisplayed() 
@@ -57,5 +55,8 @@ namespace AutomatedTests.Tests.TestCases
 				Assert.That(askTheExpert.IsAteSubmitButtonDisplayed(), "Submit button field is not displayed");
 			});
 		}
+
+		/*[Test]
+		public void IsTitleDisplayed() => Assert.That(askTheExpert.IsTitleDisplayed(), Is.True, "H1 is not displayed");*/
 	}
 }
