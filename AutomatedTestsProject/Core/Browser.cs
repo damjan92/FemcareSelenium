@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Interactions;
 
 namespace AutomatedTests.Framework.Core
 {
@@ -34,8 +35,10 @@ namespace AutomatedTests.Framework.Core
         {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddUserProfilePreference("download.default_directory", DownloadPath);
+			chromeOptions.AddArgument("--headless");
+			chromeOptions.AddArgument("--incognito");
 
-            return new ChromeDriver(chromeOptions);
+			return new ChromeDriver(chromeOptions);
         }
 
         private InternetExplorerDriver BuildInternetExplorerDriver()

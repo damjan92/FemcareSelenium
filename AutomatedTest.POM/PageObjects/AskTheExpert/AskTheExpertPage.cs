@@ -32,23 +32,11 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web Elements
-		public IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
-		public IWebElement AskTheExpertWindowWebElement => Driver.FindElementWait(AskTheExpertWindow, ExpectedConditions.ElementIsVisible(AskTheExpertWindow));
-		public IWebElement AteSubHeadingWebElement => Driver.FindElementWait(AteSubHeading, ExpectedConditions.ElementIsVisible(AteSubHeading));
-		public IWebElement ExpertHeadlineWebElement => Driver.FindElementWait(ExpertHeadline, ExpectedConditions.ElementIsVisible(ExpertHeadline));
-		public IWebElement ExpertBodyWebElemenet => Driver.FindElementWait(ExpertBody, ExpectedConditions.ElementIsVisible(ExpertBody));
-		public IWebElement ExpertFormToggleButtonWebElement => Driver.FindElementWait(ExpertFormToggleButton, ExpectedConditions.ElementIsVisible(ExpertFormToggleButton));
-		public IWebElement ExpertAnswersSubHeadingWebElement => Driver.FindElementWait(ExpertAnswersSubHeading, ExpectedConditions.ElementIsVisible(ExpertAnswersSubHeading));
+		public IWebElement ExpertFormToggleButtonWebElement => Driver.FindElementWait(ExpertFormToggleButton, ExpectedConditions.ElementIsVisible(ExpertFormToggleButton));		
 		public IList<IWebElement> ExpertAnswersWebElement => Driver.FindElementsWait(ExpertAnswers);
 		public IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton, ExpectedConditions.ElementToBeClickable(LoadMoreButton));
-		// Ask the Expert form
-		public IWebElement AskTheExpertFormWebElement => Driver.FindElementWait(AskTheExpertForm, ExpectedConditions.ElementIsVisible(AskTheExpertForm));
-		public IWebElement NameFieldWebElement => Driver.FindElementWait(NameField, ExpectedConditions.ElementIsVisible(NameField));
-		public IWebElement EmailFieldWebElement => Driver.FindElementWait(EmailField, ExpectedConditions.ElementIsVisible(EmailField));
-		public IWebElement QuestionWebElement => Driver.FindElementWait(Question, ExpectedConditions.ElementIsVisible(Question));
-		public IWebElement SummaryWebElement => Driver.FindElementWait(Summary, ExpectedConditions.ElementIsVisible(Summary));
-		public IList<IWebElement> CheckBoxesConsentWebElements => Driver.FindElementsWait(CheckBoxesConsent);
-		public IWebElement RecaptchaWebElement => Driver.FindElementWait(Recaptcha, ExpectedConditions.ElementIsVisible(Recaptcha));
+		// Ask the Expert form	
+		public IList<IWebElement> CheckBoxesConsentWebElements => Driver.FindElementsWait(CheckBoxesConsent);		
 		public IWebElement AteSubmitButtonWebElement => Driver.FindElementWait(AteSubmitButton, ExpectedConditions.ElementToBeClickable(AteSubmitButton));
 
 		#endregion
@@ -60,22 +48,21 @@ namespace AutomatedTest.POM.PageObjects
 		}
 
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
-		public bool IsAskTheExpertWindowDisplayed() => AskTheExpertWindowWebElement.Displayed;
-		public bool IsAteSubHeadingDisplayed() => AteSubHeadingWebElement.Displayed;
-		public bool IsExpertHeadlineDisplayed() => ExpertHeadlineWebElement.Displayed;
-		public bool IsExpertBodyDisplayed() => ExpertBodyWebElemenet.Displayed;
-		public bool IsExpertFormToggleButtonDisplayed() => ExpertFormToggleButtonWebElement.Displayed;
-		public bool IsExpertAnswersSubHeadingDisplayed() => ExpertAnswersSubHeadingWebElement.Displayed;
-		//public bool IsExpertAnswersDisplayed() => ExpertAnswersWebElement.Displayed;
+		public bool IsTitleDisplayed() => IsDisplayed(Title);
+		public bool IsAskTheExpertWindowDisplayed() => IsDisplayed(AskTheExpertWindow);
+		public bool IsAteSubHeadingDisplayed() => IsDisplayed(AteSubHeading);
+		public bool IsExpertHeadlineDisplayed() => IsDisplayed(ExpertHeadline);
+		public bool IsExpertBodyDisplayed() => IsDisplayed(ExpertBody);
+		public bool IsExpertFormToggleButtonDisplayed() => IsDisplayed(ExpertFormToggleButton);
+		public bool IsExpertAnswersSubHeadingDisplayed() => IsDisplayed(ExpertAnswersSubHeading);
 		public bool IsLoadMoreButtonDisplayed() => LoadMoreButtonWebElement.Displayed;
 		//Ask The Expert Form
 		public bool ClickOnButton() => WebDriverExtensions.ClickTheWebElement(ExpertFormToggleButtonWebElement);
-		public bool IsNameFieldDisplayed() => NameFieldWebElement.Displayed;
-		public bool IsEmailFieldDisplayed() => EmailFieldWebElement.Displayed;
-		public bool IsQuestionDisplayed() => QuestionWebElement.Displayed;
-		public bool IsSummaryDisplayed() => SummaryWebElement.Displayed;
-		public bool IsRecaptchaDisplayed() => RecaptchaWebElement.Displayed;
+		public bool IsNameFieldDisplayed() => IsDisplayed(NameField);
+		public bool IsEmailFieldDisplayed() => IsDisplayed(EmailField);
+		public bool IsQuestionDisplayed() => IsDisplayed(Question);
+		public bool IsSummaryDisplayed() => IsDisplayed(Summary);
+		public bool IsRecaptchaDisplayed() => IsDisplayed(Recaptcha);
 		public bool IsAteSubmitButtonDisplayed() => AteSubmitButtonWebElement.Displayed;
 
 		#endregion

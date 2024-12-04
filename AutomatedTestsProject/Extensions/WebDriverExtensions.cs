@@ -36,18 +36,7 @@ namespace AutomatedTests.Framework.Extensions
             try
             {
                 var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
-                // return condition != null ? wait.Until(condition) : wait.Until(ExpectedConditions.ElementExists(by));
-                if (condition != null)
-                {
-                    Console.WriteLine($"Element: [{by.Criteria}] is displayed");
-                    return wait.Until(condition);
-                }
-                else
-                {
-                    Console.WriteLine($"Element[ExpectedCondition]: [{by.Criteria}] is displayed");
-                    return wait.Until(ExpectedConditions.ElementExists(by));
-                }
-
+                return condition != null ? wait.Until(condition) : wait.Until(ExpectedConditions.ElementExists(by));
             }
             catch (Exception e)
             {
@@ -227,11 +216,24 @@ namespace AutomatedTests.Framework.Extensions
 				throw new ElementNotVisibleException($"Element [{webElement.Text}] is not clickable nor visible");
 			}
 		}
+		/*public static bool ClickTheWebElement(By by)
+		{
+			try
+			{
+				IWebElement webElement = Driver.FindElementsWait(ExpectedConditions.ElementToBeClickable(by));
+				Console.WriteLine($"Element[{by.Criteria}]Element is clicked");
+				return true;
+			}
+			catch
+			{
+				throw new ElementNotVisibleException($"Element [{by.Criteria}] is not clickable nor visible");
+			}
+		}*/
 
 		/// <summary>
 		/// Return the indicator number
 		/// </summary>
-        public static int GetIndicatorNumberOfProducts(IWebElement webElement)
+		public static int GetIndicatorNumberOfProducts(IWebElement webElement)
         {
 			try
 			{                		

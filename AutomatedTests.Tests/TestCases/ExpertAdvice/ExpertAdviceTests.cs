@@ -23,7 +23,7 @@ namespace AutomatedTests.Tests.TestCases
 		[Category("ErrorAlert - Expert Advice")]
 		public void ErrorMessage() => Assert.That(expertAdvice.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
 		[Test]
-		public void IsTitleDisplayed() => Assert.That(expertAdvice.IsTitleDisplayed(), "Title is not visible");
+		public void IsTitleDisplayed() => Assert.That(expertAdvice.IsTitleDisplayed(), "Title is not visible");	
 		[Test]
 		public void IsLatestQuestionSubDisplayed() => Assert.That(expertAdvice.IsLatestQuestionSubDisplayed(), "The Latest Question Displayed is not visible");
 		[Test]

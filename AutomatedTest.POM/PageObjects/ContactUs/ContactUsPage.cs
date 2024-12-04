@@ -21,9 +21,8 @@ namespace AutomatedTest.POM.PageObjects
 		public By SubjectSelectMenu => By.CssSelector("#Subject-button");
 		public By TextAreaMessage => By.Id("Message");
 		public By ValidationErrorMessage => By.CssSelector("div[class='validation-error']");
-		//CheckBox
-		public By CheckBoxes => By.CssSelector("div[class*='form-group--checkbox']");
-		//ReCaptcha and Send Button
+		//CheckBox, ReCaptcha and Send Button
+		public By CheckBoxes => By.CssSelector("div[class*='form-group--checkbox']");		
 		public By ReCaptcha => By.CssSelector("div[class='g-recaptcha']");
 		public By SendButton => By.CssSelector("form[class*='custom-form'] button");
 
@@ -47,36 +46,9 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web elements
-
-		public IWebElement ContactUsFormWebElement => Driver.FindElementWait(ContactUsForm, ExpectedConditions.ElementIsVisible(ContactUsForm));
-		public IWebElement NameWebElement => Driver.FindElementWait(Name, ExpectedConditions.ElementIsVisible(Name));
-		public IWebElement LastNameWebElement => Driver.FindElementWait(LastName, ExpectedConditions.ElementIsVisible(LastName));
-		public IWebElement PhoneNumberWebElement => Driver.FindElementWait(PhoneNumber, ExpectedConditions.ElementIsVisible(PhoneNumber));
-		public IWebElement EmailWebElement => Driver.FindElementWait(Email, ExpectedConditions.ElementIsVisible(Email));
-		public IWebElement SubjectSelectMenuWebElement => Driver.FindElementWait(SubjectSelectMenu, ExpectedConditions.ElementIsVisible(SubjectSelectMenu));
-		public IWebElement TextAreaMessageWebElement => Driver.FindElementWait(TextAreaMessage, ExpectedConditions.ElementIsVisible(TextAreaMessage));
-		public IWebElement ValidationErrorMessageWebElement => Driver.FindElementWait(ValidationErrorMessage, ExpectedConditions.ElementIsVisible(ValidationErrorMessage));
-		public IWebElement ReCaptchaWebElement => Driver.FindElementWait(ReCaptcha, ExpectedConditions.ElementIsVisible(ReCaptcha));
-		public IWebElement SendButtonWebElement => Driver.FindElementWait(SendButton, ExpectedConditions.ElementIsVisible(SendButton));
+				
 		public IList<IWebElement> CheckBoxesWebElements => Driver.FindElementsWait(CheckBoxes);
-
-		/// <summary>
-		/// Coheris Form Web Elements
-		/// </summary>
-		public IWebElement TitleSelectFieldWebElement => Driver.FindElementWait(TitleSelectField, ExpectedConditions.ElementIsVisible(TitleSelectField));
-		public IWebElement CountryWebElement => Driver.FindElementWait(Country, ExpectedConditions.ElementIsVisible(Country));
-		public IWebElement FirstNameWebElement => Driver.FindElementWait(FirstName, ExpectedConditions.ElementIsVisible(FirstName));
-		public IWebElement AddressWebElement => Driver.FindElementWait(Address, ExpectedConditions.ElementIsVisible(Address));
-		public IWebElement PostalCodeWebElement => Driver.FindElementWait(PostalCode, ExpectedConditions.ElementIsVisible(PostalCode));
-		public IWebElement CityWebElement => Driver.FindElementWait(City, ExpectedConditions.ElementIsVisible(City));
-		public IWebElement ConfirmEmailWebElement => Driver.FindElementWait(ConfirmEmail, ExpectedConditions.ElementIsVisible(ConfirmEmail));
-		public IWebElement ControlNumberWebElement => Driver.FindElementWait(ControlNumber, ExpectedConditions.ElementIsVisible(ControlNumber));
-		public IWebElement BarCodeWebElement => Driver.FindElementWait(BarCode, ExpectedConditions.ElementIsVisible(BarCode));
-		public IWebElement PhoneWebElement => Driver.FindElementWait(Phone, ExpectedConditions.ElementIsVisible(Phone));
-		public IWebElement AgeRangeSelectWebElement => Driver.FindElementWait(AgeRangeSelect, ExpectedConditions.ElementIsVisible(AgeRangeSelect));
-		public IWebElement AffectedProductSelectWebElement => Driver.FindElementWait(AffectedProductSelect, ExpectedConditions.ElementIsVisible(AffectedProductSelect));
-		public IWebElement ReasonSelectWebElement => Driver.FindElementWait(ReasonSelect, ExpectedConditions.ElementIsVisible(ReasonSelect));
-
+	
 		#endregion
 
 		#region Contructor and methods
@@ -87,16 +59,16 @@ namespace AutomatedTest.POM.PageObjects
 		}
 
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsContactUsFormLoaded() => ContactUsFormWebElement.Displayed;
-		public bool IsNameDisplayed() => NameWebElement.Displayed;
-		public bool IsLastNameDisplayed() => LastNameWebElement.Displayed;
-		public bool IsPhoneNumberDisplayed() => PhoneNumberWebElement.Displayed;
-		public bool IsEmailDisplayed() => EmailWebElement.Displayed;
-		public bool IsSubjectSelectMenuDisplayed() => SubjectSelectMenuWebElement.Displayed;
-		public bool IsTextAreaMessageDisplayed() => TextAreaMessageWebElement.Displayed;
-		public bool IsValidationErrorMessageDisplayed() => ValidationErrorMessageWebElement.Displayed;
-		public bool IsRecaptchaDisplayed() => ReCaptchaWebElement.Displayed;
-		public bool IsSendButtonDisplayed() => SendButtonWebElement.Displayed;
+		public bool IsContactUsFormLoaded() => IsDisplayed(ContactUsForm);
+		public bool IsNameDisplayed() => IsDisplayed(Name);
+		public bool IsLastNameDisplayed() => IsDisplayed(LastName);
+		public bool IsPhoneNumberDisplayed() => IsDisplayed(PhoneNumber);
+		public bool IsEmailDisplayed() => IsDisplayed(Email);
+		public bool IsSubjectSelectMenuDisplayed() => IsDisplayed(SubjectSelectMenu);
+		public bool IsTextAreaMessageDisplayed() => IsDisplayed(TextAreaMessage);
+		public bool IsValidationErrorMessageDisplayed() => IsDisplayed(ValidationErrorMessage);
+		public bool IsRecaptchaDisplayed() => IsDisplayed(ReCaptcha);
+		public bool IsSendButtonDisplayed() => IsDisplayed(SendButton);
 		
 		public bool AreCheckBoxesDisplayed()
 		{
@@ -111,19 +83,19 @@ namespace AutomatedTest.POM.PageObjects
 		/// <summary>
 		/// Coheris Form Web Elements
 		/// </summary>
-		public bool IsTitleSelectFieldDisplayed() => TitleSelectFieldWebElement.Displayed;
-		public bool IsCountryDisplayed() => CountryWebElement.Displayed;
-		public bool IsFirstNameDisplayed() => FirstNameWebElement.Displayed;
-		public bool IsAddressDisplayed() => AddressWebElement.Displayed;
-		public bool IsPostalCodeDisplayed() => PostalCodeWebElement.Displayed;
-		public bool IsCityDisplayed() => CityWebElement.Displayed;
-		public bool IsConfirmEmailDisplayed() => ConfirmEmailWebElement.Displayed;
-		public bool IsControlNumberDisplayed() => ControlNumberWebElement.Displayed;
-		public bool IsBarCodeDisplayed() => BarCodeWebElement.Displayed;
-		public bool IsPhoneDisplayed() => PhoneWebElement.Displayed;
-		public bool IsAgeRangeSelectDisplayed() => AgeRangeSelectWebElement.Displayed;
-		public bool IsAffectedProductSelectDisplayed() => AffectedProductSelectWebElement.Displayed;
-		public bool IsReasonSelectDisplayed() => ReasonSelectWebElement.Displayed;
+		public bool IsTitleSelectFieldDisplayed() => IsDisplayed(TitleSelectField);
+		public bool IsCountryDisplayed() => IsDisplayed(Country);
+		public bool IsFirstNameDisplayed() => IsDisplayed(FirstName);
+		public bool IsAddressDisplayed() => IsDisplayed(Address);
+		public bool IsPostalCodeDisplayed() => IsDisplayed(PostalCode);
+		public bool IsCityDisplayed() => IsDisplayed(City);
+		public bool IsConfirmEmailDisplayed() => IsDisplayed(ConfirmEmail);
+		public bool IsControlNumberDisplayed() => IsDisplayed(ControlNumber);
+		public bool IsBarCodeDisplayed() => IsDisplayed(BarCode);
+		public bool IsPhoneDisplayed() => IsDisplayed(Phone);
+		public bool IsAgeRangeSelectDisplayed() => IsDisplayed(AgeRangeSelect);
+		public bool IsAffectedProductSelectDisplayed() => IsDisplayed(AffectedProductSelect);
+		public bool IsReasonSelectDisplayed() => IsDisplayed(ReasonSelect);
 		#endregion
 	}
 }

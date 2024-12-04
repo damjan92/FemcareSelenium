@@ -52,44 +52,17 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Webelemets
-
-		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
-		//Period Pads
-		IWebElement PeriodPadsIndicatorWebElement => Driver.FindElementWait(PeriodPadsIndicator, ExpectedConditions.ElementIsVisible(PeriodPadsIndicator));
-		IWebElement PeriodPadsRangeSliderWebElement => Driver.FindElementWait(PeriodPadsRangeSlider, ExpectedConditions.ElementIsVisible(PeriodPadsRangeSlider));
+		
+		//Period Pads		
 		IList<IWebElement> PeriodPadsList => Driver.FindElementsWait(PeriodPadsProducts);
-		// Maxi Towels
-		IWebElement MaxiTowelsIndicatorWebElement => Driver.FindElementWait(MaxiTowelsIndicator, ExpectedConditions.ElementIsVisible(MaxiTowelsIndicator));
-		IWebElement MaxiTowelsRangeSliderWewbElement => Driver.FindElementWait(MaxiTowelsRangeSlider, ExpectedConditions.ElementIsVisible(MaxiTowelsRangeSlider));
+		// Maxi Towels		
 		IList<IWebElement> MaxiTowelsList => Driver.FindElementsWait(MaxiTowelProducts);
-		//Panty Liners
-		IWebElement PantyLinersIndicatorWebElement => Driver.FindElementWait(PantyLinersIndicator, ExpectedConditions.ElementIsVisible(PantyLinersIndicator));
-		IWebElement PantyLinersRangeSliderWebElement => Driver.FindElementWait(PantyLinersRangeSlider, ExpectedConditions.ElementIsVisible(PantyLinersRangeSlider));
+		//Panty Liners		
 		IList<IWebElement> PantyLinersList => Driver.FindElementsWait(PantyLinersProducts);
-		//Period Pants
-		IWebElement PeriodPantsIndicatorWebElement => Driver.FindElementWait(PeriodPantsIndicator, ExpectedConditions.ElementIsVisible(PeriodPantsIndicator));
-		IWebElement PeriodPantsRangeSliderWebElement => Driver.FindElementWait(PeriodPantsRangeSlider, ExpectedConditions.ElementIsVisible(PeriodPantsRangeSlider));
-		IList<IWebElement> PeriodPantsList => Driver.FindElementsWait(PeriodPantsProducts);
-		// Innovations
-		IWebElement InovationsInfoPanelWebElement => Driver.FindElementWait(InovationsInfoPanel, ExpectedConditions.ElementIsVisible(InovationsInfoPanel));
-		IWebElement InovationsSliderWebElement => Driver.FindElementWait(InovationsSlider, ExpectedConditions.ElementIsVisible(InovationsSlider));
-		/// <summary>
-		/// Quick Buy
-		/// </summary>
-		/// 
-		IWebElement ProductInPcpWebElement => Driver.FindElementWait(QuickBuyProduct, ExpectedConditions.ElementIsVisible(QuickBuyProduct));
-		IWebElement QuickBuyButtonWebElement => Driver.FindElementWait(QuickBuyButton, ExpectedConditions.ElementIsVisible(QuickBuyButton));
-		IWebElement QuickBuyModalWebElement => Driver.FindElementWait(QuickBuyModal, ExpectedConditions.ElementIsVisible(QuickBuyModal));
-		IWebElement ModalTitleWebElement => Driver.FindElementWait(ModalTitle, ExpectedConditions.ElementIsVisible(ModalTitle));
-		IWebElement ModalOldPriceWebElement => Driver.FindElementWait(ModalOldPrice, ExpectedConditions.ElementIsVisible(ModalOldPrice));
-		IWebElement ModalNewPriceWebElement => Driver.FindElementWait(ModalNewPrice, ExpectedConditions.ElementIsVisible(ModalNewPrice));
-		IWebElement ModalRatingsWebElement => Driver.FindElementWait(ModalRatings, ExpectedConditions.ElementIsVisible(ModalRatings));
-		IWebElement ModalSizeGuideWebElement => Driver.FindElementWait(ModalSizeGuide, ExpectedConditions.ElementIsVisible(ModalSizeGuide));
-		IWebElement ModalAddToCartCounterWebElement => Driver.FindElementWait(ModalAddToCartCounter, ExpectedConditions.ElementIsVisible(ModalAddToCartCounter), 3);
-		IWebElement ModalAddToCartButtonWebElement => Driver.FindElementWait(ModalAddToCartButton, ExpectedConditions.ElementIsVisible(ModalAddToCartButton));
-		IWebElement ModalViewProductButtonWebElement => Driver.FindElementWait(ModalViewProductButton, ExpectedConditions.ElementIsVisible(ModalViewProductButton));
-
+		//Period Pants		
+		IList<IWebElement> PeriodPantsList => Driver.FindElementsWait(PeriodPantsProducts);				
+		// Quick Buy
+		IWebElement QuickBuyButtonWebElement => Driver.FindElementWait(QuickBuyButton, ExpectedConditions.ElementIsVisible(QuickBuyButton));		
 		#endregion
 
 		#region Constructor and methods
@@ -99,40 +72,40 @@ namespace AutomatedTest.POM.PageObjects
 		}
 
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
-		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
-		public bool IsPeriodPadsIndicatorDisplayed() => PeriodPadsIndicatorWebElement.Displayed;
-		public bool IsPeriodPadsRangeSliderDisplayed() => PeriodPadsRangeSliderWebElement.Displayed;
+		public bool IsTitleDisplayed() => IsDisplayed(Title);
+		public bool IsBreadcrumbsDisplayed() => IsDisplayed(Breadcrumbs);
+		public bool IsPeriodPadsIndicatorDisplayed() => IsDisplayed(PeriodPadsIndicator);
+		public bool IsPeriodPadsRangeSliderDisplayed() => IsDisplayed(PeriodPadsRangeSlider);
 		public bool ArePeriodPadsProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(PeriodPadsList);
-		public bool IsMaxiTowelsIndicatorDisplayed() => MaxiTowelsIndicatorWebElement.Displayed;
-		public bool IsMaxiTowelsRangeSliderDisplayed() => MaxiTowelsRangeSliderWewbElement.Displayed;
+		public bool IsMaxiTowelsIndicatorDisplayed() => IsDisplayed(MaxiTowelsIndicator);
+		public bool IsMaxiTowelsRangeSliderDisplayed() => IsDisplayed(MaxiTowelsRangeSlider);
 		public bool AreMaxiTowelProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(MaxiTowelsList);
-		public bool IsPantyLinersIndicatorDisplayed() => PantyLinersIndicatorWebElement.Displayed;
-		public bool IsPantyLinersRangeSliderDisplayed() => PantyLinersRangeSliderWebElement.Displayed;
+		public bool IsPantyLinersIndicatorDisplayed() => IsDisplayed(PantyLinersIndicator);
+		public bool IsPantyLinersRangeSliderDisplayed() => IsDisplayed(PantyLinersRangeSlider);
 		public bool ArePantyLinersProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(PantyLinersList);
-		public bool IsPeriodPantsIndicatorDisplayed() => PeriodPantsIndicatorWebElement.Displayed;
-		public bool IsPeriodPantsRangeSliderDisplayed() => PeriodPantsRangeSliderWebElement.Displayed;
+		public bool IsPeriodPantsIndicatorDisplayed() => IsDisplayed(PeriodPantsIndicator);
+		public bool IsPeriodPantsRangeSliderDisplayed() => IsDisplayed(PeriodPantsRangeSlider);
 		public bool ArePeriodPantsProductsDisplayed() => WebDriverExtensions.AreElementsDisplayed(PeriodPantsList);
-		public bool IsInovationsInfoPanelDisplayed() => InovationsInfoPanelWebElement.Displayed;
-		public bool IsInnovationSliderDisplayed() => InovationsSliderWebElement.Displayed;
+		public bool IsInovationsInfoPanelDisplayed() => IsDisplayed(InovationsInfoPanel);
+		public bool IsInnovationSliderDisplayed() => IsDisplayed(InovationsSlider);
 
 		/// <summary>
 		/// Quick Buy Modal
 		/// </summary>
 		/// 
-		public bool IsProductInPcpDisplayed() => ProductInPcpWebElement.Displayed;
-		public bool IsQuickBuyButtonDisplayed() => QuickBuyButtonWebElement.Displayed;
+		public bool IsProductInPcpDisplayed() => IsDisplayed(QuickBuyProduct);
+		public bool IsQuickBuyButtonDisplayed() => IsDisplayed(QuickBuyButton);
 		public void IsProductInPcpHoveredAndClicked() => WebDriverExtensions.WaitElementForHoverAndClick(Driver, QuickBuyProduct);
 		public bool IsClicked() => WebDriverExtensions.ClickTheWebElement(QuickBuyButtonWebElement);
-		public bool IsQuickBuyModalDisplayed() => QuickBuyModalWebElement.Displayed;
-		public bool IsModalTitleDisplayed() => ModalTitleWebElement.Displayed;
-		public bool IsModalOldPriceWebElement() => ModalOldPriceWebElement.Displayed;
-		public bool IsModalNewPriceWebElement() => ModalNewPriceWebElement.Displayed;
-		public bool IsModalRatingsWebElement() => ModalRatingsWebElement.Displayed;
-		public bool IsModalSizeGuideWebElement() => ModalSizeGuideWebElement.Displayed;
-		public bool IsModalAddToCartCounterWebElement() => ModalAddToCartCounterWebElement.Displayed;
-		public bool IsModalAddToCartButtonWebElement() => ModalAddToCartButtonWebElement.Displayed;
-		public bool IsModalViewProductButtonWebElement() => ModalViewProductButtonWebElement.Displayed;
+		public bool IsQuickBuyModalDisplayed() => IsDisplayed(QuickBuyModal);
+		public bool IsModalTitleDisplayed() => IsDisplayed(ModalTitle);
+		public bool IsModalOldPriceWebElement() => IsDisplayed(ModalOldPrice);
+		public bool IsModalNewPriceWebElement() => IsDisplayed(ModalNewPrice);
+		public bool IsModalRatingsWebElement() => IsDisplayed(ModalRatings);
+		public bool IsModalSizeGuideWebElement() => IsDisplayed(ModalSizeGuide);
+		public bool IsModalAddToCartCounterWebElement() => IsDisplayed(ModalAddToCartCounter);
+		public bool IsModalAddToCartButtonWebElement() => IsDisplayed(ModalAddToCartButton);
+		public bool IsModalViewProductButtonWebElement() => IsDisplayed(ModalViewProductButton);
 
 		#endregion
 	}

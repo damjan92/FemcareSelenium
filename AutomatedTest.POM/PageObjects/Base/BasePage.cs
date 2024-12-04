@@ -1,6 +1,7 @@
 ﻿using AutomatedTests.Framework.Core;
 using AutomatedTests.Framework.Extensions;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 
 namespace AutomatedTest.POM.PageObjects
 {
@@ -11,15 +12,32 @@ namespace AutomatedTest.POM.PageObjects
         public TestSettings AutomatedTestSettings = TestSettings.GetTestSettings();
 
         public virtual By RootSelector { get; set; }
-        public IWebElement RootElement => Driver.FindElementWait(RootSelector);
 
         protected BasePage(Browser browser)
         {
             this.Browser = browser;
             this.Driver = browser.BrowserDriver;
         }
+		public bool IsDisplayed(By by, int timeout = 10)
+		{
+			try
+			{				
+				IWebElement webElement = Driver.FindElementWait(by, ExpectedConditions.ElementIsVisible(by));
+				Console.WriteLine($"Element: [{by}] is Displayed");
+				return webElement.Displayed;
+			}
+			catch (NoSuchElementException)
+			{
+				Console.WriteLine($"Element: [{by}] not found");
+				return false;
+			}
+			catch (WebDriverTimeoutException)
+			{
+				Console.WriteLine($"Element: [{by}] waiting timeout");
+				return false;
+			}
+		}
 
-        public bool IsRootSelectorVisible() => true;
 
         public virtual bool IsPageLoaded()
         {
@@ -46,5 +64,7 @@ namespace AutomatedTest.POM.PageObjects
             SwitchToTab(windowHandleToClose);
             Driver.Close();
         }
+        public IWebElement RootElement => Driver.FindElementWait(RootSelector);
+		public bool IsRootSelectorVisible() => true;
     }
 }

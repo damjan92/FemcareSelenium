@@ -58,22 +58,21 @@ namespace AutomatedTest.POM.PageObjects
 		}
 
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
-		public bool IsPeriodTrackerContainerDisplayed() => PeriodTrackerContainerWebElement.Displayed;
-		public bool IsInputFieldsDisplayed() => InputFieldsWebElement.Displayed;
-		public bool IsDateSelectorDisplayed() => DateSelectorWebElement.Displayed;
-		public bool IsDurationSelectorDisplayed() => DurationSelectorWebElement.Displayed;
-		public bool IsCycleSelectorDisplayed() => CycleSelectorWebElement.Displayed;
-		public bool IsTrackMyPeriodButtonDisplayed() => TrackMyPeriodButtonWebElement.Displayed;
+		public bool IsTitleDisplayed() => IsDisplayed(Title);
+		public bool IsPeriodTrackerContainerDisplayed() => IsDisplayed(PeriodTrackerContainer);
+		public bool IsInputFieldsDisplayed() => IsDisplayed(InputFields);
+		public bool IsDateSelectorDisplayed() => IsDisplayed(DateSelector);
+		public bool IsDurationSelectorDisplayed() => IsDisplayed(DurationSelector);
+		public bool IsCycleSelectorDisplayed() => IsDisplayed(CycleSelector);
+		public bool IsTrackMyPeriodButtonDisplayed() => IsDisplayed(TrackMyPeriodButton);
 		//On Click
 		public bool IsTrackMyPeriodBtnClicked() => WebDriverExtensions.ClickTheWebElement(TrackMyPeriodButtonWebElement);
-		public bool IsSubHeadingDisplayed() => SubHeadingWebElement.Displayed;
-		public bool IsPeriodTrackerResultContainerDisplayed() => PeriodTrackerResultContainerWebElement.Displayed;
-		public bool IsPreviousNavButtonDisplayed() => PreviousNavButtonWebElement.Displayed;
-		public bool IsNextNavButtonDisplayed() => NextNavButtonWebElement.Displayed;
-		public bool IsResultCalendarDisplayed() => ResultCalendarWebElement.Displayed;
-		public bool IsPeriodTrackerLegendDisplayed() => PeriodTrackerLegendWebElement.Displayed;
-		public bool IsRelatedProductsDisplayed() => RelatedProductsWebElement.Displayed;
+		public bool IsSubHeadingDisplayed() => IsDisplayed(SubHeading);
+		public bool IsPeriodTrackerResultContainerDisplayed() => IsDisplayed(PeriodTrackerResultContainer);
+		public bool IsPreviousNavButtonDisplayed() => IsDisplayed(PreviousNavButton);
+		public bool IsNextNavButtonDisplayed() => IsDisplayed(NextNavButton);
+		public bool IsResultCalendarDisplayed() => IsDisplayed(ResultCalendar);
+		public bool IsPeriodTrackerLegendDisplayed() => IsDisplayed(PeriodTrackerLegend);
 
 		#endregion
 	}

@@ -22,11 +22,12 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		[Category("ErrorAlert - Period Tracker")]
 		public void ErrorMessage() => Assert.That(periodTracker.IsErrorMessageDisplayed(), Is.False, "Erros message is loaded!");
-
 		[Test]
 		public void Test_13_IsTitleDisplayed() => Assert.That(periodTracker.IsTitleDisplayed(), "Title is not displayed");
 		[Test]
 		public void Test_14_IsPeriodTrackerContainerDisplayed() => Assert.That(periodTracker.IsPeriodTrackerContainerDisplayed(), "Period Tracker Container is not displayed");
+		[Test]
+		public void Test_20_IsTrackMyPeriodButtonDisplayed() => Assert.That(periodTracker.IsTrackMyPeriodButtonDisplayed(), "Period Button is not displayed");
 		[Test]
 		public void ArePeriodTrackerFieldsDisplayed()
 		{
@@ -38,8 +39,6 @@ namespace AutomatedTests.Tests.TestCases
 				Assert.That(periodTracker.IsCycleSelectorDisplayed(), "Cycle selector is not displayed");
 			});
 		}		
-		[Test]
-		public void Test_20_IsTrackMyPeriodButtonDisplayed() => Assert.That(periodTracker.IsTrackMyPeriodButtonDisplayed(), "Period Button is not displayed");
 		[Test]
 		public void IsCalendarVisibleAfterSubmit()
 		{

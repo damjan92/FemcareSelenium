@@ -19,9 +19,6 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region WebElements
-		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
-		IWebElement LatestQuestionSubWebElement => Driver.FindElementWait(LatestQuestionSub, ExpectedConditions.ElementIsVisible(LatestQuestionSub));
-		IWebElement BrowseLatestQuestionWebElement => Driver.FindElementWait(BrowseLatestQuestion, ExpectedConditions.ElementIsVisible(BrowseLatestQuestion));		
 		IList<IWebElement> AllQuestionWebElemenet => Driver.FindElementsWait(AllQuestion);
 		IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton, ExpectedConditions.ElementToBeClickable(LoadMoreButton));
 
@@ -34,10 +31,10 @@ namespace AutomatedTest.POM.PageObjects
 		}
 
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
-		public bool IsLatestQuestionSubDisplayed() => LatestQuestionSubWebElement.Displayed;
-		public bool IsBrowseLatestQuestionWebElement() => BrowseLatestQuestionWebElement.Displayed;
-		public bool IsLoadMoreButtonDisplayed() => LoadMoreButtonWebElement.Displayed;
+		public bool IsTitleDisplayed() => IsDisplayed(Title);
+		public bool IsLatestQuestionSubDisplayed() => IsDisplayed(LatestQuestionSub);
+		public bool IsBrowseLatestQuestionWebElement() => IsDisplayed(BrowseLatestQuestion);
+		public bool IsLoadMoreButtonDisplayed() => IsDisplayed(LoadMoreButton);
 		public bool AreAllQuestionDisplayed() => WebDriverExtensions.AreElementsDisplayed(AllQuestionWebElemenet);
 		public int NumberOfResult() => AllQuestionWebElemenet.Count;
 		public bool ClickOnLoadMoreQuestion() => WebDriverExtensions.ClickTheWebElement(LoadMoreButtonWebElement);
