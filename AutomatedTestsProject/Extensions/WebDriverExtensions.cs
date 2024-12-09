@@ -2,7 +2,6 @@
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Interactions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AutomatedTests.Framework.Extensions
 {
@@ -284,7 +283,6 @@ namespace AutomatedTests.Framework.Extensions
         /// </summary>
         /// <param name="webDriver"></param>
         /// <param name="tab"></param>
-
 		public static void SwitchToTab(this IWebDriver webDriver, int tab)
         {
             webDriver.SwitchTo().Window(webDriver.WindowHandles[tab]);

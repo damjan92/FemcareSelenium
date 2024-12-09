@@ -38,8 +38,43 @@ namespace AutomatedTest.POM.PageObjects
 			}
 		}
 
+		public bool IsDisplayedAndClickable(By by, int timeout = 10)
+		{
+			try
+			{
+				IWebElement webElement = Driver.FindElementWait(by, ExpectedConditions.ElementToBeClickable(by));
+				Console.WriteLine($"Element: [{by}] is Displayed");
+				return webElement.Displayed;
+			}
+			catch (NoSuchElementException)
+			{
+				Console.WriteLine($"Element: [{by}] not found");
+				return false;
+			}
+			catch (WebDriverTimeoutException)
+			{
+				Console.WriteLine($"Element: [{by}] waiting timeout");
+				return false;
+			}
+		}
 
-        public virtual bool IsPageLoaded()
+		public bool IsClicked(By by)
+		{
+			try
+			{
+				IWebElement webElement = Driver.FindElementWait(by, ExpectedConditions.ElementToBeClickable(by));
+				webElement.Click();
+				Console.WriteLine($"Element[{webElement.Text}]Element is clicked");
+				return true;
+			}
+			catch
+			{
+				throw new ElementNotVisibleException($"Element [{by.Criteria}] is not clickable nor visible");
+			}
+		}
+
+
+		public virtual bool IsPageLoaded()
         {
             return Driver.FindElement(RootSelector).Displayed;
         }

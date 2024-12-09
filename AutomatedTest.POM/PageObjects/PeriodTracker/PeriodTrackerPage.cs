@@ -33,21 +33,7 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web elements
-		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
-		IWebElement PeriodTrackerContainerWebElement => Driver.FindElementWait(PeriodTrackerContainer, ExpectedConditions.ElementIsVisible(PeriodTrackerContainer));
-		IWebElement InputFieldsWebElement => Driver.FindElementWait(InputFields, ExpectedConditions.ElementIsVisible(InputFields));
-		IWebElement DateSelectorWebElement => Driver.FindElementWait(DateSelector, ExpectedConditions.ElementIsVisible(DateSelector));
-		IWebElement DurationSelectorWebElement => Driver.FindElementWait(DurationSelector, ExpectedConditions.ElementIsVisible(DurationSelector));
-		IWebElement CycleSelectorWebElement => Driver.FindElementWait(CycleSelector, ExpectedConditions.ElementIsVisible(CycleSelector));
-		IWebElement TrackMyPeriodButtonWebElement => Driver.FindElementWait(TrackMyPeriodButton, ExpectedConditions.ElementIsVisible(TrackMyPeriodButton));
-		IWebElement SubHeadingWebElement => Driver.FindElementWait(SubHeading, ExpectedConditions.ElementIsVisible(SubHeading));
-		IWebElement PeriodTrackerResultContainerWebElement => Driver.FindElementWait(PeriodTrackerResultContainer, ExpectedConditions.ElementIsVisible(PeriodTrackerResultContainer));
-		IWebElement PreviousNavButtonWebElement => Driver.FindElementWait(PreviousNavButton, ExpectedConditions.ElementIsVisible(PreviousNavButton));
-		IWebElement NextNavButtonWebElement => Driver.FindElementWait(NextNavButton, ExpectedConditions.ElementIsVisible(NextNavButton));
-		IWebElement ResultCalendarWebElement => Driver.FindElementWait(ResultCalendar, ExpectedConditions.ElementIsVisible(ResultCalendar),3);
-		IWebElement PeriodTrackerLegendWebElement => Driver.FindElementWait(PeriodTrackerLegend, ExpectedConditions.ElementIsVisible(PeriodTrackerLegend));
-		IWebElement RelatedProductsWebElement => Driver.FindElementWait(RelatedProducts, ExpectedConditions.ElementIsVisible(RelatedProducts));
-
+		//
 		#endregion
 
 		#region Contructor and methods
@@ -60,17 +46,17 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsTitleDisplayed() => IsDisplayed(Title);
 		public bool IsPeriodTrackerContainerDisplayed() => IsDisplayed(PeriodTrackerContainer);
-		public bool IsInputFieldsDisplayed() => IsDisplayed(InputFields);
-		public bool IsDateSelectorDisplayed() => IsDisplayed(DateSelector);
-		public bool IsDurationSelectorDisplayed() => IsDisplayed(DurationSelector);
-		public bool IsCycleSelectorDisplayed() => IsDisplayed(CycleSelector);
-		public bool IsTrackMyPeriodButtonDisplayed() => IsDisplayed(TrackMyPeriodButton);
+		public bool IsInputFieldsDisplayed() => IsDisplayedAndClickable(InputFields);
+		public bool IsDateSelectorDisplayed() => IsDisplayedAndClickable(DateSelector);
+		public bool IsDurationSelectorDisplayed() => IsDisplayedAndClickable(DurationSelector);
+		public bool IsCycleSelectorDisplayed() => IsDisplayedAndClickable(CycleSelector);
+		public bool IsTrackMyPeriodButtonDisplayed() => IsDisplayedAndClickable(TrackMyPeriodButton);
 		//On Click
-		public bool IsTrackMyPeriodBtnClicked() => WebDriverExtensions.ClickTheWebElement(TrackMyPeriodButtonWebElement);
+		public bool IsTrackMyPeriodBtnClicked() => IsClicked(TrackMyPeriodButton);
 		public bool IsSubHeadingDisplayed() => IsDisplayed(SubHeading);
 		public bool IsPeriodTrackerResultContainerDisplayed() => IsDisplayed(PeriodTrackerResultContainer);
-		public bool IsPreviousNavButtonDisplayed() => IsDisplayed(PreviousNavButton);
-		public bool IsNextNavButtonDisplayed() => IsDisplayed(NextNavButton);
+		public bool IsPreviousNavButtonDisplayed() => IsDisplayedAndClickable(PreviousNavButton);
+		public bool IsNextNavButtonDisplayed() => IsDisplayedAndClickable(NextNavButton);
 		public bool IsResultCalendarDisplayed() => IsDisplayed(ResultCalendar);
 		public bool IsPeriodTrackerLegendDisplayed() => IsDisplayed(PeriodTrackerLegend);
 

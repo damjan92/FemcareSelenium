@@ -140,7 +140,7 @@ namespace AutomatedTests.Tests
 		// Product Landing
 		public static string[] ProductLandingPageQuickBuy =
 		{
-			"https://www.saba.com.mx/comprar-productos/reutilizables-saba/calzones-menstruales-reutilizables/"
+			"https://www.saba.com.mx/comprar-productos/productos-saba/kits-saba/"
 		};
 		public static string[] ProductLandingPageUrls =
 		{

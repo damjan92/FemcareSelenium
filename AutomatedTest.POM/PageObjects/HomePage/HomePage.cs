@@ -36,7 +36,7 @@ namespace AutomatedTest.POM.PageObjects
 		public bool IsNavigationBarLoaded() => IsDisplayed(NavigationBar);
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		public bool IsBodyformNavIconDisplayed() => IsDisplayed(BodyformNavIcon);
-		public bool IsSearchIconDisplayed() => IsDisplayed(SearchIcon);
+		public bool IsSearchIconDisplayed() => IsDisplayedAndClickable(SearchIcon);
 		public bool IsEssityFooterLogoDisplayed() => IsDisplayed(EssityFooterLogo);
 		public bool IsFooterSocialLinksDisplayed() => IsDisplayed(FooterMenuLinks);
 

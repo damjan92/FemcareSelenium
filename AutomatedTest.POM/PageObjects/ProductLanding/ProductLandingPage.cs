@@ -46,29 +46,10 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region WebElements
-		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator, ExpectedConditions.ElementIsVisible(Indicator), 3);
-		IWebElement TitleWebElement => Driver.FindElementWait(Title, ExpectedConditions.ElementIsVisible(Title));
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
-		IWebElement FilterByButtonWebElement => Driver.FindElementWait(FilterByButton, ExpectedConditions.ElementIsVisible(FilterByButton));
-		IWebElement SortButtonWebElement => Driver.FindElementWait(SortButton, ExpectedConditions.ElementIsVisible(SortButton));
-		IWebElement ExploreAllProductsWebElement => Driver.FindElementWait(ExploreAllProducts, ExpectedConditions.ElementToBeClickable(ExploreAllProducts));
-		IWebElement SocialLinkWebElement => Driver.FindElementWait(SocialLinks, ExpectedConditions.ElementToBeClickable(SocialLinks));
-		IList<IWebElement> ListOfProducts => Driver.FindElementsWait(ProductList);
-		/// <summary>
-		/// Quick Buy Modal
-		/// </summary>
-		/// 
-		IWebElement ProductInPcpWebElement => Driver.FindElementWait(ProductInPcp, ExpectedConditions.ElementIsVisible(ProductInPcp));
+		IWebElement IndicatorWebElement => Driver.FindElementWait(Indicator, ExpectedConditions.ElementIsVisible(Indicator), 3);		
+		IList<IWebElement> ListOfProducts => Driver.FindElementsWait(ProductList);		
+		// Quick Buy Modal
 		IWebElement QuickBuyButtonWebElement => Driver.FindElementWait(QuickBuyButton, ExpectedConditions.ElementIsVisible(QuickBuyButton));
-		IWebElement QuickBuyModalWebElement => Driver.FindElementWait(QuickBuyModal,ExpectedConditions.ElementIsVisible(QuickBuyModal));
-		IWebElement ModalTitleWebElement => Driver.FindElementWait(ModalTitle, ExpectedConditions.ElementIsVisible(ModalTitle));
-		IWebElement ModalOldPriceWebElement => Driver.FindElementWait(ModalOldPrice, ExpectedConditions.ElementIsVisible(ModalOldPrice));
-		IWebElement ModalNewPriceWebElement => Driver.FindElementWait(ModalNewPrice, ExpectedConditions.ElementIsVisible(ModalNewPrice));
-		IWebElement ModalRatingsWebElement => Driver.FindElementWait(ModalRatings, ExpectedConditions.ElementIsVisible(ModalRatings));
-		IWebElement ModalSizeGuideWebElement => Driver.FindElementWait(ModalSizeGuide, ExpectedConditions.ElementIsVisible(ModalSizeGuide));
-		IWebElement ModalAddToCartCounterWebElement => Driver.FindElementWait(ModalAddToCartCounter, ExpectedConditions.ElementIsVisible(ModalAddToCartCounter), 3);
-		IWebElement ModalAddToCartButtonWebElement => Driver.FindElementWait(ModalAddToCartButton, ExpectedConditions.ElementIsVisible(ModalAddToCartButton));
-		IWebElement ModalViewProductButtonWebElement => Driver.FindElementWait(ModalViewProductButton, ExpectedConditions.ElementIsVisible(ModalViewProductButton));
 		#endregion
 
 		#region Constructor and methods
@@ -76,32 +57,32 @@ namespace AutomatedTest.POM.PageObjects
 		{
 		}
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsIndicatorDisplayed() => IndicatorWebElement.Displayed;
-		public bool IsTitleDisplayed() => TitleWebElement.Displayed;
-		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
-		public bool IsFilterByButtonDisplayed() => FilterByButtonWebElement.Displayed;
-		public bool IsSortButtonDisplayed() => SortButtonWebElement.Displayed;
-		public bool IsExploreAllProductsDisplayed() => ExploreAllProductsWebElement.Displayed;
-		public bool IsSocialIconDisplayed() => SocialLinkWebElement.Displayed;
+		public bool IsIndicatorDisplayed() => IsDisplayed(Indicator);
+		public bool IsTitleDisplayed() => IsDisplayed(Title);
+		public bool IsBreadcrumbsDisplayed() => IsDisplayed(Breadcrumbs);
+		public bool IsFilterByButtonDisplayed() => IsDisplayed(FilterByButton);
+		public bool IsSortButtonDisplayed() => IsDisplayed(SortButton);
+		public bool IsExploreAllProductsDisplayed() => IsDisplayed(ExploreAllProducts); // to be clickable
+		public bool IsSocialIconDisplayed() => IsDisplayed(SocialLinks); // to be clickable
 		public int GetIndicatorNumber() => WebDriverExtensions.GetIndicatorNumberOfProducts(IndicatorWebElement);
 		public int GetNumberOfProducts() => WebDriverExtensions.GetNumberOfProducts(ListOfProducts);
 		/// <summary>
 		/// Quick Buy Modal
 		/// </summary>
 		/// 
-		public bool IsProductInPcpDisplayed() => ProductInPcpWebElement.Displayed;
-		public bool IsQuickBuyButtonDisplayed() => QuickBuyButtonWebElement.Displayed;
+		public bool IsProductInPcpDisplayed() => IsDisplayed(ProductInPcp);
+		public bool IsQuickBuyButtonDisplayed() => IsDisplayed(QuickBuyButton);
 		public void IsProductInPcpHoveredAndClicked() => WebDriverExtensions.WaitElementForHoverAndClick(Driver, ProductInPcp);
 		public bool IsClicked() => WebDriverExtensions.ClickTheWebElement(QuickBuyButtonWebElement);
-		public bool IsQuickBuyModalDisplayed() => QuickBuyModalWebElement.Displayed;
-		public bool IsModalTitleDisplayed() => ModalTitleWebElement.Displayed;
-		public bool IsModalOldPriceWebElement() => ModalOldPriceWebElement.Displayed;
-		public bool IsModalNewPriceWebElement() => ModalNewPriceWebElement.Displayed;
-		public bool IsModalRatingsWebElement() => ModalRatingsWebElement.Displayed;
-		public bool IsModalSizeGuideWebElement() => ModalSizeGuideWebElement.Displayed;
-		public bool IsModalAddToCartCounterWebElement() => ModalAddToCartCounterWebElement.Displayed;
-		public bool IsModalAddToCartButtonWebElement() => ModalAddToCartButtonWebElement.Displayed;
-		public bool IsModalViewProductButtonWebElement() => ModalViewProductButtonWebElement.Displayed;
+		public bool IsQuickBuyModalDisplayed() => IsDisplayed(QuickBuyModal);
+		public bool IsModalTitleDisplayed() => IsDisplayed(ModalTitle);
+		public bool IsModalOldPriceWebElement() => IsDisplayed(ModalOldPrice);
+		public bool IsModalNewPriceWebElement() => IsDisplayed(ModalNewPrice);
+		public bool IsModalRatingsWebElement() => IsDisplayed(ModalRatings);
+		public bool IsModalSizeGuideWebElement() => IsDisplayed(ModalSizeGuide);
+		public bool IsModalAddToCartCounterWebElement() => IsDisplayed(ModalAddToCartCounter);
+		public bool IsModalAddToCartButtonWebElement() => IsDisplayed(ModalAddToCartButton);
+		public bool IsModalViewProductButtonWebElement() => IsDisplayed(ModalViewProductButton);
 		#endregion
 	}
 }

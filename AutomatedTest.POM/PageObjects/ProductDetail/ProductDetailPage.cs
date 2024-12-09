@@ -28,28 +28,11 @@ namespace AutomatedTest.POM.PageObjects
 		public By CardsPanel => By.CssSelector("div[class=\"cards-panel\"]");
 		//BaazarVoice
 		public By BaazarVoiceContainer => By.CssSelector("div[class='show-reviews-container']");
-
 		
-
 		#endregion
 
-		#region Web Elements
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
-		IWebElement TitleOfProductWebElement => Driver.FindElementWait(TitleOfProduct, ExpectedConditions.ElementIsVisible(TitleOfProduct));
-		IWebElement BvRatingsWebElement => Driver.FindElementWait(BvRatings, ExpectedConditions.ElementIsVisible(BvRatings));
-		IWebElement FlowMeterWebElement => Driver.FindElementWait(FlowMeter, ExpectedConditions.ElementIsVisible(FlowMeter));
-		IWebElement ProductDescriptionWebElement => Driver.FindElementWait(ProductDescription, ExpectedConditions.ElementIsVisible(ProductDescription));
-		IWebElement ReasonToLoveWebElement => Driver.FindElementWait(ReasonToLove, ExpectedConditions.ElementIsVisible(ReasonToLove));
-		IWebElement ProductNewsletterWebElement => Driver.FindElementWait(ProductNewsletter, ExpectedConditions.ElementIsVisible(ProductNewsletter));
-		IWebElement ButtonProductNewsletterWebElement => Driver.FindElementWait(ButtonProductNewsletter, ExpectedConditions.ElementIsVisible(ButtonProductNewsletter));
-		IWebElement ProductImageSwipperWebElement => Driver.FindElementWait(ProductImageSwipper, ExpectedConditions.ElementIsVisible(ProductImageSwipper));
-		IWebElement ProductRetailersWebElemenet => Driver.FindElementWait(ProductRetailers, ExpectedConditions.ElementIsVisible(ProductRetailers));
-		//Social icons
-		IWebElement SocialLinkWebElement => Driver.FindElementWait(SocialLinks, ExpectedConditions.ElementToBeClickable(SocialLinks));
-		IWebElement CardsPanelWebElement => Driver.FindElementWait(CardsPanel, ExpectedConditions.ElementIsVisible(CardsPanel));
-		//BaazarVoice
-		IWebElement BaazarVoiceContainerWebElement => Driver.FindElementWait(BaazarVoiceContainer, ExpectedConditions.ElementIsVisible(BaazarVoiceContainer));		
-
+		#region Web Elements	
+		//
 		#endregion
 
 		#region Constructor and methods
@@ -59,19 +42,17 @@ namespace AutomatedTest.POM.PageObjects
 		}
 
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
-		public bool IsTitleOfProductDisplayed() => TitleOfProductWebElement.Displayed;
-		public bool IsBvRatingsDisplayed() => BvRatingsWebElement.Displayed;
-		public bool IsFlowMeterDisplayed() => FlowMeterWebElement.Displayed;
-		public bool IsProductDescriptionDisplayed() => ProductDescriptionWebElement.Displayed;
-		public bool IsReasonToLoveDisplayed() => ReasonToLoveWebElement.Displayed;
-		public bool IsProductNewsletterDisplayed() => ProductNewsletterWebElement.Displayed;
-		public bool IsButtonProductNewsletterDisplayed() => ButtonProductNewsletterWebElement.Displayed;
-		public bool IsProductImageSwipperDisplayed() => ProductImageSwipperWebElement.Displayed;
-		public bool IsProductRetailersDisplayed() => ProductRetailersWebElemenet.Displayed;
-		public bool IsSocialIconDisplayed() => SocialLinkWebElement.Displayed;
-		public bool IsCardsPanelDisplayed() => CardsPanelWebElement.Displayed;
-		public bool IsBaazarVoiceContainerDisplayed() => BaazarVoiceContainerWebElement.Displayed;
+		public bool IsBreadcrumbsDisplayed() => IsDisplayed(Breadcrumbs);
+		public bool IsTitleOfProductDisplayed() => IsDisplayed(TitleOfProduct);
+		public bool IsBvRatingsDisplayed() => IsDisplayed(BvRatings);
+		public bool IsFlowMeterDisplayed() => IsDisplayed(FlowMeter);
+		public bool IsProductDescriptionDisplayed() => IsDisplayed(ProductDescription);
+		public bool IsReasonToLoveDisplayed() => IsDisplayed(ReasonToLove);		
+		public bool IsProductImageSwipperDisplayed() => IsDisplayed(ProductImageSwipper);
+		public bool IsProductRetailersDisplayed() => IsDisplayed(ProductRetailers);
+		public bool IsSocialIconDisplayed() => IsDisplayed(SocialLinks);
+		public bool IsCardsPanelDisplayed() => IsDisplayed(CardsPanel);
+		public bool IsBaazarVoiceContainerDisplayed() => IsDisplayed(BaazarVoiceContainer);
 
 		#endregion
 	}

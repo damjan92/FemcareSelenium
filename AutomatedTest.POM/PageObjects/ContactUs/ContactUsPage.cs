@@ -11,7 +11,6 @@ namespace AutomatedTest.POM.PageObjects
 	{
 		#region Selectors
 
-		public override By RootSelector => By.ClassName("hero-slide");
 		public By ErrorMessage => By.CssSelector("div[class='alert-danger']");
 		public By ContactUsForm => By.CssSelector("form[class*='custom-form']");
 		public By Name => By.Id("Name");

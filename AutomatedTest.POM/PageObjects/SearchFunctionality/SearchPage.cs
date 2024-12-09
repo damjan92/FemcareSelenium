@@ -23,11 +23,8 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region WebElements
-		IWebElement SearchIconWebElement => Driver.FindElementWait(SearchIcon, ExpectedConditions.ElementExists(SearchIcon), 7);
 		IWebElement SearchBarWebElement => Driver.FindElementWait(SearchBar, ExpectedConditions.ElementIsVisible(SearchBar), 3);
 		// On click action
-		IWebElement ResetSearchWordWebElement => Driver.FindElementWait(ResetSearchWord, ExpectedConditions.ElementToBeClickable(ResetSearchWord), 3);
-		IWebElement SearchedWordBarWebElement => Driver.FindElementWait(SearchedWordBar, ExpectedConditions.ElementToBeClickable(SearchedWordBar), 3);
 		IWebElement SumOfFoundResultsWebElement => Driver.FindElementWait(SumOfFoundResults, ExpectedConditions.ElementIsVisible(SumOfFoundResults), 3);
 		IList<IWebElement> SearchResultsList => Driver.FindElementsWait(SearchResults, 5);
 		IWebElement LoadMoreButtonWebElement => Driver.FindElementWait(LoadMoreButton, ExpectedConditions.ElementToBeClickable(LoadMoreButton), 3);
@@ -40,15 +37,15 @@ namespace AutomatedTest.POM.PageObjects
 		{
 		}
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsSearchIconDisplayed() => SearchIconWebElement.Displayed;
-		public bool IsSearchBarDisplayed() => SearchBarWebElement.Displayed;
-		public bool ClickOnSearchIcon() => WebDriverExtensions.ClickTheWebElement(SearchIconWebElement);
+		public bool IsSearchIconDisplayed() => IsDisplayed(SearchIcon);
+		public bool IsSearchBarDisplayed() => IsDisplayed(SearchBar);
+		public bool ClickOnSearchIcon() => IsClicked(SearchIcon);
 		public void EnterKeys(string data) => WebDriverExtensions.WaitForElementToSendKeys(Driver, SearchBar, data, 5);
-		public bool IsResetSearchWordDisplayed() => ResetSearchWordWebElement.Displayed;
-		public bool IsSumOfFoundResultsDisplayed() => SumOfFoundResultsWebElement.Displayed;
+		public bool IsResetSearchWordDisplayed() => IsDisplayedAndClickable(ResetSearchWord);
+		public bool IsSumOfFoundResultsDisplayed() => IsDisplayed(SumOfFoundResults);
 		public bool AreSearchResultsDisplayed() => WebDriverExtensions.AreElementsDisplayed(SearchResultsList);
 		public int GetNumberOfResult() => SearchResultsList.Count;
-		public bool IsLoadMoreButtonDisplayed() => LoadMoreButtonWebElement.Displayed;
+		public bool IsLoadMoreButtonDisplayed() => IsDisplayedAndClickable(LoadMoreButton);
 		public string GetText() => SearchBarWebElement.Text;
 
 

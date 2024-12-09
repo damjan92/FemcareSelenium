@@ -33,25 +33,10 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region WebElements
+
 		// Baazar Voice
-		IWebElement BvReviewsContainerWebElement => Driver.FindElementWait(BvReviewsContainer, ExpectedConditions.ElementIsVisible(BvReviewsContainer));
-		IWebElement BvReviewsOverviewWebElement => Driver.FindElementWait(BvReviewsOverview, ExpectedConditions.ElementIsVisible(BvReviewsOverview));
-		IWebElement BvRatingsSnapshotWebElement => Driver.FindElementWait(BvRatingsSnapshot, ExpectedConditions.ElementIsVisible(BvRatingsSnapshot));
-		IWebElement BvOveralRatingWebElement => Driver.FindElementWait(BvOveralRating, ExpectedConditions.ElementIsVisible(BvOveralRating));
-		IWebElement BvReviewTheProductWebElement => Driver.FindElementWait(BvReviewTheProduct, ExpectedConditions.ElementIsVisible(BvReviewTheProduct));
-		IWebElement BvAverageRatingsWebElement => Driver.FindElementWait(BvAverageRatings, ExpectedConditions.ElementIsVisible(BvAverageRatings));
-		IWebElement BvSortRatingsWebElement => Driver.FindElementWait(BvSortRatings, ExpectedConditions.ElementIsVisible(BvSortRatings));
 		IList<IWebElement> BvCustomersReviewsList => Driver.FindElementsWait(BvCustomersReviews);
-		IWebElement BvLoadMoreButtonWebElement => Driver.FindElementWait(BvLoadMoreButton, ExpectedConditions.ElementIsVisible(BvLoadMoreButton));
-		// Ratings and reviews
-		IWebElement RrReviesContainerWebElement => Driver.FindElementWait(RrReviesContainer, ExpectedConditions.ElementIsVisible(RrReviesContainer));
-		IWebElement RrReviewsSnapshotWebElement => Driver.FindElementWait(RrReviewsSnapshot, ExpectedConditions.ElementIsVisible(RrReviewsSnapshot));
-		IWebElement RrTitleWebElement => Driver.FindElementWait(RrTitle, ExpectedConditions.ElementIsVisible(RrTitle));
-		IWebElement RrHistogramRatingsWebElement => Driver.FindElementWait(RrHistogramRatings, ExpectedConditions.ElementIsVisible(RrHistogramRatings));
-		IWebElement RrWriteReviewButtonWebElement => Driver.FindElementWait(RrWriteReviewButton, ExpectedConditions.ElementIsVisible(RrWriteReviewButton));
-		IWebElement RrReviewFaceoffWebElement => Driver.FindElementWait(RrReviewFaceoff, ExpectedConditions.ElementIsVisible(RrReviewFaceoff));
-		IWebElement RrSearchReviewWebElement => Driver.FindElementWait(RrSearchReview, ExpectedConditions.ElementIsVisible(RrSearchReview));
-		IWebElement RrSortReviewWebElement => Driver.FindElementWait(RrSortReview, ExpectedConditions.ElementIsVisible(RrSortReview));
+		// Ratings and reviews	
 		IList<IWebElement> RrReviewsList => Driver.FindElementsWait(RrReviews);
 		#endregion
 
@@ -62,24 +47,24 @@ namespace AutomatedTest.POM.PageObjects
 		}
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
 		// Baazar Voice
-		public bool IsBvReviewsContainerDisplayed() => BvReviewsContainerWebElement.Displayed;
-		public bool IsBvReviewsOverviewDisplayed() => BvReviewsOverviewWebElement.Displayed;
-		public bool IsBvRatingsSnapshotDisplayed() => BvRatingsSnapshotWebElement.Displayed;
-		public bool IsBvOveralRatingDisplayed() => BvOveralRatingWebElement.Displayed;
-		public bool IsBvReviewTheProductDisplayed() => BvReviewTheProductWebElement.Displayed;
-		public bool IsBvAverageRatingsDisplayed() => BvAverageRatingsWebElement.Displayed;
-		public bool IsBvSortRatingsDisplayed() => BvSortRatingsWebElement.Displayed;
+		public bool IsBvReviewsContainerDisplayed() => IsDisplayed(BvReviewsContainer);
+		public bool IsBvReviewsOverviewDisplayed() => IsDisplayed(BvReviewsOverview);
+		public bool IsBvRatingsSnapshotDisplayed() => IsDisplayed(BvRatingsSnapshot);
+		public bool IsBvOveralRatingDisplayed() => IsDisplayed(BvOveralRating);
+		public bool IsBvReviewTheProductDisplayed() => IsDisplayed(BvReviewTheProduct);
+		public bool IsBvAverageRatingsDisplayed() => IsDisplayed(BvAverageRatings);
+		public bool IsBvSortRatingsDisplayed() => IsDisplayed(BvSortRatings);
 		public bool AreBvCustomersReviewsListDisplayed() => WebDriverExtensions.AreElementsDisplayed(BvCustomersReviewsList);
-		public bool IsBvLoadMoreButtonDisplayed() => BvLoadMoreButtonWebElement.Displayed;
+		public bool IsBvLoadMoreButtonDisplayed() => IsDisplayed(BvLoadMoreButton);
 		// Ratings and reviews
-		public bool IsRrReviesContainerDisplayed() => RrReviesContainerWebElement.Displayed;
-		public bool IsRrReviewsSnapshotDisplayed() => RrReviewsSnapshotWebElement.Displayed;
-		public bool IsRrTitleDisplayed() => RrTitleWebElement.Displayed;
-		public bool IsRrHistogramRatingsDisplayed() => RrHistogramRatingsWebElement.Displayed;
-		public bool IsRrWriteReviewButtonDisplayed() => RrWriteReviewButtonWebElement.Displayed;
-		public bool IsRrReviewFaceoffDisplayed() => RrReviewFaceoffWebElement.Displayed;
-		public bool IsRrSearchReviewDisplayed() => RrSearchReviewWebElement.Displayed;
-		public bool IsRrSortReviewDisplayed() => RrSortReviewWebElement.Displayed;
+		public bool IsRrReviesContainerDisplayed() => IsDisplayed(RrReviesContainer);
+		public bool IsRrReviewsSnapshotDisplayed() => IsDisplayed(RrReviewsSnapshot);
+		public bool IsRrTitleDisplayed() => IsDisplayed(RrTitle);
+		public bool IsRrHistogramRatingsDisplayed() => IsDisplayed(RrHistogramRatings);
+		public bool IsRrWriteReviewButtonDisplayed() => IsDisplayed(RrWriteReviewButton);
+		public bool IsRrReviewFaceoffDisplayed() => IsDisplayed(RrReviewFaceoff);
+		public bool IsRrSearchReviewDisplayed() => IsDisplayed(RrSearchReview);
+		public bool IsRrSortReviewDisplayed() => IsDisplayed(RrSortReview);
 		public bool AreRrReviewsListDisplayed() => WebDriverExtensions.AreElementsDisplayed(RrReviewsList);
 		#endregion
 	}

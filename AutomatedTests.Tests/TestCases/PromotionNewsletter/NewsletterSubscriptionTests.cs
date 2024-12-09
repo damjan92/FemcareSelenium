@@ -23,6 +23,16 @@ namespace AutomatedTests.Tests.TestCases
 		[Test]
 		public void IsNewsletterFormDisplayed() => Assert.That(promotionNewsletter.IsNewsletterFormDisplayed(), "Newsletter form is not visible");
 		[Test]
+		public void IsNewsletterDatesDisplayed()
+		{
+			Assert.Multiple(() =>
+			{
+				Assert.That(promotionNewsletter.IsNewsletterDayDisplayed(), "Newsletter Birthday day is not displayed");
+				Assert.That(promotionNewsletter.IsNewsletterMonthDisplayed(), "Newsletter Birthday month is not displayed");
+				Assert.That(promotionNewsletter.IsNewsletterYearDisplayed(), "Newsletter Birthday year is not displayed");
+			});
+		}
+		[Test]
 		public void IsNewsletterNameDisplayed() => Assert.That(promotionNewsletter.IsNewsletterNameDisplayed(), "Name field is not visible");
 		[Test]
 		public void IsNewsletterEmailDisplayed() => Assert.That(promotionNewsletter.IsNewsletterEmailDisplayed(), "Email field is not visible");

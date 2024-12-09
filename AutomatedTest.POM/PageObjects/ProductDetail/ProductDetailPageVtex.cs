@@ -49,43 +49,12 @@ namespace AutomatedTest.POM.PageObjects
 		#endregion
 
 		#region Web Elements
-		IWebElement BreadcrumbsWebElement => Driver.FindElementWait(Breadcrumbs, ExpectedConditions.ElementIsVisible(Breadcrumbs));
-		IWebElement TitleOfProductWebElement => Driver.FindElementWait(TitleOfProduct, ExpectedConditions.ElementIsVisible(TitleOfProduct));
-		IWebElement FlowMeterWebElement => Driver.FindElementWait(FlowMeter, ExpectedConditions.ElementIsVisible(FlowMeter));
-		IWebElement ProductDescriptionWebElement => Driver.FindElementWait(ProductDescription, ExpectedConditions.ElementIsVisible(ProductDescription));
-		//Vtex
-		IWebElement RatingStarsWebElement => Driver.FindElementWait(RatingStars, ExpectedConditions.ElementIsVisible(RatingStars));
-		IWebElement NumOfRatingWebElement => Driver.FindElementWait(NumOfRating, ExpectedConditions.ElementToBeClickable(NumOfRating));
-		IWebElement PriceWebElement => Driver.FindElementWait(Price, ExpectedConditions.ElementIsVisible(Price));
-		IWebElement ProductOptionsWebElement => Driver.FindElementWait(ProductOptions, ExpectedConditions.ElementIsVisible(ProductOptions));
+		//Vtex		
 		IList<IWebElement> SizeCardsList => Driver.FindElementsWait(SizeCards);
-		IWebElement ColorPickerWebElement => Driver.FindElementWait(ColorPicker, ExpectedConditions.ElementIsVisible(ColorPicker));
-		IWebElement AddToCartCounterWebElement => Driver.FindElementWait(AddToCartCounter, ExpectedConditions.ElementIsVisible(AddToCartCounter));
-		IWebElement AddToCartButtonWebElement => Driver.FindElementWait(AddToCartButton, ExpectedConditions.ElementIsVisible(AddToCartButton));
-		IWebElement SizeGuidTableWebElement => Driver.FindElementWait(SizeGuidTable, ExpectedConditions.ElementIsVisible(SizeGuidTable));
-		IWebElement ProductSafetyWebElement => Driver.FindElementWait(ProductSafety, ExpectedConditions.ElementIsVisible(ProductSafety));
+		IWebElement AddToCartButtonWebElement => Driver.FindElementWait(AddToCartButton, ExpectedConditions.ElementIsVisible(AddToCartButton)); // in use
 		// Cart Modal
-		IWebElement CartModalTitleWebElement => Driver.FindElementWait(CartModalTitle, ExpectedConditions.ElementIsVisible(CartModalTitle));
-		IWebElement CartModalCloseBtnWebElement => Driver.FindElementWait(CartModalCloseBtn, ExpectedConditions.ElementToBeClickable(CartModalCloseBtn));
-		IWebElement CartModalProductImageWebElement => Driver.FindElementWait(CartModalProductImage, ExpectedConditions.ElementIsVisible(CartModalProductImage));
-		IWebElement CartModalProductNameWebElement => Driver.FindElementWait(CartModalProductName, ExpectedConditions.ElementIsVisible(CartModalProductName));
-		IWebElement CartModalSkuNameWebElement => Driver.FindElementWait(CartModalSkuName, ExpectedConditions.ElementIsVisible(CartModalSkuName));
-		IWebElement CartModalTotalPriceWebElement => Driver.FindElementWait(CartModalTotalPrice, ExpectedConditions.ElementIsVisible(CartModalTotalPrice));
-		IWebElement CartModalViewCartWebElement => Driver.FindElementWait(CartModalViewCart, ExpectedConditions.ElementIsVisible(CartModalViewCart));
-		IWebElement CartModalCheckoutWebElement => Driver.FindElementWait(CartModalCheckout, ExpectedConditions.ElementIsVisible(CartModalCheckout));
-		// Cart
-		IWebElement CartWebElement => Driver.FindElementWait(Cart, ExpectedConditions.ElementIsVisible(Cart));
-		IWebElement CartTitleWebElement => Driver.FindElementWait(CartTitle, ExpectedConditions.ElementIsVisible(CartTitle));
-		IWebElement CartIndicatorWebElement => Driver.FindElementWait(CartIndicator, ExpectedConditions.ElementIsVisible(CartIndicator));
-		IWebElement CartCloseWebElement => Driver.FindElementWait(CartClose, ExpectedConditions.ElementIsVisible(CartClose));
-		IWebElement CartItemNameWebElement => Driver.FindElementWait(CartItemName, ExpectedConditions.ElementIsVisible(CartItemName));
-		IWebElement CartItemSkuNameWebElement => Driver.FindElementWait(CartItemSkuName, ExpectedConditions.ElementIsVisible(CartItemSkuName));
-		IWebElement CartDeleteItemWebElement => Driver.FindElementWait(CartDeleteItem, ExpectedConditions.ElementIsVisible(CartDeleteItem));
-		IWebElement CartCounterWebElement => Driver.FindElementWait(CartCounter, ExpectedConditions.ElementIsVisible(CartCounter));
-		IWebElement CartTotalPriceWebElement => Driver.FindElementWait(CartTotalPrice, ExpectedConditions.ElementIsVisible(CartTotalPrice));
-		IWebElement CartSubtotalWebElement => Driver.FindElementWait(CartSubtotal, ExpectedConditions.ElementIsVisible(CartSubtotal));
-		IWebElement CartCheckOutButtonWebElement => Driver.FindElementWait(CartCheckOutButton, ExpectedConditions.ElementToBeClickable(CartCheckOutButton));
-
+		IWebElement CartModalViewCartWebElement => Driver.FindElementWait(CartModalViewCart, ExpectedConditions.ElementIsVisible(CartModalViewCart)); // in use
+		
 		#endregion
 
 		#region Constructor and methods
@@ -94,43 +63,43 @@ namespace AutomatedTest.POM.PageObjects
 		{
 		}
 		public bool IsErrorMessageDisplayed() => Driver.IsElementContainedBy(ErrorMessage, 3);
-		public bool IsBreadcrumbsDisplayed() => BreadcrumbsWebElement.Displayed;
-		public bool IsTitleOfProductDisplayed() => TitleOfProductWebElement.Displayed;
-		public bool IsFlowMeterDisplayed() => FlowMeterWebElement.Displayed;
-		public bool IsProductDescriptionDisplayed() => ProductDescriptionWebElement.Displayed;
-		public bool IsRatingStarsDisplayed() => RatingStarsWebElement.Displayed;
-		public bool IsNumOfRatingDisplayed() => NumOfRatingWebElement.Displayed;
-		public bool IsPriceDisplayed() => PriceWebElement.Displayed;
-		public bool IsProductOptionsDisplayed() => ProductOptionsWebElement.Displayed;
+		public bool IsBreadcrumbsDisplayed() => IsDisplayed(Breadcrumbs);
+		public bool IsTitleOfProductDisplayed() => IsDisplayed(TitleOfProduct);
+		public bool IsFlowMeterDisplayed() => IsDisplayed(FlowMeter);
+		public bool IsProductDescriptionDisplayed() => IsDisplayed(ProductDescription);
+		public bool IsRatingStarsDisplayed() => IsDisplayed(RatingStars);
+		public bool IsNumOfRatingDisplayed() => IsDisplayed(NumOfRating);
+		public bool IsPriceDisplayed() => IsDisplayed(Price);
+		public bool IsProductOptionsDisplayed() => IsDisplayed(ProductOptions);
 		public bool AreSizeCardsDisplayed() => WebDriverExtensions.AreElementsDisplayed(SizeCardsList);
-		public bool IsColorPickerDisplayed() => ColorPickerWebElement.Displayed;
-		public bool IsAddToCartCounterDisplayed() => AddToCartCounterWebElement.Displayed;
-		public bool IsAddToCartButtonDisplayed() => AddToCartButtonWebElement.Displayed;
-		public bool IsSizeGuidTableDisplayed() => SizeGuidTableWebElement.Displayed;
-		public bool IsProductSafetyDisplayed() => ProductSafetyWebElement.Displayed;
+		public bool IsColorPickerDisplayed() => IsDisplayed(ColorPicker);
+		public bool IsAddToCartCounterDisplayed() => IsDisplayed(AddToCartCounter);
+		public bool IsAddToCartButtonDisplayed() => IsDisplayed(AddToCartButton);
+		public bool IsSizeGuidTableDisplayed() => IsDisplayed(SizeGuidTable);
+		public bool IsProductSafetyDisplayed() => IsDisplayed(ProductSafety);
 		// Add to cart modal
 		public bool IsAddToCartClicked() => WebDriverExtensions.ClickTheWebElement(AddToCartButtonWebElement);
-		public bool IsCartModalTitleDisplayed() => CartModalTitleWebElement.Displayed;
-		public bool IsCartModalCloseBtnDisplayed() => CartModalCloseBtnWebElement.Displayed;
-		public bool IsCartModalProductImageDisplayed() => CartModalProductImageWebElement.Displayed;
-		public bool IsCartModalProductNameDisplayed() => CartModalProductNameWebElement.Displayed;
-		public bool IsCartModalSkuNameDisplayed() => CartModalSkuNameWebElement.Displayed;
-		public bool IsCartModalTotalPriceDisplayed() => CartModalTotalPriceWebElement.Displayed;
-		public bool IsCartModalViewCartDisplayed() => CartModalViewCartWebElement.Displayed;
-		public bool IsCartModalCheckoutDisplayed() => CartModalCheckoutWebElement.Displayed;
+		public bool IsCartModalTitleDisplayed() => IsDisplayed(CartModalTitle);
+		public bool IsCartModalCloseBtnDisplayed() => IsDisplayed(CartModalCloseBtn);
+		public bool IsCartModalProductImageDisplayed() => IsDisplayed(CartModalProductImage);
+		public bool IsCartModalProductNameDisplayed() => IsDisplayed(CartModalProductName);
+		public bool IsCartModalSkuNameDisplayed() => IsDisplayed(CartModalSkuName);
+		public bool IsCartModalTotalPriceDisplayed() => IsDisplayed(CartModalTotalPrice);
+		public bool IsCartModalViewCartDisplayed() => IsDisplayed(CartModalViewCart);
+		public bool IsCartModalCheckoutDisplayed() => IsDisplayed(CartModalCheckout);
 		// Cart
 		public bool IsViewCartitoClicked() => WebDriverExtensions.ClickTheWebElement(CartModalViewCartWebElement);
-		public bool IsCartDisplayed() => CartWebElement.Displayed;
-		public bool IsCartTitleDisplayed() => CartTitleWebElement.Displayed;
-		public bool IsCartIndicatorDisplayed() => CartIndicatorWebElement.Displayed;
-		public bool IsCartCloseDisplayed() => CartCloseWebElement.Displayed;
-		public bool IsCartItemNameDisplayed() => CartItemNameWebElement.Displayed;
-		public bool IsCartItemSkuNameDisplayed() => CartItemSkuNameWebElement.Displayed;
-		public bool IsCartDeleteItemDisplayed() => CartDeleteItemWebElement.Displayed;
-		public bool IsCartCounterDisplayed() => CartCounterWebElement.Displayed;
-		public bool IsCartTotalPriceDisplayed() => CartTotalPriceWebElement.Displayed;
-		public bool IsCartSubtotalDisplayed() => CartSubtotalWebElement.Displayed;
-		public bool IsCartCheckOutButtonDisplayed() => CartCheckOutButtonWebElement.Displayed;
+		public bool IsCartDisplayed() => IsDisplayed(Cart);
+		public bool IsCartTitleDisplayed() => IsDisplayed(CartTitle);
+		public bool IsCartIndicatorDisplayed() => IsDisplayed(CartIndicator);
+		public bool IsCartCloseDisplayed() => IsDisplayed(CartClose);
+		public bool IsCartItemNameDisplayed() => IsDisplayed(CartItemName);
+		public bool IsCartItemSkuNameDisplayed() => IsDisplayed(CartItemSkuName);
+		public bool IsCartDeleteItemDisplayed() => IsDisplayed(CartDeleteItem);
+		public bool IsCartCounterDisplayed() => IsDisplayed(CartCounter);
+		public bool IsCartTotalPriceDisplayed() => IsDisplayed(CartTotalPrice);
+		public bool IsCartSubtotalDisplayed() => IsDisplayed(CartSubtotal);
+		public bool IsCartCheckOutButtonDisplayed() => IsDisplayed(CartCheckOutButton); // clickable
 		#endregion
 	}
 }

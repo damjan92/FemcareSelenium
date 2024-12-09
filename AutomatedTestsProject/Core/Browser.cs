@@ -36,7 +36,7 @@ namespace AutomatedTests.Framework.Core
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddUserProfilePreference("download.default_directory", DownloadPath);
 			chromeOptions.AddArgument("--headless");
-			chromeOptions.AddArgument("--incognito");
+			//chromeOptions.AddArgument("--incognito");
 
 			return new ChromeDriver(chromeOptions);
         }
